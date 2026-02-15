@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, Resolver } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { questionnaireSchema, QuestionnaireData } from "@/lib/schemas/questionnaire";
+import { questionnaireSchema, QuestionnaireData, QuestionnaireFormValues } from "@/lib/schemas/questionnaire";
 import { supabase } from "@/lib/supabase";
 import { Button } from "@/components/ui/button";
 import { Card, CardFooter, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -25,13 +25,13 @@ export function QuestionnaireWizard() {
     const [submitError, setSubmitError] = useState<string | null>(null);
     const router = useRouter();
 
-    const form = useForm<QuestionnaireData>({
-        resolver: zodResolver(questionnaireSchema),
+    const form = useForm<QuestionnaireFormValues>({
+        resolver: zodResolver(questionnaireSchema) as Resolver<QuestionnaireFormValues>,
         defaultValues: {
-            morningActivity: undefined,
-            environment: undefined,
+            morningActivity: "",
+            environment: "",
             interests: [],
-            duration: undefined,
+            duration: "",
             firstName: "",
             lastName: "",
             phone: "",
@@ -46,7 +46,7 @@ export function QuestionnaireWizard() {
         let isValid = false;
 
         // Mapping steps to fields to validate
-        const stepFields: Record<number, (keyof QuestionnaireData)[]> = {
+        const stepFields: Record<number, (keyof QuestionnaireFormValues)[]> = {
             1: ["morningActivity"],
             2: ["environment"],
             3: ["interests"],
@@ -72,7 +72,7 @@ export function QuestionnaireWizard() {
         setCurrentStep((prev) => Math.max(prev - 1, 1));
     };
 
-    const onSubmit = async (data: QuestionnaireData) => {
+    const onSubmit = async (data: QuestionnaireFormValues) => {
         setIsSubmitting(true);
         setSubmitError(null);
 

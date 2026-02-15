@@ -1,5 +1,5 @@
 import { UseFormReturn, useWatch } from "react-hook-form";
-import { QuestionnaireData } from "@/lib/schemas/questionnaire";
+import { QuestionnaireFormValues } from "@/lib/schemas/questionnaire";
 import { CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { Sunrise, Waves, Coffee, Trophy, BookOpen, Building2, Trees, Stethoscope, ShieldCheck, Activity, Users, Globe, User, Utensils, Mountain, HeartHandshake } from "lucide-react";
 
 interface StepProps {
-    form: UseFormReturn<QuestionnaireData>;
+    form: UseFormReturn<QuestionnaireFormValues>;
 }
 
 // --- Bloque I: La Visión ---
