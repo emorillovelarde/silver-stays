@@ -1,0 +1,12 @@
+{
+    "HomePage": {
+        "title": "Bienvenido a Silver Stays",
+        "subtitle": "Descubre tu hogar perfecto para los años dorados.",
+        "cta": "Comenzar"
+    },
+    "Navigation": {
+        "home": "Inicio",
+        "about": "Sobre Nosotros",
+        "contact": "Contacto"
+    }
+}
