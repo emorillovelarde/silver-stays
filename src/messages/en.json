@@ -1,0 +1,110 @@
+{
+  "HomePage": {
+    "title": "Welcome to Silver Stays",
+    "subtitle": "Discover your perfect home for the golden years.",
+    "cta": "Get Started"
+  },
+  "Hero": {
+    "headline": "Winter Stays on the Costa del Sol",
+    "subtitle": "Silver-Standard certified accommodation, legal and healthcare support — so you can focus on enjoying your stay.",
+    "cta": "Design your stay",
+    "imageAlt": "Sunset in Marbella - Panoramic view of the Costa del Sol"
+  },
+  "Concepts": {
+    "silverStandard": "Silver-Standard",
+    "bureaucracyShield": "Bureaucracy Shield",
+    "winterStays": "Winter Stays",
+    "careConcierge": "Care Concierge",
+    "lifestylePlatform": "Lifestyle & Care Platform"
+  },
+  "Questionnaire": {
+    "steps": {
+      "vision": "Your Vision",
+      "environment": "The Environment",
+      "interests": "Interests",
+      "logistics": "Logistics",
+      "contact": "Contact"
+    },
+    "morningActivity": {
+      "title": "Your Vision",
+      "description": "What is the first activity you would like to do when you wake up?",
+      "beach_walk": "Beach walks",
+      "breakfast_views": "Breakfast with views",
+      "golf_tennis": "Golf / Tennis",
+      "silence_read": "Quiet time / Reading"
+    },
+    "environment": {
+      "title": "The Environment",
+      "description": "What type of environment do you prefer?",
+      "urban_vibrant": "Urban / Vibrant",
+      "urban_vibrant_desc": "Shops, restaurants and social life within walking distance.",
+      "natural_reserved": "Natural / Peaceful",
+      "natural_reserved_desc": "Tranquility, green spaces and privacy."
+    },
+    "interests": {
+      "title": "Interests",
+      "description": "Select your topics of interest",
+      "gastronomy": "Gastronomy",
+      "gentle_hiking": "Gentle hiking",
+      "bridge": "Bridge",
+      "volunteering": "Volunteering",
+      "yoga": "Yoga"
+    },
+    "duration": {
+      "title": "Logistics",
+      "description": "Estimated length of stay",
+      "1_3_months": "1-3 months",
+      "3_6_months": "3-6 months",
+      "6_9_months": "6-9 months",
+      "9_plus_months": "9+ months"
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "To send you your personalised Dossier",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "phone": "Phone",
+      "firstNamePlaceholder": "John",
+      "lastNamePlaceholder": "Smith",
+      "emailPlaceholder": "example@email.com",
+      "phonePlaceholder": "+34 600 000 000",
+      "privacyNote": "Your data is secure. We will only use this email to send you stay proposals."
+    },
+    "validation": {
+      "selectOption": "Please select an option",
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "phoneRequired": "Please enter a valid phone number",
+      "emailRequired": "Please enter a valid email address"
+    },
+    "completion": {
+      "title": "Profile Received!",
+      "message": "Thank you, <bold>{name}</bold>. You will shortly receive your Wellbeing Dossier at:",
+      "backHome": "Back to Home"
+    },
+    "nav": {
+      "back": "Back",
+      "next": "Next",
+      "submit": "Submit",
+      "processing": "Processing..."
+    },
+    "error": "An error occurred. Please try again."
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact",
+    "properties": "Properties",
+    "lifestyle": "Lifestyle"
+  },
+  "Metadata": {
+    "title": "Silver Stays | Your perfect home for the golden years",
+    "description": "Discover your perfect home for the golden years. Senior-friendly stays with comfort and care."
+  },
+  "Footer": {
+    "cta": "Ready to take the next step?",
+    "questionnaire": "Start Questionnaire",
+    "copyright": "© 2026 Silver Stays. All rights reserved."
+  }
+}
