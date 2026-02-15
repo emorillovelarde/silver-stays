@@ -148,21 +148,21 @@ export function QuestionnaireWizard() {
         return (
             <Card className="w-full max-w-2xl mx-auto shadow-2xl border-none bg-white animate-in zoom-in-95 duration-500">
                 <CardContent className="flex flex-col items-center text-center p-12 space-y-6">
-                    <div className="bg-[#006D77]/10 p-6 rounded-full mb-4 animate-bounce">
-                        <Sparkles className="h-16 w-16 text-[#006D77]" />
+                    <div className="bg-[#004F56]/10 p-6 rounded-full mb-4 animate-bounce">
+                        <Sparkles className="h-16 w-16 text-[#004F56]" />
                     </div>
                     <CardTitle className="text-3xl font-bold text-[#333333]">
                         ¡Perfil Recibido!
                     </CardTitle>
                     <CardDescription className="text-xl text-[#333333]/80 max-w-md mx-auto leading-relaxed">
                         Muchas gracias, <strong>{form.getValues("firstName")}</strong>. En breve recibirá su Dossier de Bienestar en: <br />
-                        <span className="font-semibold text-[#006D77]">{form.getValues("email")}</span>
+                        <span className="font-semibold text-[#004F56]">{form.getValues("email")}</span>
                     </CardDescription>
 
                     <div className="pt-8">
                         <Button
                             onClick={() => router.push("/")}
-                            className="bg-[#006D77] hover:bg-[#006D77]/90 text-white text-lg px-8 h-12 rounded-full shadow-lg"
+                            className="bg-[#004F56] hover:bg-[#004F56]/90 text-white text-lg px-8 h-12 rounded-full shadow-lg"
                         >
                             Volver al Inicio
                         </Button>
@@ -180,7 +180,7 @@ export function QuestionnaireWizard() {
             {/* Progress Bar */}
             <div className="h-2 w-full bg-slate-100">
                 <div
-                    className="h-full bg-[#006D77] transition-all duration-500 ease-out"
+                    className="h-full bg-[#004F56] transition-all duration-500 ease-out"
                     style={{ width: `${progress}%` }}
                 />
             </div>
@@ -202,7 +202,7 @@ export function QuestionnaireWizard() {
                         variant="ghost"
                         onClick={prevStep}
                         disabled={currentStep === 1 || isSubmitting}
-                        className="text-lg h-12 text-slate-500 hover:text-[#006D77]"
+                        className="text-lg h-12 text-slate-500 hover:text-[#004F56]"
                     >
                         <ChevronLeft className="mr-2 h-5 w-5" /> Atrás
                     </Button>
@@ -212,7 +212,7 @@ export function QuestionnaireWizard() {
                         onClick={nextStep}
                         disabled={isSubmitting}
                         className={cn(
-                            "text-lg h-12 px-8 bg-[#006D77] hover:bg-[#006D77]/90 text-white shadow-md transition-all",
+                            "text-lg h-12 px-8 bg-[#004F56] hover:bg-[#004F56]/90 text-white shadow-md transition-all",
                             isSubmitting && "opacity-80"
                         )}
                     >

@@ -59,7 +59,7 @@ export default function AdminLeadsPage() {
                     <Button
                         onClick={fetchLeads}
                         variant="outline"
-                        className="border-[#006D77] text-[#006D77] hover:bg-[#006D77] hover:text-white"
+                        className="border-[#004F56] text-[#004F56] hover:bg-[#004F56] hover:text-white"
                         disabled={loading}
                     >
                         {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <RefreshCw className="h-4 w-4 mr-2" />}
@@ -101,7 +101,7 @@ export default function AdminLeadsPage() {
                                             <TableCell className="font-medium text-slate-600">
                                                 {format(new Date(lead.created_at), "d MMM yyyy, HH:mm", { locale: es })}
                                             </TableCell>
-                                            <TableCell className="font-semibold text-[#006D77]">
+                                            <TableCell className="font-semibold text-[#004F56]">
                                                 {lead.full_name || "N/A"}
                                             </TableCell>
                                             <TableCell>{lead.email}</TableCell>
@@ -116,7 +116,7 @@ export default function AdminLeadsPage() {
                                                 </div>
                                             </TableCell>
                                             <TableCell>
-                                                <span className="px-3 py-1 bg-[#006D77]/10 text-[#006D77] rounded-full text-sm font-medium">
+                                                <span className="px-3 py-1 bg-[#004F56]/10 text-[#004F56] rounded-full text-sm font-medium">
                                                     {lead.data?.questionnaire?.duration}
                                                 </span>
                                             </TableCell>

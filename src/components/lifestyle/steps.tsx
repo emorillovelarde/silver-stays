@@ -38,9 +38,9 @@ export function StepMorningActivity({ form }: StepProps) {
                             <RadioGroupItem value={opt.value} id={opt.value} className="peer sr-only" />
                             <Label
                                 htmlFor={opt.value}
-                                className="flex flex-col items-center justify-center p-6 border-2 border-muted rounded-xl cursor-pointer hover:border-[#006D77] peer-data-[state=checked]:border-[#006D77] peer-data-[state=checked]:bg-[#006D77]/5 transition-all h-full text-center"
+                                className="flex flex-col items-center justify-center p-6 border-2 border-muted rounded-xl cursor-pointer hover:border-[#004F56] peer-data-[state=checked]:border-[#004F56] peer-data-[state=checked]:bg-[#004F56]/5 transition-all h-full text-center"
                             >
-                                <div className="text-[#006D77]">{opt.icon}</div>
+                                <div className="text-[#004F56]">{opt.icon}</div>
                                 <span className="font-medium text-[#333333]">{opt.label}</span>
                             </Label>
                         </div>
@@ -66,16 +66,16 @@ export function StepEnvironment({ form }: StepProps) {
                 >
                     <div className="relative">
                         <RadioGroupItem value="Urbano/Vibrante" id="urban" className="peer sr-only" />
-                        <Label htmlFor="urban" className="flex flex-col items-center p-6 border-2 rounded-xl cursor-pointer hover:border-[#006D77] peer-data-[state=checked]:border-[#006D77] peer-data-[state=checked]:bg-[#006D77]/5 transition-all">
-                            <Building2 className="h-10 w-10 mb-3 text-[#006D77]" />
+                        <Label htmlFor="urban" className="flex flex-col items-center p-6 border-2 rounded-xl cursor-pointer hover:border-[#004F56] peer-data-[state=checked]:border-[#004F56] peer-data-[state=checked]:bg-[#004F56]/5 transition-all">
+                            <Building2 className="h-10 w-10 mb-3 text-[#004F56]" />
                             <span className="text-lg font-bold text-[#333333]">Urbano / Vibrante</span>
                             <span className="text-sm text-muted-foreground text-center mt-2">Tiendas, restaurantes y vida social a pie de calle.</span>
                         </Label>
                     </div>
                     <div className="relative">
                         <RadioGroupItem value="Natural/Reservado" id="natural" className="peer sr-only" />
-                        <Label htmlFor="natural" className="flex flex-col items-center p-6 border-2 rounded-xl cursor-pointer hover:border-[#006D77] peer-data-[state=checked]:border-[#006D77] peer-data-[state=checked]:bg-[#006D77]/5 transition-all">
-                            <Trees className="h-10 w-10 mb-3 text-[#006D77]" />
+                        <Label htmlFor="natural" className="flex flex-col items-center p-6 border-2 rounded-xl cursor-pointer hover:border-[#004F56] peer-data-[state=checked]:border-[#004F56] peer-data-[state=checked]:bg-[#004F56]/5 transition-all">
+                            <Trees className="h-10 w-10 mb-3 text-[#004F56]" />
                             <span className="text-lg font-bold text-[#333333]">Natural / Reservado</span>
                             <span className="text-sm text-muted-foreground text-center mt-2">Tranquilidad, espacios verdes y privacidad.</span>
                         </Label>
@@ -130,8 +130,8 @@ export function StepInterests({ form }: StepProps) {
                             className={cn(
                                 "cursor-pointer px-6 py-3 rounded-full border-2 text-lg font-medium transition-all select-none",
                                 isSelected
-                                    ? "bg-[#006D77]/5 border-[#006D77] text-[#333333] font-semibold"
-                                    : "bg-white border-slate-200 text-slate-600 hover:border-[#006D77] hover:text-[#006D77]"
+                                    ? "bg-[#004F56]/5 border-[#004F56] text-[#333333] font-semibold"
+                                    : "bg-white border-slate-200 text-slate-600 hover:border-[#004F56] hover:text-[#004F56]"
                             )}
                         >
                             {tag}
@@ -163,7 +163,7 @@ export function StepDuration({ form }: StepProps) {
                     {options.map((opt) => (
                         <div key={opt}>
                             <RadioGroupItem value={opt} id={opt} className="peer sr-only" />
-                            <Label htmlFor={opt} className="flex items-center justify-center p-6 border-2 rounded-xl cursor-pointer hover:border-[#006D77] peer-data-[state=checked]:border-[#006D77] peer-data-[state=checked]:bg-[#006D77]/5 transition-all text-center text-lg font-medium text-[#333333]">
+                            <Label htmlFor={opt} className="flex items-center justify-center p-6 border-2 rounded-xl cursor-pointer hover:border-[#004F56] peer-data-[state=checked]:border-[#004F56] peer-data-[state=checked]:bg-[#004F56]/5 transition-all text-center text-lg font-medium text-[#333333]">
                                 {opt}
                             </Label>
                         </div>
@@ -193,7 +193,7 @@ export function StepContact({ form }: StepProps) {
                             id="firstName"
                             placeholder="Juan"
                             {...form.register("firstName")}
-                            className="h-12 text-lg border-2 focus-visible:ring-[#006D77]"
+                            className="h-12 text-lg border-2 focus-visible:ring-[#004F56]"
                         />
                         {form.formState.errors.firstName && (
                             <p className="text-red-500 font-medium text-sm">{form.formState.errors.firstName.message}</p>
@@ -205,7 +205,7 @@ export function StepContact({ form }: StepProps) {
                             id="lastName"
                             placeholder="Pérez"
                             {...form.register("lastName")}
-                            className="h-12 text-lg border-2 focus-visible:ring-[#006D77]"
+                            className="h-12 text-lg border-2 focus-visible:ring-[#004F56]"
                         />
                         {form.formState.errors.lastName && (
                             <p className="text-red-500 font-medium text-sm">{form.formState.errors.lastName.message}</p>
@@ -219,7 +219,7 @@ export function StepContact({ form }: StepProps) {
                         id="email"
                         placeholder="ejemplo@correo.com"
                         {...form.register("email")}
-                        className="h-12 text-lg border-2 focus-visible:ring-[#006D77]"
+                        className="h-12 text-lg border-2 focus-visible:ring-[#004F56]"
                     />
                     {form.formState.errors.email && (
                         <p className="text-red-500 font-medium text-sm">{form.formState.errors.email.message}</p>
@@ -232,7 +232,7 @@ export function StepContact({ form }: StepProps) {
                         id="phone"
                         placeholder="+34 600 000 000"
                         {...form.register("phone")}
-                        className="h-12 text-lg border-2 focus-visible:ring-[#006D77]"
+                        className="h-12 text-lg border-2 focus-visible:ring-[#004F56]"
                     />
                     {form.formState.errors.phone && (
                         <p className="text-red-500 font-medium text-sm">{form.formState.errors.phone.message}</p>

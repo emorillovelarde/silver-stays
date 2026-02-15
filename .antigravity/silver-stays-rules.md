@@ -5,4 +5,4 @@
 - **UI Components**:
     - Buttons: Ergonomic height of **48px**
 - **Colors**:
-    - Primary: Deep Teal `#006D77`
+    - Primary: Deep Teal `#004F56` (WCAG 2.1 AAA)
