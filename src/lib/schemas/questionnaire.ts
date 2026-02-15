@@ -10,8 +10,8 @@ export const questionnaireSchema = z.object({
     ]),
     environment: z.enum(["Urbano/Vibrante", "Natural/Reservado"]),
 
-    // Paso 2: Intereses (Social)
-    interests: z.array(z.string()).default([]),
+    // Paso 2: Intereses (Social) — Silver-Standard: siempre array, nunca undefined
+    interests: z.array(z.string()).optional().default([]),
 
     // Paso 3: Logística
     duration: z.enum(["1-3 meses", "3-6 meses", "6-9 meses", "+9 meses"]),

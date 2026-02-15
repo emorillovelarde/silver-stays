@@ -95,7 +95,7 @@ export function StepInterests({ form }: StepProps) {
         control: form.control,
         name: "interests",
         defaultValue: []
-    });
+    }) ?? [];
 
     const toggle = (tag: string) => {
         const current = form.getValues("interests") || [];

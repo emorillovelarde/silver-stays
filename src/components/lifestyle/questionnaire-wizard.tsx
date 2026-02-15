@@ -82,7 +82,7 @@ export function QuestionnaireWizard() {
                 questionnaire: {
                     morningActivity: data.morningActivity,
                     environment: data.environment,
-                    interests: data.interests,
+                    interests: data.interests ?? [],
                     duration: data.duration,
                 },
                 contact: {
