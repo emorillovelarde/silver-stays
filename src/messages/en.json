@@ -83,6 +83,14 @@
       "message": "Thank you, <bold>{name}</bold>. You will shortly receive your Wellbeing Dossier at:",
       "backHome": "Back to Home"
     },
+    "progress": {
+      "stepOf": "Step {current} of {total}",
+      "step1": "Your ideal morning",
+      "step2": "Your preferred environment",
+      "step3": "Your health preferences",
+      "step4": "Length of stay",
+      "step5": "Your contact details"
+    },
     "nav": {
       "back": "Back",
       "next": "Next",

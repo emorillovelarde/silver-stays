@@ -54,6 +54,13 @@ export function QuestionnaireWizard() {
   });
 
   const totalSteps = 5;
+  const STEP_LABEL_KEYS = [
+    "step1",
+    "step2",
+    "step3",
+    "step4",
+    "step5",
+  ] as const;
 
   const nextStep = async () => {
     let isValid = false;
@@ -189,14 +196,29 @@ export function QuestionnaireWizard() {
   }
 
   const progress = (currentStep / totalSteps) * 100;
+  const stepLabelKey = STEP_LABEL_KEYS[currentStep - 1];
+  const progressText = t("progress.stepOf", {
+    current: currentStep,
+    total: totalSteps,
+  });
 
   return (
     <Card className="w-full max-w-2xl mx-auto shadow-xl border-none bg-white overflow-hidden flex flex-col min-h-[500px]">
-      <div className="h-2 w-full bg-slate-100">
-        <div
-          className="h-full bg-[#004F56] transition-all duration-500 ease-out"
-          style={{ width: `${progress}%` }}
-        />
+      <div className="px-6 pt-6 pb-2 space-y-2">
+        <p className="text-sm font-medium text-slate-600" aria-live="polite">
+          {progressText}: {t(`progress.${stepLabelKey}`)}
+        </p>
+        <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
+          <div
+            className="h-full bg-[#004F56] transition-all duration-500 ease-out rounded-full"
+            style={{ width: `${progress}%` }}
+            role="progressbar"
+            aria-valuenow={currentStep}
+            aria-valuemin={1}
+            aria-valuemax={totalSteps}
+            aria-label={`${progressText}: ${t(`progress.${stepLabelKey}`)}`}
+          />
+        </div>
       </div>
 
       <form

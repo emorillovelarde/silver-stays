@@ -75,13 +75,21 @@
       "selectOption": "Seleccione una opción",
       "firstNameRequired": "El nombre es obligatorio",
       "lastNameRequired": "El apellido es obligatorio",
-      "phoneRequired": "Introduce un teléfono válido",
-      "emailRequired": "Por favor introduce un email válido"
+      "phoneRequired": "Introduce un número de teléfono válido",
+      "emailRequired": "Introduce un correo electrónico válido"
     },
     "completion": {
       "title": "¡Perfil Recibido!",
       "message": "Muchas gracias, <bold>{name}</bold>. En breve recibirá su Dossier de Bienestar en:",
       "backHome": "Volver al Inicio"
+    },
+    "progress": {
+      "stepOf": "Paso {current} de {total}",
+      "step1": "Su mañana ideal",
+      "step2": "Su entorno preferido",
+      "step3": "Sus preferencias de salud",
+      "step4": "Duración de la estancia",
+      "step5": "Sus datos de contacto"
     },
     "nav": {
       "back": "Atrás",
