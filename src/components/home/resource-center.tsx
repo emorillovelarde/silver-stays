@@ -1,50 +1,95 @@
-import { Button } from "@/components/ui/button";
-import { FileText, Sun, BookOpen } from "lucide-react";
+"use client";
+
+import { Link } from "@/i18n/routing";
+import { useTranslations, useLocale } from "next-intl";
+import { FileText, Sun, ShieldCheck } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+const GUIDE_IDS = ["legal", "arbitrage", "nlv"] as const;
+
+const GUIDE_CONFIG: Record<
+  (typeof GUIDE_IDS)[number],
+  {
+    icon: typeof FileText;
+    slug: { es: string; en: string };
+    category: "Legal" | "Savings";
+  }
+> = {
+  legal: {
+    icon: FileText,
+    slug: { es: "guia-legal-alquiler-2025", en: "guia-legal-alquiler-2025" },
+    category: "Legal",
+  },
+  arbitrage: {
+    icon: Sun,
+    slug: { es: "arbitraje-energetico", en: "energy-arbitrage" },
+    category: "Savings",
+  },
+  nlv: {
+    icon: ShieldCheck,
+    slug: { es: "nlv-2026-uk", en: "nlv-2026-uk" },
+    category: "Legal",
+  },
+};
 
 export function ResourceCenter() {
-    const resources = [
-        {
-            title: "La Guía del Brexit",
-            subtitle: "Regla 90/180 explicada",
-            icon: <FileText className="h-8 w-8" />,
-        },
-        {
-            title: "Sanidad en la Costa",
-            subtitle: "Manual para jubilados",
-            icon: <BookOpen className="h-8 w-8" />,
-        },
-        {
-            title: "Invierno al Sol",
-            subtitle: "Mejores zonas por clima",
-            icon: <Sun className="h-8 w-8" />,
-        },
-    ];
+  const t = useTranslations("ResourceCenter");
+  const locale = useLocale() as "es" | "en";
 
-    return (
-        <section className="py-16 bg-white border-t border-gray-100">
-            <div className="container mx-auto px-4 max-w-5xl">
-                <h2 className="text-3xl font-bold text-primary mb-8 text-center md:text-left">
-                    Centro de Recursos
-                </h2>
+  return (
+    <section className="py-16 bg-white border-t border-gray-100">
+      <div className="container mx-auto px-4 max-w-5xl">
+        <h2 className="text-3xl font-bold text-[#004F56] mb-8 text-center md:text-left">
+          {t("title")}
+        </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {resources.map((res, i) => (
-                        <Button
-                            key={i}
-                            variant="outline"
-                            className="h-auto py-8 flex flex-col gap-4 border-2 border-secondary/30 hover:border-primary hover:bg-secondary/10 hover:text-primary transition-all group"
-                        >
-                            <div className="bg-primary/10 p-4 rounded-full text-primary group-hover:scale-110 transition-transform">
-                                {res.icon}
-                            </div>
-                            <div className="text-center">
-                                <div className="text-xl font-bold text-primary">{res.title}</div>
-                                <div className="text-sm text-muted-foreground">{res.subtitle}</div>
-                            </div>
-                        </Button>
-                    ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {GUIDE_IDS.map((id) => {
+            const config = GUIDE_CONFIG[id];
+            const Icon = config.icon;
+            const slug = config.slug[locale] ?? config.slug.en;
+            const title = t(`guides.${id}.title`);
+            const description = t(`guides.${id}.description`);
+            const badge = t(`guides.${id}.badge`);
+
+            return (
+              <Link
+                key={id}
+                href={`/guias/${slug}`}
+                className={cn(
+                  "flex flex-col items-center gap-4 py-8 px-6 rounded-xl border-2 border-secondary/30",
+                  "transition-all duration-300 group",
+                  "hover:border-[#004F56] hover:bg-primary/5 hover:shadow-md",
+                  "focus:outline-none focus:ring-2 focus:ring-[#004F56] focus:ring-offset-2 focus:border-[#004F56]",
+                )}
+                aria-label={`${title}: ${description}`}
+              >
+                <span
+                  className={cn(
+                    "self-start text-xs font-semibold px-2.5 py-1 rounded-full",
+                    config.category === "Legal"
+                      ? "bg-amber-100 text-amber-800"
+                      : "bg-emerald-100 text-emerald-800",
+                  )}
+                >
+                  {badge}
+                </span>
+                <div className="bg-[#004F56]/10 p-4 rounded-full text-[#004F56] group-hover:scale-110 transition-transform">
+                  <Icon className="h-8 w-8" aria-hidden />
                 </div>
-            </div>
-        </section>
-    );
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-[#004F56] group-hover:text-[#004F56]/90">
+                    {title}
+                  </h3>
+                  <p className="text-base text-[#1A1A1A] mt-2 leading-relaxed min-h-[3rem]">
+                    {description}
+                  </p>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 }

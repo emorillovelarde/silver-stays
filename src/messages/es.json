@@ -110,9 +110,37 @@
     "title": "Silver Stays | Tu hogar perfecto para los años dorados",
     "description": "Descubre tu hogar perfecto para los años dorados. Estancias senior-friendly con confort y cuidado."
   },
+  "Guias": {
+    "arbitraje-energetico": {
+      "title": "Arbitraje Energético: Cómo tu calefacción en el norte paga tu invierno",
+      "description": "Descubre el 'Turismo Energético': una estrategia financiera para financiar tu estancia en la Costa del Sol.",
+      "slug": "arbitraje-energetico",
+      "heatingDegreeDays": "Grados Días de Calefacción"
+    }
+  },
   "Footer": {
     "cta": "¿Listo para dar el siguiente paso?",
     "questionnaire": "Comenzar Cuestionario",
     "copyright": "© 2026 Silver Stays. Todos los derechos reservados."
+  },
+  "ResourceCenter": {
+    "title": "Centro de Recursos",
+    "guides": {
+      "legal": {
+        "title": "Guía Legal de Alquiler 2025",
+        "description": "Normativa vigente para propietarios 55+. Contratos, prórrogas y garantías.",
+        "badge": "Legal"
+      },
+      "arbitrage": {
+        "title": "Arbitraje Energético 2026",
+        "description": "Cómo su calefacción paga su invierno. Evite la trampa de la regla de 90 días.",
+        "badge": "Popular"
+      },
+      "nlv": {
+        "title": "Manual NLV 2026",
+        "description": "Requisitos, Formulario S1 y EES/ETIAS. Evite la trampa de la regla de 90 días.",
+        "badge": "Nuevo"
+      }
+    }
   }
 }

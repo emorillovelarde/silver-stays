@@ -110,9 +110,37 @@
     "title": "Silver Stays | Your perfect home for the golden years",
     "description": "Discover your perfect home for the golden years. Senior-friendly stays with comfort and care."
   },
+  "Guias": {
+    "arbitraje-energetico": {
+      "title": "Energy Arbitrage: How Northern Heating Bills Pay for Your Winter",
+      "description": "Discover 'Energy Tourism': a financial strategy to fund your stay in Costa del Sol.",
+      "slug": "energy-arbitrage",
+      "heatingDegreeDays": "Heating Degree Days"
+    }
+  },
   "Footer": {
     "cta": "Ready to take the next step?",
     "questionnaire": "Start Questionnaire",
     "copyright": "© 2026 Silver Stays. All rights reserved."
+  },
+  "ResourceCenter": {
+    "title": "Resource Center",
+    "guides": {
+      "legal": {
+        "title": "2025 Legal Rental Guide",
+        "description": "Current regulations for 55+ owners. Contracts, extensions and guarantees.",
+        "badge": "Legal"
+      },
+      "arbitrage": {
+        "title": "Energy Arbitrage 2026",
+        "description": "How your heating pays for your winter. Avoid the 90-day rule trap.",
+        "badge": "Popular"
+      },
+      "nlv": {
+        "title": "2026 NLV Manual",
+        "description": "Requirements, Form S1 and EES/ETIAS. Avoid the 90-day rule trap.",
+        "badge": "New"
+      }
+    }
   }
 }
