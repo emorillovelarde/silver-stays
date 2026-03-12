@@ -10,6 +10,17 @@
     "cta": "Diseña tu estancia",
     "imageAlt": "Atardecer en Marbella - Vista panorámica de la Costa del Sol"
   },
+  "StepsSection": {
+    "title": "Tres simples pasos para hacer tu estancia realidad",
+    "step1Title": "Cuéntanos sobre ti",
+    "step1Desc": "Cuéntanos tus necesidades de salud, movilidad y preferencias sociales en 2 minutos.",
+    "step2Title": "Diseñamos tu plan a medida",
+    "step2Desc": "Tu gestor personal te contactará para ajustar cada detalle de tu aterrizaje en España.",
+    "step3Title": "Nos encargamos de todo",
+    "step3Desc": "Logística, sanidad y comunidad listas para tu llegada. Tú solo disfruta del sol.",
+    "cta": "Empezar mi plan ahora",
+    "imageAlt": "Terraza premium con vistas al Mediterráneo - Estancia Silver Stays"
+  },
   "Concepts": {
     "silverStandard": "Silver-Standard",
     "bureaucracyShield": "Escudo Burocrático",
@@ -104,7 +115,13 @@
     "about": "Sobre Nosotros",
     "contact": "Contacto",
     "properties": "Propiedades",
-    "lifestyle": "Estilo de Vida"
+    "lifestyle": "Estilo de Vida",
+    "guidesAndResources": "Guías y Recursos",
+    "findMyStay": "Encontrar mi Estancia",
+    "closeMenu": "Cerrar menú",
+    "openMenu": "Abrir menú de navegación",
+    "language": "Idioma",
+    "selectLanguage": "Seleccionar idioma"
   },
   "Metadata": {
     "title": "Silver Stays | Tu hogar perfecto para los años dorados",
@@ -122,6 +139,18 @@
     "cta": "¿Listo para dar el siguiente paso?",
     "questionnaire": "Comenzar Cuestionario",
     "copyright": "© 2026 Silver Stays. Todos los derechos reservados."
+  },
+  "GuidesHub": {
+    "heroTitle": "Guías y Recursos para Vivir en España",
+    "heroSubtitle": "Información experta y actualizada para planificar su transición a la Costa del Sol de forma segura.",
+    "guidesGridLabel": "Listado de guías disponibles",
+    "readGuide": "Leer Guía",
+    "ctaTitle": "¿Listo para dar el siguiente paso hacia su nueva vida en España?",
+    "ctaSubtitle": "Complete nuestra evaluación gratuita y encontraremos la estancia perfecta para sus necesidades.",
+    "ctaButton": "Comenzar mi Evaluación",
+    "ctaButtonAria": "Comenzar evaluación gratuita para encontrar su estancia ideal",
+    "metaTitle": "Guías y Recursos para Vivir en España | Silver Stays",
+    "metaDescription": "Descubra todo lo que necesita saber sobre visados, contratos de alquiler y el coste de vida en la Costa del Sol. Guías expertas para su retiro en España."
   },
   "ResourceCenter": {
     "title": "Centro de Recursos",

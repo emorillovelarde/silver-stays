@@ -10,6 +10,17 @@
     "cta": "Design your stay",
     "imageAlt": "Sunset in Marbella - Panoramic view of the Costa del Sol"
   },
+  "StepsSection": {
+    "title": "Three simple steps to make your stay a reality",
+    "step1Title": "Tell us about yourself",
+    "step1Desc": "Share your health needs, mobility and social preferences in 2 minutes.",
+    "step2Title": "We design your tailored plan",
+    "step2Desc": "Your personal manager will contact you to fine-tune every detail of your landing in Spain.",
+    "step3Title": "We take care of everything",
+    "step3Desc": "Logistics, healthcare and community ready for your arrival. You just enjoy the sun.",
+    "cta": "Start my plan now",
+    "imageAlt": "Premium terrace with Mediterranean views - Silver Stays stay"
+  },
   "Concepts": {
     "silverStandard": "Silver-Standard",
     "bureaucracyShield": "Bureaucracy Shield",
@@ -104,7 +115,13 @@
     "about": "About Us",
     "contact": "Contact",
     "properties": "Properties",
-    "lifestyle": "Lifestyle"
+    "lifestyle": "Lifestyle",
+    "guidesAndResources": "Guides & Resources",
+    "findMyStay": "Find My Stay",
+    "closeMenu": "Close menu",
+    "openMenu": "Open navigation menu",
+    "language": "Language",
+    "selectLanguage": "Select language"
   },
   "Metadata": {
     "title": "Silver Stays | Your perfect home for the golden years",
@@ -122,6 +139,18 @@
     "cta": "Ready to take the next step?",
     "questionnaire": "Start Questionnaire",
     "copyright": "© 2026 Silver Stays. All rights reserved."
+  },
+  "GuidesHub": {
+    "heroTitle": "Living in Spain Guides & Resources",
+    "heroSubtitle": "Expert, up-to-date information to plan your transition to the Costa del Sol safely.",
+    "guidesGridLabel": "List of available guides",
+    "readGuide": "Read Guide",
+    "ctaTitle": "Ready to take the next step towards your new life in Spain?",
+    "ctaSubtitle": "Complete our free assessment and we'll find the perfect stay for your needs.",
+    "ctaButton": "Start My Assessment",
+    "ctaButtonAria": "Start free assessment to find your ideal stay",
+    "metaTitle": "Living in Spain Guides & Resources | Silver Stays",
+    "metaDescription": "Discover everything you need to know about visas, rental contracts, and the cost of living on the Costa del Sol. Expert guides for your retirement in Spain."
   },
   "ResourceCenter": {
     "title": "Resource Center",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { Header } from "@/components/layout/Header";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -44,6 +45,7 @@ export default async function RootLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
+      <Header />
       {children}
     </NextIntlClientProvider>
   );
