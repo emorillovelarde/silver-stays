@@ -15,6 +15,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { LanguageSwitcher } from "./language-switcher";
+import { useScrollDirection } from "@/hooks/use-scroll-direction";
+import { useIsAtTop } from "@/hooks/use-is-at-top";
 
 const NAV_LINKS = [
   { href: "/", key: "home" as const },
@@ -51,11 +53,11 @@ function NavLinks({
             href={href}
             onClick={onLinkClick}
             className={cn(
-              "min-h-[44px] min-w-[44px] flex items-center px-4 py-3 text-base font-medium transition-colors rounded-md",
-              "text-[#1A1A1A] hover:bg-[#004F56]/10 hover:text-[#004F56]",
-              "focus:outline-none focus:ring-2 focus:ring-[#004F56] focus:ring-offset-2",
-              "md:min-h-0 md:min-w-0 md:px-0 md:py-2",
-              isActive && "text-[#004F56] font-semibold",
+              "min-h-[44px] min-w-[44px] flex items-center px-4 py-2 text-base transition-colors focus:outline-none",
+              "md:min-h-0 md:min-w-0",
+              isActive
+                ? "text-[#004F56] font-bold"
+                : "text-gray-600 font-medium hover:text-[#004F56]",
             )}
             aria-label={t(key)}
             aria-current={isActive ? "page" : undefined}
@@ -69,22 +71,52 @@ function NavLinks({
 }
 
 export function Header() {
+  const pathname = usePathname();
+  const isQuestionnaire = pathname.includes("/questionnaire");
+
+  if (isQuestionnaire) {
+    return (
+      <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white border-b border-gray-100">
+        <div className="container mx-auto flex h-16 items-center px-4 md:h-18">
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-xl font-bold text-[#004F56] focus:outline-none"
+            aria-label="Silver Stays - Ir al inicio"
+          >
+            Silver Stays
+          </Link>
+        </div>
+      </header>
+    );
+  }
+
+  return <HeaderFull />;
+}
+
+function HeaderFull() {
   const [open, setOpen] = useState(false);
   const t = useTranslations("Navigation");
+  const scrollDirection = useScrollDirection(10);
+  const isAtTop = useIsAtTop(20);
+
+  const isHidden = scrollDirection === "down";
 
   return (
     <header
       className={cn(
-        "sticky top-0 z-40 w-full",
-        "bg-[#FAFAFA]/85 backdrop-blur-md border-b border-[#004F56]/10",
-        "supports-[backdrop-filter]:bg-[#FAFAFA]/80",
+        "fixed top-0 left-0 right-0 z-50 w-full",
+        "transition-all duration-300 ease-in-out",
+        isHidden && "-translate-y-full",
+        isAtTop
+          ? "bg-transparent border-transparent shadow-none"
+          : "bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm",
       )}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:h-18">
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 text-xl font-bold text-[#004F56] focus:outline-none focus:ring-2 focus:ring-[#004F56] focus:ring-offset-2 rounded-md"
+          className="flex items-center gap-2 text-xl font-bold text-[#004F56] focus:outline-none"
           aria-label="Silver Stays - Ir al inicio"
         >
           Silver Stays
@@ -95,8 +127,19 @@ export function Header() {
           <NavLinks />
         </div>
 
-        {/* Right controls: Language + Mobile menu */}
+        {/* Right controls: CTA + Language + Mobile menu */}
         <div className="flex items-center gap-2">
+          <Link
+            href="/questionnaire"
+            className={cn(
+              "hidden sm:inline-flex items-center justify-center focus:outline-none",
+              "bg-[#004F56] hover:bg-[#00383D] text-white",
+              "px-5 py-2 rounded-full font-medium text-sm",
+              "transition-colors min-h-[44px] md:min-h-0",
+            )}
+          >
+            {t("startYourPlan")}
+          </Link>
           <LanguageSwitcher />
 
           {/* Mobile menu */}
@@ -122,8 +165,20 @@ export function Header() {
                   Silver Stays
                 </SheetTitle>
               </SheetHeader>
-              <div className="mt-8 flex flex-col gap-2">
+              <div className="mt-8 flex flex-col gap-4">
                 <NavLinks onLinkClick={() => setOpen(false)} />
+                <Link
+                  href="/questionnaire"
+                  onClick={() => setOpen(false)}
+                  className={cn(
+                    "inline-flex items-center justify-center mt-4 focus:outline-none",
+                    "bg-[#004F56] hover:bg-[#00383D] text-white",
+                    "px-5 py-3 rounded-full font-medium text-sm",
+                    "min-h-[44px]",
+                  )}
+                >
+                  {t("startYourPlan")}
+                </Link>
               </div>
             </SheetContent>
           </Sheet>

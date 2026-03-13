@@ -5,9 +5,10 @@
     "cta": "Comenzar"
   },
   "Hero": {
-    "headline": "Estancias de Invierno en la Costa del Sol",
-    "subtitle": "Alojamiento certificado Silver-Standard, soporte legal y médico para que solo te preocupes de disfrutar.",
-    "cta": "Diseña tu estancia",
+    "headline": "Las Mejores Estancias Invernales en la Costa del Sol",
+    "subtitle": "Tu hogar, sanidad y comunidad en España, gestionados con una sola llamada",
+    "supportText": "Deja el frío y la burocracia atrás. Seleccionamos estancias de 1 a 9 meses entre Fuengirola y Nerja, para que solo disfrutes.",
+    "cta": "Diseñe su Estancia",
     "imageAlt": "Atardecer en Marbella - Vista panorámica de la Costa del Sol"
   },
   "StepsSection": {
@@ -20,6 +21,22 @@
     "step3Desc": "Logística, sanidad y comunidad listas para tu llegada. Tú solo disfruta del sol.",
     "cta": "Empezar mi plan ahora",
     "imageAlt": "Terraza premium con vistas al Mediterráneo - Estancia Silver Stays"
+  },
+  "BentoGrid": {
+    "eyebrow": "Nuestra Promesa",
+    "title": "El Estándar de Excelencia en Long Stay Spain for Retirees",
+    "pillar1Title": "Alojamiento Silver-Standard",
+    "pillar1Text": "Viviendas cálidas en invierno, sin escalones imprevistos, con fibra óptica garantizada y contratos de temporada 100% seguros y legales.",
+    "pillar2Title": "Escudo Legal y Burocrático",
+    "pillar2Text": "Navegamos la administración española por usted. Gestionamos su Visado No Lucrativo (NLV), reglas Schengen (90/180) y su empadronamiento.",
+    "pillar3Title": "Concierge de Salud",
+    "pillar3Text": "Disfrute con paz mental. Le conectamos con la mejor red médica privada (como Vithas Xanit) con acceso rápido (Fast Track) y gestionamos sus seguros.",
+    "pillar4Title": "Comunidad e Integración",
+    "pillar4Text": "Nunca se sentirá solo. Acceso exclusivo a nuestro Club Social Privado, eventos semanales, catas de vino y conexión con asociaciones locales.",
+    "pillar1Alt": "Icono Alojamiento Silver-Standard",
+    "pillar2Alt": "Icono Escudo Legal y Burocrático",
+    "pillar3Alt": "Icono Concierge de Salud",
+    "pillar4Alt": "Icono Comunidad e Integración"
   },
   "Concepts": {
     "silverStandard": "Silver-Standard",
@@ -121,7 +138,8 @@
     "closeMenu": "Cerrar menú",
     "openMenu": "Abrir menú de navegación",
     "language": "Idioma",
-    "selectLanguage": "Seleccionar idioma"
+    "selectLanguage": "Seleccionar idioma",
+    "startYourPlan": "Diseñe su Estancia"
   },
   "Metadata": {
     "title": "Silver Stays | Tu hogar perfecto para los años dorados",

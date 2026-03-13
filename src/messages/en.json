@@ -5,9 +5,10 @@
     "cta": "Get Started"
   },
   "Hero": {
-    "headline": "Winter Stays on the Costa del Sol",
-    "subtitle": "Silver-Standard certified accommodation, legal and healthcare support — so you can focus on enjoying your stay.",
-    "cta": "Design your stay",
+    "headline": "Finest Winter Stays on the Costa del Sol",
+    "subtitle": "Your home, healthcare, and community in Spain, managed with a single call",
+    "supportText": "Leave the cold and bureaucracy behind. We curate stays of 1 to 9 months between Fuengirola and Nerja, so you can simply enjoy your time.",
+    "cta": "Design Your Stay",
     "imageAlt": "Sunset in Marbella - Panoramic view of the Costa del Sol"
   },
   "StepsSection": {
@@ -20,6 +21,22 @@
     "step3Desc": "Logistics, healthcare and community ready for your arrival. You just enjoy the sun.",
     "cta": "Start my plan now",
     "imageAlt": "Premium terrace with Mediterranean views - Silver Stays stay"
+  },
+  "BentoGrid": {
+    "eyebrow": "Our Promise",
+    "title": "The Standard of Excellence in Long Stay Spain for Retirees",
+    "pillar1Title": "Silver-Standard Accommodation",
+    "pillar1Text": "Warm homes in winter, no unexpected stairs, guaranteed fibre optic and 100% secure and legal seasonal contracts.",
+    "pillar2Title": "Legal and Bureaucratic Shield",
+    "pillar2Text": "We navigate Spanish administration for you. We manage your Non-Lucrative Visa (NLV), Schengen rules (90/180) and your registration.",
+    "pillar3Title": "Health Concierge",
+    "pillar3Text": "Enjoy with peace of mind. We connect you with the best private medical network (such as Vithas Xanit) with fast-track access and manage your insurance.",
+    "pillar4Title": "Community and Integration",
+    "pillar4Text": "You will never feel alone. Exclusive access to our Private Social Club, weekly events, wine tastings and connection with local associations.",
+    "pillar1Alt": "Silver-Standard Accommodation icon",
+    "pillar2Alt": "Legal and Bureaucratic Shield icon",
+    "pillar3Alt": "Health Concierge icon",
+    "pillar4Alt": "Community and Integration icon"
   },
   "Concepts": {
     "silverStandard": "Silver-Standard",
@@ -121,7 +138,8 @@
     "closeMenu": "Close menu",
     "openMenu": "Open navigation menu",
     "language": "Language",
-    "selectLanguage": "Select language"
+    "selectLanguage": "Select language",
+    "startYourPlan": "Design Your Stay"
   },
   "Metadata": {
     "title": "Silver Stays | Your perfect home for the golden years",
