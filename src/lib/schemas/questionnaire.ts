@@ -1,29 +1,33 @@
 import { z } from "zod";
 
-const morningActivityEnum = z.enum([
-  "beach_walk",
-  "breakfast_views",
-  "golf_tennis",
-  "silence_read",
+const locationEnum = z.enum(["locWest", "locCenter", "locEast", "locUnsure"]);
+const lifestyleEnum = z.enum([
+  "lifeBeach",
+  "lifeGolf",
+  "lifeCulture",
+  "lifeQuiet",
 ]);
-const environmentEnum = z.enum(["urban_vibrant", "natural_reserved"]);
-const durationEnum = z.enum([
-  "1_3_months",
-  "3_6_months",
-  "6_9_months",
-  "9_plus_months",
+const essentialServicesEnum = z.enum([
+  "srvHealth",
+  "srvCommunity",
+  "srvLegal",
+  "srvTransport",
 ]);
+const durationEnum = z.enum(["dur1", "dur3", "dur6", "dur9"]);
 
 export const questionnaireSchema = z.object({
-  morningActivity: z
-    .union([morningActivityEnum, z.literal("")])
+  location: z
+    .union([locationEnum, z.literal("")])
     .default("")
     .refine((v) => v !== "", { message: "selectOption" }),
-  environment: z
-    .union([environmentEnum, z.literal("")])
+  lifestyle: z
+    .union([lifestyleEnum, z.literal("")])
     .default("")
     .refine((v) => v !== "", { message: "selectOption" }),
-  interests: z.array(z.string()).optional().default([]),
+  essentialServices: z
+    .union([essentialServicesEnum, z.literal("")])
+    .default("")
+    .refine((v) => v !== "", { message: "selectOption" }),
   duration: z
     .union([durationEnum, z.literal("")])
     .default("")
@@ -37,15 +41,15 @@ export const questionnaireSchema = z.object({
 export type QuestionnaireData = z.infer<typeof questionnaireSchema>;
 
 export type QuestionnaireFormValues = {
-  morningActivity:
+  location: "" | "locWest" | "locCenter" | "locEast" | "locUnsure";
+  lifestyle: "" | "lifeBeach" | "lifeGolf" | "lifeCulture" | "lifeQuiet";
+  essentialServices:
     | ""
-    | "beach_walk"
-    | "breakfast_views"
-    | "golf_tennis"
-    | "silence_read";
-  environment: "" | "urban_vibrant" | "natural_reserved";
-  interests: string[];
-  duration: "" | "1_3_months" | "3_6_months" | "6_9_months" | "9_plus_months";
+    | "srvHealth"
+    | "srvCommunity"
+    | "srvLegal"
+    | "srvTransport";
+  duration: "" | "dur1" | "dur3" | "dur6" | "dur9";
   firstName: string;
   lastName: string;
   phone: string;

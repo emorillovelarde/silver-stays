@@ -12,14 +12,14 @@
     "imageAlt": "Sunset in Marbella - Panoramic view of the Costa del Sol"
   },
   "StepsSection": {
-    "title": "Three simple steps to make your stay a reality",
-    "step1Title": "Tell us about yourself",
-    "step1Desc": "Share your health needs, mobility and social preferences in 2 minutes.",
-    "step2Title": "We design your tailored plan",
-    "step2Desc": "Your personal manager will contact you to fine-tune every detail of your landing in Spain.",
-    "step3Title": "We take care of everything",
-    "step3Desc": "Logistics, healthcare and community ready for your arrival. You just enjoy the sun.",
-    "cta": "Start my plan now",
+    "stepsTitle": "Three steps to your winter retreat",
+    "step1Title": "Share your vision",
+    "step1Desc": "Complete our brief questionnaire to outline your lifestyle, health, and location preferences in just 2 minutes.",
+    "step2Title": "Meet your local expert",
+    "step2Desc": "A Managing Partner will contact you directly to refine every detail and present a curated proposal.",
+    "step3Title": "Arrive and enjoy",
+    "step3Desc": "From legal paperwork and healthcare to your property readiness. We handle the logistics so you can simply focus on the sun.",
+    "btnCTA": "Design Your Stay",
     "imageAlt": "Premium terrace with Mediterranean views - Silver Stays stay"
   },
   "BentoGrid": {
@@ -46,49 +46,35 @@
     "lifestylePlatform": "Lifestyle & Care Platform"
   },
   "Questionnaire": {
-    "steps": {
-      "vision": "Your Vision",
-      "environment": "The Environment",
-      "interests": "Interests",
-      "logistics": "Logistics",
-      "contact": "Contact"
-    },
-    "morningActivity": {
-      "title": "Your Vision",
-      "description": "What is the first activity you would like to do when you wake up?",
-      "beach_walk": "Beach walks",
-      "breakfast_views": "Breakfast with views",
-      "golf_tennis": "Golf / Tennis",
-      "silence_read": "Quiet time / Reading"
-    },
-    "environment": {
-      "title": "The Environment",
-      "description": "What type of environment do you prefer?",
-      "urban_vibrant": "Urban / Vibrant",
-      "urban_vibrant_desc": "Shops, restaurants and social life within walking distance.",
-      "natural_reserved": "Natural / Peaceful",
-      "natural_reserved_desc": "Tranquility, green spaces and privacy."
-    },
-    "interests": {
-      "title": "Interests",
-      "description": "Select your topics of interest",
-      "gastronomy": "Gastronomy",
-      "gentle_hiking": "Gentle hiking",
-      "bridge": "Bridge",
-      "volunteering": "Volunteering",
-      "yoga": "Yoga"
-    },
-    "duration": {
-      "title": "Logistics",
-      "description": "Estimated length of stay",
-      "1_3_months": "1-3 months",
-      "3_6_months": "3-6 months",
-      "6_9_months": "6-9 months",
-      "9_plus_months": "9+ months"
-    },
+    "pageTitle": "Design Your Stay",
+    "pageSubtitle": "Share your vision with us, and our local experts will take care of the rest.",
+    "step1Title": "Step 1 of 5: Your Ideal Location",
+    "step1Question": "Do you already have a preferred area in mind?",
+    "locWest": "Fuengirola / Mijas (Vibrant & Connected)",
+    "locCenter": "Málaga Capital (Urban & Cultural)",
+    "locEast": "Nerja / Torrox (Authentic & Tranquil)",
+    "locUnsure": "I'm not sure, I need your expert advice",
+    "step2Title": "Step 2 of 5: Daily Lifestyle",
+    "step2Question": "How do you envision your perfect days?",
+    "lifeBeach": "Morning beach walks & sea breeze",
+    "lifeGolf": "Golf, tennis, and active sports",
+    "lifeCulture": "Cultural immersion & gastronomy",
+    "lifeQuiet": "Quiet reading and nature retreats",
+    "step3Title": "Step 3 of 5: Essential Services",
+    "step3Question": "What is most important for your peace of mind?",
+    "srvHealth": "Proximity to international hospitals/clinics",
+    "srvCommunity": "An active expat social community",
+    "srvLegal": "Assistance with visas and legal paperwork",
+    "srvTransport": "Excellent transport and airport access",
+    "step4Title": "Step 4 of 5: Duration",
+    "step4Question": "How long do you plan to stay?",
+    "dur1": "1 to 3 months",
+    "dur3": "3 to 6 months",
+    "dur6": "6 to 9 months",
+    "dur9": "More than 9 months (Visa NLV)",
+    "step5Title": "Step 5 of 5: Your Details",
+    "step5Question": "Where should we send your personalized proposal?",
     "contact": {
-      "title": "Contact",
-      "description": "To send you your personalised Dossier",
       "firstName": "First name",
       "lastName": "Last name",
       "email": "Email address",
@@ -97,7 +83,7 @@
       "lastNamePlaceholder": "Smith",
       "emailPlaceholder": "example@email.com",
       "phonePlaceholder": "+34 600 000 000",
-      "privacyNote": "Your data is secure. We will only use this email to send you stay proposals."
+      "privacyNote": "Your privacy is our priority. A Silver Stays Managing Partner will review your vision and contact you within 24 hours."
     },
     "validation": {
       "selectOption": "Please select an option",
@@ -108,24 +94,32 @@
     },
     "completion": {
       "title": "Profile Received!",
-      "message": "Thank you, <bold>{name}</bold>. You will shortly receive your Wellbeing Dossier at:",
+      "message": "Thank you, <bold>{name}</bold>. You will shortly receive your personalized proposal at:",
       "backHome": "Back to Home"
     },
     "progress": {
       "stepOf": "Step {current} of {total}",
-      "step1": "Your ideal morning",
-      "step2": "Your preferred environment",
-      "step3": "Your health preferences",
-      "step4": "Length of stay",
-      "step5": "Your contact details"
+      "step1": "Your Ideal Location",
+      "step2": "Daily Lifestyle",
+      "step3": "Essential Services",
+      "step4": "Duration",
+      "step5": "Your Details"
     },
     "nav": {
       "back": "Back",
       "next": "Next",
-      "submit": "Submit",
+      "submit": "Get My Proposal",
       "processing": "Processing..."
     },
     "error": "An error occurred. Please try again."
+  },
+  "Success": {
+    "title": "Your vision has been received.",
+    "subtitle": "Thank you for trusting Silver Stays. One of our Managing Partners is reviewing your preferences and will contact you within 24 hours to design your perfect winter retreat.",
+    "guideTitle": "Your free guide is ready.",
+    "guideDesc": "We have sent a copy to your email for your records, but you can download your '2026 Costa del Sol Guide' right now to start discovering the best areas and visa requirements while you wait.",
+    "btnDownload": "Download Free Guide",
+    "btnHome": "Return to Home"
   },
   "Navigation": {
     "home": "Home",

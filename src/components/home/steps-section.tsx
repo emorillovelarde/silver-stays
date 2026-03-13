@@ -15,7 +15,7 @@ export async function StepsSection() {
           className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16 sm:mb-20"
           style={{ color: CORPORATE_GREEN }}
         >
-          {t("title")}
+          {t("stepsTitle")}
         </h1>
 
         {/* Two-column layout: Timeline (45%) | Image (55%) */}

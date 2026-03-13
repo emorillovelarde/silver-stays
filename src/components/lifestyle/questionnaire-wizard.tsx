@@ -9,41 +9,36 @@ import {
 } from "@/lib/schemas/questionnaire";
 import { supabase } from "@/lib/supabase";
 import { Button } from "@/components/ui/button";
+import { Card, CardFooter } from "@/components/ui/card";
 import {
-  Card,
-  CardFooter,
-  CardContent,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
-import {
-  StepMorningActivity,
-  StepEnvironment,
-  StepInterests,
+  StepLocation,
+  StepLifestyle,
+  StepEssentialServices,
   StepDuration,
   StepContact,
 } from "./steps";
-import { ChevronRight, ChevronLeft, Loader2, Sparkles } from "lucide-react";
+import { ChevronRight, ChevronLeft, Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { sendLeadEmail } from "@/actions/send-lead-email";
 
 export function QuestionnaireWizard() {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isCompleted, setIsCompleted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const router = useRouter();
   const t = useTranslations("Questionnaire");
+  const locale = useLocale();
 
   const form = useForm<QuestionnaireFormValues>({
     resolver: zodResolver(
       questionnaireSchema,
     ) as Resolver<QuestionnaireFormValues>,
     defaultValues: {
-      morningActivity: "",
-      environment: "",
-      interests: [],
+      location: "",
+      lifestyle: "",
+      essentialServices: "",
       duration: "",
       firstName: "",
       lastName: "",
@@ -66,9 +61,9 @@ export function QuestionnaireWizard() {
     let isValid = false;
 
     const stepFields: Record<number, (keyof QuestionnaireFormValues)[]> = {
-      1: ["morningActivity"],
-      2: ["environment"],
-      3: ["interests"],
+      1: ["location"],
+      2: ["lifestyle"],
+      3: ["essentialServices"],
       4: ["duration"],
       5: ["firstName", "lastName", "phone", "email"],
     };
@@ -98,9 +93,9 @@ export function QuestionnaireWizard() {
     try {
       const leadData = {
         questionnaire: {
-          morningActivity: data.morningActivity,
-          environment: data.environment,
-          interests: data.interests ?? [],
+          location: data.location,
+          lifestyle: data.lifestyle,
+          essentialServices: data.essentialServices,
           duration: data.duration,
         },
         contact: {
@@ -133,7 +128,17 @@ export function QuestionnaireWizard() {
           .eq("id", user.id);
       }
 
-      setIsCompleted(true);
+      const { success } = await sendLeadEmail({
+        email: data.email,
+        firstName: data.firstName,
+        lastName: data.lastName,
+        locale,
+      });
+      if (!success) {
+        console.warn("[Questionnaire] Lead email could not be sent");
+      }
+
+      router.push("/success");
     } catch (err: unknown) {
       console.error(err);
       setSubmitError(t("error"));
@@ -143,15 +148,13 @@ export function QuestionnaireWizard() {
   };
 
   const renderStep = () => {
-    if (isCompleted) return null;
-
     switch (currentStep) {
       case 1:
-        return <StepMorningActivity form={form} />;
+        return <StepLocation form={form} />;
       case 2:
-        return <StepEnvironment form={form} />;
+        return <StepLifestyle form={form} />;
       case 3:
-        return <StepInterests form={form} />;
+        return <StepEssentialServices form={form} />;
       case 4:
         return <StepDuration form={form} />;
       case 5:
@@ -161,40 +164,6 @@ export function QuestionnaireWizard() {
     }
   };
 
-  if (isCompleted) {
-    return (
-      <Card className="w-full max-w-2xl mx-auto shadow-2xl border-none bg-white animate-in zoom-in-95 duration-500">
-        <CardContent className="flex flex-col items-center text-center p-12 space-y-6">
-          <div className="bg-[#004F56]/10 p-6 rounded-full mb-4 animate-bounce">
-            <Sparkles className="h-16 w-16 text-[#004F56]" />
-          </div>
-          <CardTitle className="text-3xl font-bold text-[#333333]">
-            {t("completion.title")}
-          </CardTitle>
-          <CardDescription className="text-xl text-[#333333]/80 max-w-md mx-auto leading-relaxed">
-            {t.rich("completion.message", {
-              name: form.getValues("firstName"),
-              bold: (chunks) => <strong>{chunks}</strong>,
-            })}
-            <br />
-            <span className="font-semibold text-[#004F56]">
-              {form.getValues("email")}
-            </span>
-          </CardDescription>
-
-          <div className="pt-8">
-            <Button
-              onClick={() => router.push("/")}
-              className="bg-[#004F56] hover:bg-[#004F56]/90 text-white text-lg px-8 h-12 rounded-full shadow-lg"
-            >
-              {t("completion.backHome")}
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    );
-  }
-
   const progress = (currentStep / totalSteps) * 100;
   const stepLabelKey = STEP_LABEL_KEYS[currentStep - 1];
   const progressText = t("progress.stepOf", {
@@ -203,8 +172,8 @@ export function QuestionnaireWizard() {
   });
 
   return (
-    <Card className="w-full max-w-2xl mx-auto shadow-xl border-none bg-white overflow-hidden flex flex-col min-h-[500px]">
-      <div className="px-6 pt-6 pb-2 space-y-2">
+    <Card className="w-full max-w-2xl mx-auto shadow-xl border-none bg-white overflow-hidden flex flex-col max-h-[85vh]">
+      <div className="px-6 pt-5 pb-2 space-y-2 shrink-0">
         <p className="text-sm font-medium text-slate-600" aria-live="polite">
           {progressText}: {t(`progress.${stepLabelKey}`)}
         </p>
@@ -223,9 +192,11 @@ export function QuestionnaireWizard() {
 
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="flex flex-col flex-grow"
+        className="flex flex-col flex-grow min-h-0"
       >
-        <div className="flex-grow p-1">{renderStep()}</div>
+        <div className="flex-grow min-h-0 overflow-y-auto px-6 py-4">
+          {renderStep()}
+        </div>
 
         {submitError && (
           <div
@@ -236,7 +207,7 @@ export function QuestionnaireWizard() {
           </div>
         )}
 
-        <CardFooter className="flex justify-between p-8 border-t bg-slate-50/50">
+        <CardFooter className="flex justify-between p-6 border-t bg-slate-50/50 shrink-0">
           <Button
             type="button"
             variant="ghost"

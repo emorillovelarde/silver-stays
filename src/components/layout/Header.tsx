@@ -73,22 +73,9 @@ function NavLinks({
 export function Header() {
   const pathname = usePathname();
   const isQuestionnaire = pathname.includes("/questionnaire");
+  const isSuccess = pathname.includes("/success");
 
-  if (isQuestionnaire) {
-    return (
-      <header className="fixed top-0 left-0 right-0 z-50 w-full bg-white border-b border-gray-100">
-        <div className="container mx-auto flex h-16 items-center px-4 md:h-18">
-          <Link
-            href="/"
-            className="flex items-center gap-2 text-xl font-bold text-[#004F56] focus:outline-none"
-            aria-label="Silver Stays - Ir al inicio"
-          >
-            Silver Stays
-          </Link>
-        </div>
-      </header>
-    );
-  }
+  if (isQuestionnaire || isSuccess) return null;
 
   return <HeaderFull />;
 }

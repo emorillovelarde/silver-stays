@@ -115,20 +115,16 @@ export function StepsTimeline() {
       </ol>
 
       {/* CTA Button - end of timeline */}
-      <div className="relative z-10 mt-10 sm:mt-12 pl-0 sm:pl-0">
+      <div className="relative z-10 mt-12 sm:mt-14 pl-0 sm:pl-0">
         <Link
           href="/questionnaire"
           className={cn(
-            "inline-flex items-center justify-center px-8 py-4 font-bold text-lg text-white transition-all duration-300",
-            "hover:opacity-90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2",
-            "min-h-[48px] min-w-[44px]",
+            "inline-flex items-center justify-center min-h-[52px] px-10 py-4 text-lg font-semibold text-white",
+            "bg-[#004F56] rounded-xl hover:bg-[#004F56]/90 hover:scale-[1.02] transition-all duration-300 shadow-lg",
+            "focus:outline-none focus:ring-2 focus:ring-[#004F56] focus:ring-offset-2",
           )}
-          style={{
-            backgroundColor: CORPORATE_GREEN,
-            borderRadius: "8px",
-          }}
         >
-          {t("cta")}
+          {t("btnCTA")}
         </Link>
       </div>
     </div>

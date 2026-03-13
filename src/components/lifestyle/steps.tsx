@@ -1,23 +1,27 @@
 "use client";
 
-import { UseFormReturn, useWatch } from "react-hook-form";
+import { UseFormReturn } from "react-hook-form";
 import { QuestionnaireFormValues } from "@/lib/schemas/questionnaire";
-import {
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
+import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { cn } from "@/lib/utils";
 import {
-  Waves,
-  Coffee,
-  Trophy,
-  BookOpen,
   Building2,
-  Trees,
+  Landmark,
+  TreePine,
+  Compass,
+  Waves,
+  Trophy,
+  UtensilsCrossed,
+  BookOpen,
+  Heart,
+  Users,
+  FileCheck,
+  Car,
+  Calendar,
+  CalendarDays,
+  Sun,
+  FileText,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Input } from "@/components/ui/input";
@@ -26,53 +30,56 @@ interface StepProps {
   form: UseFormReturn<QuestionnaireFormValues>;
 }
 
-const MORNING_OPTIONS = [
-  { value: "beach_walk", icon: Waves },
-  { value: "breakfast_views", icon: Coffee },
-  { value: "golf_tennis", icon: Trophy },
-  { value: "silence_read", icon: BookOpen },
+const LOCATION_OPTIONS = [
+  { value: "locWest", icon: Building2 },
+  { value: "locCenter", icon: Landmark },
+  { value: "locEast", icon: TreePine },
+  { value: "locUnsure", icon: Compass },
 ] as const;
 
-const INTEREST_KEYS = [
-  "gastronomy",
-  "gentle_hiking",
-  "bridge",
-  "volunteering",
-  "yoga",
+const LIFESTYLE_OPTIONS = [
+  { value: "lifeBeach", icon: Waves },
+  { value: "lifeGolf", icon: Trophy },
+  { value: "lifeCulture", icon: UtensilsCrossed },
+  { value: "lifeQuiet", icon: BookOpen },
+] as const;
+
+const ESSENTIAL_SERVICES_OPTIONS = [
+  { value: "srvHealth", icon: Heart },
+  { value: "srvCommunity", icon: Users },
+  { value: "srvLegal", icon: FileCheck },
+  { value: "srvTransport", icon: Car },
 ] as const;
 
 const DURATION_OPTIONS = [
-  "1_3_months",
-  "3_6_months",
-  "6_9_months",
-  "9_plus_months",
+  { value: "dur1", icon: Calendar },
+  { value: "dur3", icon: CalendarDays },
+  { value: "dur6", icon: Sun },
+  { value: "dur9", icon: FileText },
 ] as const;
 
-export function StepMorningActivity({ form }: StepProps) {
-  const t = useTranslations("Questionnaire.morningActivity");
+export function StepLocation({ form }: StepProps) {
+  const t = useTranslations("Questionnaire");
 
   return (
-    <div className="space-y-6 animate-in fade-in slide-in-from-right-8 duration-500">
-      <CardHeader>
-        <CardTitle className="text-2xl font-bold text-[#333333]">
-          {t("title")}
+    <div className="space-y-4 animate-in fade-in slide-in-from-right-8 duration-500">
+      <CardHeader className="px-0 pt-0 pb-2">
+        <CardTitle className="text-xl md:text-2xl font-semibold text-[#1A1A1A] font-sans mb-4">
+          {t("step1Question")}
         </CardTitle>
-        <CardDescription className="text-lg">
-          {t("description")}
-        </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="px-0">
         <RadioGroup
           onValueChange={(val) =>
             form.setValue(
-              "morningActivity",
-              val as QuestionnaireFormValues["morningActivity"],
+              "location",
+              val as QuestionnaireFormValues["location"],
             )
           }
-          defaultValue={form.getValues("morningActivity")}
-          className="grid grid-cols-2 gap-4"
+          defaultValue={form.getValues("location")}
+          className="flex flex-col gap-2"
         >
-          {MORNING_OPTIONS.map(({ value, icon: Icon }) => (
+          {LOCATION_OPTIONS.map(({ value, icon: Icon }) => (
             <div key={value}>
               <RadioGroupItem
                 value={value}
@@ -81,11 +88,9 @@ export function StepMorningActivity({ form }: StepProps) {
               />
               <Label
                 htmlFor={value}
-                className="flex flex-col items-center justify-center p-6 border-2 border-muted rounded-xl cursor-pointer hover:border-[#004F56] peer-data-[state=checked]:border-[#004F56] peer-data-[state=checked]:bg-[#004F56]/5 transition-all h-full text-center"
+                className="flex flex-row items-center gap-4 h-14 px-4 py-3 border-2 border-muted rounded-xl cursor-pointer hover:border-[#004F56] peer-data-[state=checked]:border-[#004F56] peer-data-[state=checked]:bg-[#004F56]/5 transition-all"
               >
-                <div className="text-[#004F56]">
-                  <Icon className="h-8 w-8 mb-2" />
-                </div>
+                <Icon className="h-6 w-6 shrink-0 text-[#004F56]" />
                 <span className="font-medium text-[#333333]">{t(value)}</span>
               </Label>
             </div>
@@ -96,145 +101,103 @@ export function StepMorningActivity({ form }: StepProps) {
   );
 }
 
-export function StepEnvironment({ form }: StepProps) {
-  const t = useTranslations("Questionnaire.environment");
+export function StepLifestyle({ form }: StepProps) {
+  const t = useTranslations("Questionnaire");
 
   return (
-    <div className="space-y-6 animate-in fade-in slide-in-from-right-8 duration-500">
-      <CardHeader>
-        <CardTitle className="text-2xl font-bold text-[#333333]">
-          {t("title")}
+    <div className="space-y-4 animate-in fade-in slide-in-from-right-8 duration-500">
+      <CardHeader className="px-0 pt-0 pb-2">
+        <CardTitle className="text-xl md:text-2xl font-semibold text-[#1A1A1A] font-sans mb-4">
+          {t("step2Question")}
         </CardTitle>
-        <CardDescription className="text-lg">
-          {t("description")}
-        </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="px-0">
         <RadioGroup
           onValueChange={(val) =>
             form.setValue(
-              "environment",
-              val as QuestionnaireFormValues["environment"],
+              "lifestyle",
+              val as QuestionnaireFormValues["lifestyle"],
             )
           }
-          defaultValue={form.getValues("environment")}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4"
+          defaultValue={form.getValues("lifestyle")}
+          className="flex flex-col gap-2"
         >
-          <div className="relative">
-            <RadioGroupItem
-              value="urban_vibrant"
-              id="urban"
-              className="peer sr-only"
-            />
-            <Label
-              htmlFor="urban"
-              className="flex flex-col items-center p-6 border-2 rounded-xl cursor-pointer hover:border-[#004F56] peer-data-[state=checked]:border-[#004F56] peer-data-[state=checked]:bg-[#004F56]/5 transition-all"
-            >
-              <Building2 className="h-10 w-10 mb-3 text-[#004F56]" />
-              <span className="text-lg font-bold text-[#333333]">
-                {t("urban_vibrant")}
-              </span>
-              <span className="text-sm text-muted-foreground text-center mt-2">
-                {t("urban_vibrant_desc")}
-              </span>
-            </Label>
-          </div>
-          <div className="relative">
-            <RadioGroupItem
-              value="natural_reserved"
-              id="natural"
-              className="peer sr-only"
-            />
-            <Label
-              htmlFor="natural"
-              className="flex flex-col items-center p-6 border-2 rounded-xl cursor-pointer hover:border-[#004F56] peer-data-[state=checked]:border-[#004F56] peer-data-[state=checked]:bg-[#004F56]/5 transition-all"
-            >
-              <Trees className="h-10 w-10 mb-3 text-[#004F56]" />
-              <span className="text-lg font-bold text-[#333333]">
-                {t("natural_reserved")}
-              </span>
-              <span className="text-sm text-muted-foreground text-center mt-2">
-                {t("natural_reserved_desc")}
-              </span>
-            </Label>
-          </div>
+          {LIFESTYLE_OPTIONS.map(({ value, icon: Icon }) => (
+            <div key={value}>
+              <RadioGroupItem
+                value={value}
+                id={value}
+                className="peer sr-only"
+              />
+              <Label
+                htmlFor={value}
+                className="flex flex-row items-center gap-4 h-14 px-4 py-3 border-2 border-muted rounded-xl cursor-pointer hover:border-[#004F56] peer-data-[state=checked]:border-[#004F56] peer-data-[state=checked]:bg-[#004F56]/5 transition-all"
+              >
+                <Icon className="h-6 w-6 shrink-0 text-[#004F56]" />
+                <span className="font-medium text-[#333333]">{t(value)}</span>
+              </Label>
+            </div>
+          ))}
         </RadioGroup>
       </CardContent>
     </div>
   );
 }
 
-export function StepInterests({ form }: StepProps) {
-  const t = useTranslations("Questionnaire.interests");
-  const currentInterests =
-    useWatch({
-      control: form.control,
-      name: "interests",
-      defaultValue: [],
-    }) ?? [];
-
-  const toggle = (key: string) => {
-    const current = form.getValues("interests") || [];
-    let newInterests: string[];
-    if (current.includes(key)) {
-      newInterests = current.filter((t) => t !== key);
-    } else {
-      newInterests = [...current, key];
-    }
-    form.setValue("interests", newInterests, {
-      shouldValidate: true,
-      shouldDirty: true,
-      shouldTouch: true,
-    });
-  };
+export function StepEssentialServices({ form }: StepProps) {
+  const t = useTranslations("Questionnaire");
 
   return (
-    <div className="space-y-6 animate-in fade-in slide-in-from-right-8 duration-500">
-      <CardHeader>
-        <CardTitle className="text-2xl font-bold text-[#333333]">
-          {t("title")}
+    <div className="space-y-4 animate-in fade-in slide-in-from-right-8 duration-500">
+      <CardHeader className="px-0 pt-0 pb-2">
+        <CardTitle className="text-xl md:text-2xl font-semibold text-[#1A1A1A] font-sans mb-4">
+          {t("step3Question")}
         </CardTitle>
-        <CardDescription className="text-lg">
-          {t("description")}
-        </CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-wrap gap-3">
-        {INTEREST_KEYS.map((key) => {
-          const isSelected = currentInterests.includes(key);
-          return (
-            <div
-              key={key}
-              onClick={() => toggle(key)}
-              className={cn(
-                "cursor-pointer px-6 py-3 rounded-full border-2 text-lg font-medium transition-all select-none",
-                isSelected
-                  ? "bg-[#004F56]/5 border-[#004F56] text-[#333333] font-semibold"
-                  : "bg-white border-slate-200 text-slate-600 hover:border-[#004F56] hover:text-[#004F56]",
-              )}
-            >
-              {t(key)}
+      <CardContent className="px-0">
+        <RadioGroup
+          onValueChange={(val) =>
+            form.setValue(
+              "essentialServices",
+              val as QuestionnaireFormValues["essentialServices"],
+            )
+          }
+          defaultValue={form.getValues("essentialServices")}
+          className="flex flex-col gap-2"
+        >
+          {ESSENTIAL_SERVICES_OPTIONS.map(({ value, icon: Icon }) => (
+            <div key={value}>
+              <RadioGroupItem
+                value={value}
+                id={value}
+                className="peer sr-only"
+              />
+              <Label
+                htmlFor={value}
+                className="flex flex-row items-center gap-4 h-14 px-4 py-3 border-2 border-muted rounded-xl cursor-pointer hover:border-[#004F56] peer-data-[state=checked]:border-[#004F56] peer-data-[state=checked]:bg-[#004F56]/5 transition-all"
+              >
+                <Icon className="h-6 w-6 shrink-0 text-[#004F56]" />
+                <span className="font-medium text-[#333333]">{t(value)}</span>
+              </Label>
             </div>
-          );
-        })}
+          ))}
+        </RadioGroup>
       </CardContent>
     </div>
   );
 }
 
 export function StepDuration({ form }: StepProps) {
-  const t = useTranslations("Questionnaire.duration");
+  const t = useTranslations("Questionnaire");
 
   return (
-    <div className="space-y-6 animate-in fade-in slide-in-from-right-8 duration-500">
-      <CardHeader>
-        <CardTitle className="text-2xl font-bold text-[#333333]">
-          {t("title")}
+    <div className="space-y-4 animate-in fade-in slide-in-from-right-8 duration-500">
+      <CardHeader className="px-0 pt-0 pb-2">
+        <CardTitle className="text-xl md:text-2xl font-semibold text-[#1A1A1A] font-sans mb-4">
+          {t("step4Question")}
         </CardTitle>
-        <CardDescription className="text-lg">
-          {t("description")}
-        </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="px-0">
         <RadioGroup
           onValueChange={(val) =>
             form.setValue(
@@ -243,16 +206,21 @@ export function StepDuration({ form }: StepProps) {
             )
           }
           defaultValue={form.getValues("duration")}
-          className="grid grid-cols-2 gap-4"
+          className="flex flex-col gap-2"
         >
-          {DURATION_OPTIONS.map((opt) => (
-            <div key={opt}>
-              <RadioGroupItem value={opt} id={opt} className="peer sr-only" />
+          {DURATION_OPTIONS.map(({ value, icon: Icon }) => (
+            <div key={value}>
+              <RadioGroupItem
+                value={value}
+                id={value}
+                className="peer sr-only"
+              />
               <Label
-                htmlFor={opt}
-                className="flex items-center justify-center p-6 border-2 rounded-xl cursor-pointer hover:border-[#004F56] peer-data-[state=checked]:border-[#004F56] peer-data-[state=checked]:bg-[#004F56]/5 transition-all text-center text-lg font-medium text-[#333333]"
+                htmlFor={value}
+                className="flex flex-row items-center gap-4 h-14 px-4 py-3 border-2 border-muted rounded-xl cursor-pointer hover:border-[#004F56] peer-data-[state=checked]:border-[#004F56] peer-data-[state=checked]:bg-[#004F56]/5 transition-all font-medium text-[#333333]"
               >
-                {t(opt)}
+                <Icon className="h-6 w-6 shrink-0 text-[#004F56]" />
+                {t(value)}
               </Label>
             </div>
           ))}
@@ -263,31 +231,29 @@ export function StepDuration({ form }: StepProps) {
 }
 
 export function StepContact({ form }: StepProps) {
-  const t = useTranslations("Questionnaire.contact");
+  const t = useTranslations("Questionnaire");
+  const tContact = useTranslations("Questionnaire.contact");
   const tValidation = useTranslations("Questionnaire.validation");
 
   return (
-    <div className="space-y-6 animate-in fade-in slide-in-from-right-8 duration-500">
-      <CardHeader>
-        <CardTitle className="text-2xl font-bold text-[#333333]">
-          {t("title")}
+    <div className="space-y-4 animate-in fade-in slide-in-from-right-8 duration-500">
+      <CardHeader className="px-0 pt-0 pb-2">
+        <CardTitle className="text-xl md:text-2xl font-semibold text-[#1A1A1A] font-sans mb-4">
+          {t("step5Question")}
         </CardTitle>
-        <CardDescription className="text-lg">
-          {t("description")}
-        </CardDescription>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className="px-0 space-y-4">
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label
               htmlFor="firstName"
               className="text-lg font-medium text-[#333333]"
             >
-              {t("firstName")}
+              {tContact("firstName")}
             </Label>
             <Input
               id="firstName"
-              placeholder={t("firstNamePlaceholder")}
+              placeholder={tContact("firstNamePlaceholder")}
               {...form.register("firstName")}
               className="h-12 text-lg border-2 focus-visible:ring-[#004F56]"
             />
@@ -302,11 +268,11 @@ export function StepContact({ form }: StepProps) {
               htmlFor="lastName"
               className="text-lg font-medium text-[#333333]"
             >
-              {t("lastName")}
+              {tContact("lastName")}
             </Label>
             <Input
               id="lastName"
-              placeholder={t("lastNamePlaceholder")}
+              placeholder={tContact("lastNamePlaceholder")}
               {...form.register("lastName")}
               className="h-12 text-lg border-2 focus-visible:ring-[#004F56]"
             />
@@ -320,11 +286,11 @@ export function StepContact({ form }: StepProps) {
 
         <div className="space-y-2">
           <Label htmlFor="email" className="text-lg font-medium text-[#333333]">
-            {t("email")}
+            {tContact("email")}
           </Label>
           <Input
             id="email"
-            placeholder={t("emailPlaceholder")}
+            placeholder={tContact("emailPlaceholder")}
             {...form.register("email")}
             className="h-12 text-lg border-2 focus-visible:ring-[#004F56]"
           />
@@ -337,11 +303,11 @@ export function StepContact({ form }: StepProps) {
 
         <div className="space-y-2">
           <Label htmlFor="phone" className="text-lg font-medium text-[#333333]">
-            {t("phone")}
+            {tContact("phone")}
           </Label>
           <Input
             id="phone"
-            placeholder={t("phonePlaceholder")}
+            placeholder={tContact("phonePlaceholder")}
             {...form.register("phone")}
             className="h-12 text-lg border-2 focus-visible:ring-[#004F56]"
           />
@@ -352,7 +318,9 @@ export function StepContact({ form }: StepProps) {
           )}
         </div>
 
-        <p className="text-sm text-muted-foreground pt-2">{t("privacyNote")}</p>
+        <p className="text-xs text-gray-500 text-center mt-4">
+          {tContact("privacyNote")}
+        </p>
       </CardContent>
     </div>
   );

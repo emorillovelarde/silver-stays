@@ -12,14 +12,14 @@
     "imageAlt": "Atardecer en Marbella - Vista panorámica de la Costa del Sol"
   },
   "StepsSection": {
-    "title": "Tres simples pasos para hacer tu estancia realidad",
-    "step1Title": "Cuéntanos sobre ti",
-    "step1Desc": "Cuéntanos tus necesidades de salud, movilidad y preferencias sociales en 2 minutos.",
-    "step2Title": "Diseñamos tu plan a medida",
-    "step2Desc": "Tu gestor personal te contactará para ajustar cada detalle de tu aterrizaje en España.",
-    "step3Title": "Nos encargamos de todo",
-    "step3Desc": "Logística, sanidad y comunidad listas para tu llegada. Tú solo disfruta del sol.",
-    "cta": "Empezar mi plan ahora",
+    "stepsTitle": "Tres pasos para un retiro invernal sin esfuerzo",
+    "step1Title": "Comparta su visión",
+    "step1Desc": "Complete nuestro breve cuestionario para indicarnos sus preferencias de estilo de vida, salud y ubicación en solo 2 minutos.",
+    "step2Title": "Conozca a su experto local",
+    "step2Desc": "Un Socio Director le contactará directamente para perfilar cada detalle y presentarle una propuesta a medida.",
+    "step3Title": "Llegue y disfrute",
+    "step3Desc": "Desde los trámites legales y sanitarios hasta la preparación de su vivienda. Gestionamos la logística para que usted solo disfrute del sol.",
+    "btnCTA": "Diseñe su Estancia",
     "imageAlt": "Terraza premium con vistas al Mediterráneo - Estancia Silver Stays"
   },
   "BentoGrid": {
@@ -46,49 +46,35 @@
     "lifestylePlatform": "Plataforma de Servicios de Vida"
   },
   "Questionnaire": {
-    "steps": {
-      "vision": "La Visión",
-      "environment": "El Entorno",
-      "interests": "Intereses",
-      "logistics": "Logística",
-      "contact": "Contacto"
-    },
-    "morningActivity": {
-      "title": "La Visión",
-      "description": "¿Cuál es la primera actividad que desea hacer al despertar?",
-      "beach_walk": "Caminar por la playa",
-      "breakfast_views": "Desayunar con vistas",
-      "golf_tennis": "Golf / Tenis",
-      "silence_read": "Silencio / Leer"
-    },
-    "environment": {
-      "title": "El Entorno",
-      "description": "¿Qué entorno prefiere?",
-      "urban_vibrant": "Urbano / Vibrante",
-      "urban_vibrant_desc": "Tiendas, restaurantes y vida social a pie de calle.",
-      "natural_reserved": "Natural / Reservado",
-      "natural_reserved_desc": "Tranquilidad, espacios verdes y privacidad."
-    },
-    "interests": {
-      "title": "Intereses",
-      "description": "Seleccione sus temas de interés",
-      "gastronomy": "Gastronomía",
-      "gentle_hiking": "Senderismo suave",
-      "bridge": "Bridge",
-      "volunteering": "Voluntariado",
-      "yoga": "Yoga"
-    },
-    "duration": {
-      "title": "Logística",
-      "description": "Duración estimada de la estancia",
-      "1_3_months": "1-3 meses",
-      "3_6_months": "3-6 meses",
-      "6_9_months": "6-9 meses",
-      "9_plus_months": "+9 meses"
-    },
+    "pageTitle": "Diseñe su Estancia",
+    "pageSubtitle": "Comparta su visión con nosotros y nuestro equipo local se encargará de todo.",
+    "step1Title": "Paso 1 de 5: Su Destino Ideal",
+    "step1Question": "¿Tiene ya en mente una zona de preferencia?",
+    "locWest": "Fuengirola / Mijas (Vibrante y Conectada)",
+    "locCenter": "Málaga Capital (Urbana y Cultural)",
+    "locEast": "Nerja / Torrox (Auténtica y Tranquila)",
+    "locUnsure": "No estoy seguro, necesito su asesoramiento",
+    "step2Title": "Paso 2 de 5: Estilo de Vida",
+    "step2Question": "¿Cómo imagina sus días perfectos?",
+    "lifeBeach": "Paseos matutinos por la playa",
+    "lifeGolf": "Golf, tenis y deporte activo",
+    "lifeCulture": "Inmersión cultural y gastronomía",
+    "lifeQuiet": "Lectura tranquila y retiro en la naturaleza",
+    "step3Title": "Paso 3 de 5: Servicios Esenciales",
+    "step3Question": "¿Qué es más importante para su tranquilidad?",
+    "srvHealth": "Proximidad a hospitales y clínicas internacionales",
+    "srvCommunity": "Comunidad social internacional activa",
+    "srvLegal": "Asistencia con visados y trámites legales",
+    "srvTransport": "Excelente transporte y acceso al aeropuerto",
+    "step4Title": "Paso 4 de 5: Duración",
+    "step4Question": "¿Cuánto tiempo tiene previsto quedarse?",
+    "dur1": "De 1 a 3 meses",
+    "dur3": "De 3 a 6 meses",
+    "dur6": "De 6 a 9 meses",
+    "dur9": "Más de 9 meses (Visado No Lucrativo)",
+    "step5Title": "Paso 5 de 5: Sus Datos",
+    "step5Question": "¿Dónde debemos enviar su propuesta personalizada?",
     "contact": {
-      "title": "Contacto",
-      "description": "Para enviarle su Dossier personalizado",
       "firstName": "Nombre",
       "lastName": "Apellido",
       "email": "Correo electrónico",
@@ -97,35 +83,43 @@
       "lastNamePlaceholder": "Pérez",
       "emailPlaceholder": "ejemplo@correo.com",
       "phonePlaceholder": "+34 600 000 000",
-      "privacyNote": "Sus datos están seguros. Solo usaremos este correo para enviarle propuestas de estancias."
+      "privacyNote": "Su privacidad es nuestra prioridad. Un Socio Director de Silver Stays revisará su visión y le contactará en menos de 24 horas."
     },
     "validation": {
       "selectOption": "Seleccione una opción",
       "firstNameRequired": "El nombre es obligatorio",
       "lastNameRequired": "El apellido es obligatorio",
-      "phoneRequired": "Introduce un número de teléfono válido",
-      "emailRequired": "Introduce un correo electrónico válido"
+      "phoneRequired": "Introduzca un número de teléfono válido",
+      "emailRequired": "Introduzca un correo electrónico válido"
     },
     "completion": {
       "title": "¡Perfil Recibido!",
-      "message": "Muchas gracias, <bold>{name}</bold>. En breve recibirá su Dossier de Bienestar en:",
+      "message": "Muchas gracias, <bold>{name}</bold>. En breve recibirá su propuesta personalizada en:",
       "backHome": "Volver al Inicio"
     },
     "progress": {
       "stepOf": "Paso {current} de {total}",
-      "step1": "Su mañana ideal",
-      "step2": "Su entorno preferido",
-      "step3": "Sus preferencias de salud",
-      "step4": "Duración de la estancia",
-      "step5": "Sus datos de contacto"
+      "step1": "Su Destino Ideal",
+      "step2": "Estilo de Vida",
+      "step3": "Servicios Esenciales",
+      "step4": "Duración",
+      "step5": "Sus Datos"
     },
     "nav": {
-      "back": "Atrás",
+      "back": "Volver",
       "next": "Siguiente",
-      "submit": "Enviar",
+      "submit": "Recibir Mi Propuesta",
       "processing": "Procesando..."
     },
-    "error": "Ocurrió un error. Inténtalo de nuevo."
+    "error": "Ocurrió un error. Inténtelo de nuevo."
+  },
+  "Success": {
+    "title": "Su visión ha sido recibida.",
+    "subtitle": "Gracias por confiar en Silver Stays. Uno de nuestros Socios Directores está revisando sus preferencias y le contactará en menos de 24 horas para diseñar su retiro invernal perfecto.",
+    "guideTitle": "Su guía gratuita está lista.",
+    "guideDesc": "Le hemos enviado una copia a su correo electrónico para que la tenga a mano, pero puede descargar su 'Guía Costa del Sol 2026' ahora mismo para empezar a descubrir las mejores zonas y requisitos de visado.",
+    "btnDownload": "Descargar Guía Gratuita",
+    "btnHome": "Volver al Inicio"
   },
   "Navigation": {
     "home": "Inicio",
