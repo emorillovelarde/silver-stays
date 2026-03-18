@@ -2,10 +2,10 @@
 
 import { Link } from "@/i18n/routing";
 import { useTranslations, useLocale } from "next-intl";
-import { FileText, Sun, ShieldCheck } from "lucide-react";
+import { Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const GUIDE_IDS = ["legal", "arbitrage", "nlv"] as const;
+const GUIDE_IDS = ["arbitrage"] as const;
 
 const GUIDE_CONFIG: Record<
   (typeof GUIDE_IDS)[number],
@@ -15,20 +15,10 @@ const GUIDE_CONFIG: Record<
     category: "Legal" | "Savings";
   }
 > = {
-  legal: {
-    icon: FileText,
-    slug: { es: "guia-legal-alquiler-2025", en: "guia-legal-alquiler-2025" },
-    category: "Legal",
-  },
   arbitrage: {
     icon: Sun,
     slug: { es: "arbitraje-energetico", en: "energy-arbitrage" },
     category: "Savings",
-  },
-  nlv: {
-    icon: ShieldCheck,
-    slug: { es: "nlv-2026-uk", en: "nlv-2026-uk" },
-    category: "Legal",
   },
 };
 
@@ -43,7 +33,7 @@ export function ResourceCenter() {
           {t("title")}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {GUIDE_IDS.map((id) => {
             const config = GUIDE_CONFIG[id];
             const Icon = config.icon;

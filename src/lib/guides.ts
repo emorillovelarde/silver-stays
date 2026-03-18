@@ -28,18 +28,60 @@ const GUIDE_IMAGES: Record<
       en: "Smart energy arbitrage system and solar panels in a Costa del Sol home",
     },
   },
-  "guia-legal-alquiler-2025": {
-    imageUrl: "/images/contrato-legal-alquiler.jpg",
-    imageAlt: {
-      es: "Asesoramiento legal profesional y firma de contrato de alquiler en España",
-      en: "Professional legal advice and rental contract signing in Spain",
-    },
-  },
-  "nlv-2026-uk": {
+  "non-lucrative-visa-spain": {
     imageUrl: "/images/visado-no-lucrativo-espana.jpg",
     imageAlt: {
-      es: "Pasaporte con visado español y jubilados relajados en la Costa del Sol",
-      en: "Passport with Spanish visa and retirees relaxing on the Costa del Sol",
+      es: "Guía completa del visado no lucrativo para UK y US en la Costa del Sol",
+      en: "Complete Non-Lucrative Visa guide for UK & US citizens on the Costa del Sol",
+    },
+  },
+  "visado-no-lucrativo-espana": {
+    imageUrl: "/images/visado-no-lucrativo-espana.jpg",
+    imageAlt: {
+      es: "Guía completa del visado no lucrativo para UK y USA en la Costa del Sol",
+      en: "Complete Non-Lucrative Visa guide for UK & US citizens on the Costa del Sol",
+    },
+  },
+  "healthcare-andalusia-expats": {
+    imageUrl: "/images/silver_stays_premium_terrace.jpg",
+    imageAlt: {
+      es: "Guía de sanidad pública y privada en Andalucía para expatriados",
+      en: "Public vs private healthcare in Andalusia for expats guide",
+    },
+  },
+  "sanidad-andalucia-expatriados": {
+    imageUrl: "/images/silver_stays_premium_terrace.jpg",
+    imageAlt: {
+      es: "Guía de diferencias entre sanidad pública y privada en Andalucía para expatriados",
+      en: "Public vs private healthcare in Andalusia for expats guide",
+    },
+  },
+  "safe-mid-term-rentals-costa-del-sol": {
+    imageUrl: "/images/contrato-legal-alquiler.jpg",
+    imageAlt: {
+      es: "Guía para alquilar de forma segura a medio plazo en la Costa del Sol",
+      en: "How to safely rent mid-term on the Costa del Sol, avoiding scams",
+    },
+  },
+  "alquiler-seguro-costa-del-sol-2025": {
+    imageUrl: "/images/contrato-legal-alquiler.jpg",
+    imageAlt: {
+      es: "Guía para alquilar de forma segura a medio plazo en la Costa del Sol evitando estafas",
+      en: "How to safely rent mid-term on the Costa del Sol, avoiding scams",
+    },
+  },
+  "fuengirola-vs-nerja-winter-stay": {
+    imageUrl: "/images/silver_stays_premium_terrace.jpg",
+    imageAlt: {
+      es: "Guía Fuengirola vs Nerja para invierno en la Costa del Sol",
+      en: "Fuengirola vs Nerja winter stay comparison guide for expats",
+    },
+  },
+  "fuengirola-vs-nerja-invierno": {
+    imageUrl: "/images/silver_stays_premium_terrace.jpg",
+    imageAlt: {
+      es: "Guía comparativa Fuengirola vs Nerja para pasar el invierno en la Costa del Sol",
+      en: "Fuengirola vs Nerja winter stay comparison guide for expats",
     },
   },
 };

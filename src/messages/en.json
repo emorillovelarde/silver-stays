@@ -167,20 +167,10 @@
   "ResourceCenter": {
     "title": "Resource Center",
     "guides": {
-      "legal": {
-        "title": "2025 Legal Rental Guide",
-        "description": "Current regulations for 55+ owners. Contracts, extensions and guarantees.",
-        "badge": "Legal"
-      },
       "arbitrage": {
         "title": "Energy Arbitrage 2026",
         "description": "How your heating pays for your winter. Avoid the 90-day rule trap.",
         "badge": "Popular"
-      },
-      "nlv": {
-        "title": "2026 NLV Manual",
-        "description": "Requirements, Form S1 and EES/ETIAS. Avoid the 90-day rule trap.",
-        "badge": "New"
       }
     }
   }

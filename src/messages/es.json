@@ -167,20 +167,10 @@
   "ResourceCenter": {
     "title": "Centro de Recursos",
     "guides": {
-      "legal": {
-        "title": "Guía Legal de Alquiler 2025",
-        "description": "Normativa vigente para propietarios 55+. Contratos, prórrogas y garantías.",
-        "badge": "Legal"
-      },
       "arbitrage": {
         "title": "Arbitraje Energético 2026",
         "description": "Cómo su calefacción paga su invierno. Evite la trampa de la regla de 90 días.",
         "badge": "Popular"
-      },
-      "nlv": {
-        "title": "Manual NLV 2026",
-        "description": "Requisitos, Formulario S1 y EES/ETIAS. Evite la trampa de la regla de 90 días.",
-        "badge": "Nuevo"
       }
     }
   }

@@ -1,6 +1,12 @@
 import type { MDXComponents } from "mdx/types";
+import { CallToAction } from "@/components/guides/call-to-action";
+import { ComparisonTable } from "@/components/guides/comparison-table";
 import { EnergyArbitrageCalculatorClient } from "@/components/guides/energy-arbitrage-calculator-client";
+import { FeatureGrid } from "@/components/guides/feature-grid";
 import { GuideImage } from "@/components/guides/guide-image";
+import { HeroImage } from "@/components/guides/hero-image";
+import { HighlightBox } from "@/components/guides/highlight-box";
+import { IconList } from "@/components/guides/icon-list";
 import {
   NLVSolvencyCalculatorClient,
   SchengenClockAlertClient,
@@ -12,6 +18,12 @@ export function getMDXComponents(
   components: MDXComponents = {},
 ): MDXComponents {
   return {
+    HeroImage,
+    CallToAction,
+    HighlightBox,
+    FeatureGrid,
+    ComparisonTable,
+    IconList,
     GuideImage,
     EnergyArbitrageCalculator: EnergyArbitrageCalculatorClient,
     NLVSolvencyCalculator: NLVSolvencyCalculatorClient,

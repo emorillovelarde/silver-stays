@@ -1,5 +1,7 @@
 import fs from "fs";
 import path from "path";
+import type { Metadata } from "next";
+import matter from "gray-matter";
 import { compileMDX } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import { getMDXComponents } from "@/mdx-components";
@@ -7,12 +9,47 @@ import { notFound } from "next/navigation";
 
 interface Frontmatter {
   title: string;
+  seoTitle?: string;
   description?: string;
+  keywords?: string;
   date?: string;
   author?: string;
 }
 
 import { routing } from "@/i18n/routing";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string; locale: string }>;
+}): Promise<Metadata> {
+  const { slug, locale } = await params;
+  const filePath = path.join(
+    process.cwd(),
+    "src/content/guias",
+    locale,
+    `${slug}.mdx`,
+  );
+  if (!fs.existsSync(filePath)) return {};
+  const source = fs.readFileSync(filePath, "utf8");
+  const { data } = matter(source);
+  const frontmatter = data as Frontmatter;
+  const title = frontmatter.seoTitle ?? frontmatter.title;
+  const description = frontmatter.description ?? "";
+  const keywords = frontmatter.keywords;
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://silver-stays.com";
+  return {
+    title,
+    description,
+    ...(keywords && { keywords: keywords.split(",").map((k) => k.trim()) }),
+    openGraph: {
+      title,
+      description,
+      url: `${baseUrl}/${locale}/guias/${slug}`,
+    },
+  };
+}
 
 export async function generateStaticParams() {
   const params = [];
@@ -78,38 +115,7 @@ export default async function GuidePage({
     image: "https://silver-stays.com/og-image.jpg", // Placeholder
   };
 
-  const faqContent =
-    slug === "nlv-2026-uk"
-      ? locale === "en"
-        ? [
-            {
-              name: "What are the NLV 2026 financial requirements?",
-              text: "The main applicant must prove €28,800 per year (400% of IPREM). Each dependent adds €7,200 (100% of IPREM). IPREM 2026 remains at €600 per month.",
-            },
-            {
-              name: "What is Form S1 and how does it save money?",
-              text: "Form S1 allows British pensioners to access Spanish public healthcare at no extra cost, eliminating the need for private insurance (saving €150-250/month). It must be requested from NHS Overseas Healthcare Services 90 days before relocation.",
-            },
-            {
-              name: "Why is the NLV essential with the EES/ETIAS system?",
-              text: "From April 2026, EES and ETIAS record every entry biometrically. Exceeding 90 days in 180 can result in fines of up to €10,000 and a 5-year entry ban. The NLV permanently deactivates the 90-day clock.",
-            },
-          ]
-        : [
-            {
-              name: "¿Cuáles son los requisitos financieros del NLV 2026?",
-              text: "El titular principal debe demostrar 28.800 € anuales (400% del IPREM). Cada dependiente añade 7.200 € (100% del IPREM). El IPREM 2026 se mantiene en 600 € mensuales.",
-            },
-            {
-              name: "¿Qué es el Formulario S1 y cómo ahorra dinero?",
-              text: "El Formulario S1 permite a pensionistas británicos acceder a la sanidad pública española sin coste adicional, eliminando la necesidad de seguros privados (ahorro de 150-250 €/mes). Debe solicitarse a NHS Overseas Healthcare Services 90 días antes del traslado.",
-            },
-            {
-              name: "¿Por qué el NLV es imprescindible con el sistema EES/ETIAS?",
-              text: "Desde abril de 2026, el EES y ETIAS registran biométricamente cada entrada. Exceder 90 días en 180 puede acarrear multas de hasta 10.000 € y prohibición de entrada de 5 años. El NLV desactiva el reloj de los 90 días de forma permanente.",
-            },
-          ]
-      : null;
+  const faqContent = null;
 
   const faqJsonLd =
     faqContent &&
