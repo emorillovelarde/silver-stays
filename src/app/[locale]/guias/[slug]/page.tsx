@@ -115,19 +115,15 @@ export default async function GuidePage({
     image: "https://silver-stays.com/og-image.jpg", // Placeholder
   };
 
-  const faqContent = null;
-
-  const faqJsonLd =
-    faqContent &&
-    ({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faqContent.map((q) => ({
-        "@type": "Question",
-        name: q.name,
-        acceptedAnswer: { "@type": "Answer", text: q.text },
-      })),
-    } as const);
+  const faqJsonLd: {
+    "@context": string;
+    "@type": "FAQPage";
+    mainEntity: Array<{
+      "@type": "Question";
+      name: string;
+      acceptedAnswer: { "@type": "Answer"; text: string };
+    }>;
+  } | null = null;
 
   return (
     <main className="min-h-screen bg-[#FAFAFA] flex justify-center py-12 px-4 sm:px-6 lg:px-8">

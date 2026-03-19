@@ -10,7 +10,7 @@ const GUIDE_IDS = ["arbitrage"] as const;
 const GUIDE_CONFIG: Record<
   (typeof GUIDE_IDS)[number],
   {
-    icon: typeof FileText;
+    icon: typeof Sun;
     slug: { es: string; en: string };
     category: "Legal" | "Savings";
   }
