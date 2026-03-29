@@ -1,15 +1,15 @@
 {
   "HomePage": {
-    "title": "Bienvenido a Silver Stays",
+    "title": "Bienvenido a Silver Costa Residences",
     "subtitle": "Descubre tu hogar perfecto para los años dorados.",
     "cta": "Comenzar"
   },
   "Hero": {
-    "headline": "Las Mejores Estancias Invernales en la Costa del Sol",
-    "subtitle": "Tu hogar, sanidad y comunidad en España, gestionados con una sola llamada",
+    "headline": "Alquileres invernales premium en la Costa del Sol",
+    "subtitle": "Estancias largas Silver-Standard para jubilados activos. Su hogar, sanidad y comunidad en España, gestionados con una sola llamada.",
     "supportText": "Deja el frío y la burocracia atrás. Seleccionamos estancias de 1 a 9 meses entre Fuengirola y Nerja, para que solo disfrutes.",
     "cta": "Diseñe su Estancia",
-    "imageAlt": "Atardecer en Marbella - Vista panorámica de la Costa del Sol"
+    "imageAlt": "Bluevera Residences - Costa del Sol"
   },
   "StepsSection": {
     "stepsTitle": "Tres pasos para un retiro invernal sin esfuerzo",
@@ -20,7 +20,7 @@
     "step3Title": "Llegue y disfrute",
     "step3Desc": "Desde los trámites legales y sanitarios hasta la preparación de su vivienda. Gestionamos la logística para que usted solo disfrute del sol.",
     "btnCTA": "Diseñe su Estancia",
-    "imageAlt": "Terraza premium con vistas al Mediterráneo - Estancia Silver Stays"
+    "imageAlt": "Terraza premium con vistas al Mediterráneo - Estancia Silver Costa Residences"
   },
   "BentoGrid": {
     "eyebrow": "Nuestra Promesa",
@@ -83,7 +83,7 @@
       "lastNamePlaceholder": "Pérez",
       "emailPlaceholder": "ejemplo@correo.com",
       "phonePlaceholder": "+34 600 000 000",
-      "privacyNote": "Su privacidad es nuestra prioridad. Un Socio Director de Silver Stays revisará su visión y le contactará en menos de 24 horas."
+      "privacyNote": "Su privacidad es nuestra prioridad. Un Socio Director de Silver Costa Residences revisará su visión y le contactará en menos de 24 horas."
     },
     "validation": {
       "selectOption": "Seleccione una opción",
@@ -114,14 +114,27 @@
     "error": "Ocurrió un error. Inténtelo de nuevo."
   },
   "Success": {
-    "title": "Su visión ha sido recibida.",
-    "subtitle": "Gracias por confiar en Silver Stays. Uno de nuestros Socios Directores está revisando sus preferencias y le contactará en menos de 24 horas para diseñar su retiro invernal perfecto.",
-    "guideTitle": "Su guía gratuita está lista.",
-    "guideDesc": "Le hemos enviado una copia a su correo electrónico para que la tenga a mano, pero puede descargar su 'Guía Costa del Sol 2026' ahora mismo para empezar a descubrir las mejores zonas y requisitos de visado.",
-    "btnDownload": "Descargar Guía Gratuita",
-    "btnHome": "Volver al Inicio"
+    "title": "Gracias por su confianza",
+    "description": "Hemos recibido sus datos correctamente y su perfil ya está activo. La Guía Costa del Sol 2026 va de camino a su correo. También puede descargarla a continuación.",
+    "downloadButton": "Descargar Guía Costa del Sol 2026",
+    "nextStepLabel": "SIGUIENTE PASO PREMIUM",
+    "nextStepTitle": "Diseñemos su nueva vida",
+    "nextStepDescription": "Para garantizar la excelencia de nuestro servicio Silver-Standard, nuestro Socio Director reserva 15 minutos para comenzar a diseñar su estancia y a resolver cualquier duda.",
+    "bookCallButton": "Reservar sesión de bienvenida",
+    "bullet1": "Videollamada 15 min",
+    "bullet2": "Sin compromiso",
+    "trustBadge": "Gestión legal y logística 100% verificada.",
+    "backToHome": "Volver al Inicio",
+    "guideImageAlt": "Guía Costa del Sol 2026 - Portada",
+    "partnerAvatarAlt": "Socio Director de Silver Costa Residences",
+    "modalClose": "Cerrar",
+    "rewardSectionLabel": "Su guía y descarga"
   },
   "Navigation": {
+    "siteName": "Bluevera Residences",
+    "logoAlt": "Logo de Bluevera Residences - Residencias de Lujo en la Costa del Sol",
+    "logoHomeTitle": "Volver a la página de inicio de Bluevera Residences",
+    "logoAriaLabel": "Bluevera Residences — Ir al inicio",
     "home": "Inicio",
     "about": "Sobre Nosotros",
     "contact": "Contacto",
@@ -136,8 +149,8 @@
     "startYourPlan": "Diseñe su Estancia"
   },
   "Metadata": {
-    "title": "Silver Stays | Tu hogar perfecto para los años dorados",
-    "description": "Descubre tu hogar perfecto para los años dorados. Estancias senior-friendly con confort y cuidado."
+    "title": "Silver Costa Residences | Tu hogar perfecto para los años dorados",
+    "description": "Descubre tu hogar perfecto para los años dorados con Silver Costa Residences. Estancias senior-friendly con confort y cuidado."
   },
   "Guias": {
     "arbitraje-energetico": {
@@ -150,7 +163,7 @@
   "Footer": {
     "cta": "¿Listo para dar el siguiente paso?",
     "questionnaire": "Comenzar Cuestionario",
-    "copyright": "© 2026 Silver Stays. Todos los derechos reservados."
+    "copyright": "© 2026 Silver Costa Residences. Todos los derechos reservados."
   },
   "GuidesHub": {
     "heroTitle": "Guías y Recursos para Vivir en España",
@@ -161,7 +174,7 @@
     "ctaSubtitle": "Complete nuestra evaluación gratuita y encontraremos la estancia perfecta para sus necesidades.",
     "ctaButton": "Comenzar mi Evaluación",
     "ctaButtonAria": "Comenzar evaluación gratuita para encontrar su estancia ideal",
-    "metaTitle": "Guías y Recursos para Vivir en España | Silver Stays",
+    "metaTitle": "Guías y Recursos para Vivir en España | Silver Costa Residences",
     "metaDescription": "Descubra todo lo que necesita saber sobre visados, contratos de alquiler y el coste de vida en la Costa del Sol. Guías expertas para su retiro en España."
   },
   "ResourceCenter": {

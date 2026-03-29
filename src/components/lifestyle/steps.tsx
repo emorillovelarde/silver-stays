@@ -88,9 +88,9 @@ export function StepLocation({ form }: StepProps) {
               />
               <Label
                 htmlFor={value}
-                className="flex flex-row items-center gap-4 h-14 px-4 py-3 border-2 border-muted rounded-xl cursor-pointer hover:border-[#004F56] peer-data-[state=checked]:border-[#004F56] peer-data-[state=checked]:bg-[#004F56]/5 transition-all"
+                className="flex flex-row items-center gap-4 h-14 px-4 py-3 border-2 border-muted rounded-xl cursor-pointer hover:border-primary peer-data-[state=checked]:border-primary peer-data-[state=checked]:bg-primary/5 transition-all"
               >
-                <Icon className="h-6 w-6 shrink-0 text-[#004F56]" />
+                <Icon className="h-6 w-6 shrink-0 text-primary" />
                 <span className="font-medium text-[#333333]">{t(value)}</span>
               </Label>
             </div>
@@ -131,9 +131,9 @@ export function StepLifestyle({ form }: StepProps) {
               />
               <Label
                 htmlFor={value}
-                className="flex flex-row items-center gap-4 h-14 px-4 py-3 border-2 border-muted rounded-xl cursor-pointer hover:border-[#004F56] peer-data-[state=checked]:border-[#004F56] peer-data-[state=checked]:bg-[#004F56]/5 transition-all"
+                className="flex flex-row items-center gap-4 h-14 px-4 py-3 border-2 border-muted rounded-xl cursor-pointer hover:border-primary peer-data-[state=checked]:border-primary peer-data-[state=checked]:bg-primary/5 transition-all"
               >
-                <Icon className="h-6 w-6 shrink-0 text-[#004F56]" />
+                <Icon className="h-6 w-6 shrink-0 text-primary" />
                 <span className="font-medium text-[#333333]">{t(value)}</span>
               </Label>
             </div>
@@ -174,9 +174,9 @@ export function StepEssentialServices({ form }: StepProps) {
               />
               <Label
                 htmlFor={value}
-                className="flex flex-row items-center gap-4 h-14 px-4 py-3 border-2 border-muted rounded-xl cursor-pointer hover:border-[#004F56] peer-data-[state=checked]:border-[#004F56] peer-data-[state=checked]:bg-[#004F56]/5 transition-all"
+                className="flex flex-row items-center gap-4 h-14 px-4 py-3 border-2 border-muted rounded-xl cursor-pointer hover:border-primary peer-data-[state=checked]:border-primary peer-data-[state=checked]:bg-primary/5 transition-all"
               >
-                <Icon className="h-6 w-6 shrink-0 text-[#004F56]" />
+                <Icon className="h-6 w-6 shrink-0 text-primary" />
                 <span className="font-medium text-[#333333]">{t(value)}</span>
               </Label>
             </div>
@@ -217,9 +217,9 @@ export function StepDuration({ form }: StepProps) {
               />
               <Label
                 htmlFor={value}
-                className="flex flex-row items-center gap-4 h-14 px-4 py-3 border-2 border-muted rounded-xl cursor-pointer hover:border-[#004F56] peer-data-[state=checked]:border-[#004F56] peer-data-[state=checked]:bg-[#004F56]/5 transition-all font-medium text-[#333333]"
+                className="flex flex-row items-center gap-4 h-14 px-4 py-3 border-2 border-muted rounded-xl cursor-pointer hover:border-primary peer-data-[state=checked]:border-primary peer-data-[state=checked]:bg-primary/5 transition-all font-medium text-[#333333]"
               >
-                <Icon className="h-6 w-6 shrink-0 text-[#004F56]" />
+                <Icon className="h-6 w-6 shrink-0 text-primary" />
                 {t(value)}
               </Label>
             </div>
@@ -255,7 +255,7 @@ export function StepContact({ form }: StepProps) {
               id="firstName"
               placeholder={tContact("firstNamePlaceholder")}
               {...form.register("firstName")}
-              className="h-12 text-lg border-2 focus-visible:ring-[#004F56]"
+              className="h-12 text-lg border-2 focus-visible:ring-primary"
             />
             {form.formState.errors.firstName?.message && (
               <p className="text-red-500 font-medium text-sm">
@@ -274,7 +274,7 @@ export function StepContact({ form }: StepProps) {
               id="lastName"
               placeholder={tContact("lastNamePlaceholder")}
               {...form.register("lastName")}
-              className="h-12 text-lg border-2 focus-visible:ring-[#004F56]"
+              className="h-12 text-lg border-2 focus-visible:ring-primary"
             />
             {form.formState.errors.lastName?.message && (
               <p className="text-red-500 font-medium text-sm">
@@ -292,7 +292,7 @@ export function StepContact({ form }: StepProps) {
             id="email"
             placeholder={tContact("emailPlaceholder")}
             {...form.register("email")}
-            className="h-12 text-lg border-2 focus-visible:ring-[#004F56]"
+            className="h-12 text-lg border-2 focus-visible:ring-primary"
           />
           {form.formState.errors.email?.message && (
             <p className="text-red-500 font-medium text-sm">
@@ -309,7 +309,7 @@ export function StepContact({ form }: StepProps) {
             id="phone"
             placeholder={tContact("phonePlaceholder")}
             {...form.register("phone")}
-            className="h-12 text-lg border-2 focus-visible:ring-[#004F56]"
+            className="h-12 text-lg border-2 focus-visible:ring-primary"
           />
           {form.formState.errors.phone?.message && (
             <p className="text-red-500 font-medium text-sm">

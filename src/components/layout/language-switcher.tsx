@@ -35,7 +35,7 @@ export function LanguageSwitcher() {
         <Button
           variant="ghost"
           size="sm"
-          className="min-h-[44px] min-w-[44px] gap-1.5 text-[#1A1A1A] hover:bg-[#004F56]/10 hover:text-[#004F56] md:min-h-0 md:min-w-0 md:px-3"
+          className="min-h-[44px] min-w-[44px] gap-1.5 text-brand-navy hover:bg-brand-navy/5 hover:text-brand-navy/80 md:min-h-0 md:min-w-0 md:px-3"
           aria-label={t("selectLanguage")}
         >
           <Languages className="h-5 w-5 shrink-0" aria-hidden />

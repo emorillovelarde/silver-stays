@@ -30,17 +30,15 @@ export function getMDXComponents(
     SchengenClockAlert: SchengenClockAlertClient,
     NLVGuideCTA,
     h1: ({ children }) => (
-      <h1 className="text-3xl font-bold text-[#004F56] mb-6 mt-8">
-        {children}
-      </h1>
+      <h1 className="text-3xl font-bold text-primary mb-6 mt-8">{children}</h1>
     ),
     h2: ({ children }) => (
-      <h2 className="text-2xl font-semibold text-[#004F56] mb-4 mt-8 border-b border-[#004F56]/20 pb-2">
+      <h2 className="text-2xl font-semibold text-primary mb-4 mt-8 border-b border-primary/20 pb-2">
         {children}
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="text-xl font-semibold text-[#004F56] mb-4 mt-6">
+      <h3 className="text-xl font-semibold text-primary mb-4 mt-6">
         {children}
       </h3>
     ),
@@ -55,13 +53,13 @@ export function getMDXComponents(
     a: ({ href, children }) => (
       <a
         href={href}
-        className="text-[#004F56] underline underline-offset-4 hover:text-[#004F56]/80 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#004F56] focus:ring-offset-2 rounded"
+        className="text-primary underline underline-offset-4 hover:text-primary/80 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
       >
         {children}
       </a>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="border-l-4 border-[#004F56] pl-4 italic bg-teal-50/50 py-2 rounded-r-lg text-[#1A1A1A] my-6">
+      <blockquote className="border-l-4 border-primary pl-4 italic bg-sky-50/60 py-2 rounded-r-lg text-[#1A1A1A] my-6">
         {children}
       </blockquote>
     ),

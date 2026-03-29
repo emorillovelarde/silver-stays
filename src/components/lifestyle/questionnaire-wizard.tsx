@@ -179,7 +179,7 @@ export function QuestionnaireWizard() {
         </p>
         <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
           <div
-            className="h-full bg-[#004F56] transition-all duration-500 ease-out rounded-full"
+            className="h-full bg-primary transition-all duration-500 ease-out rounded-full"
             style={{ width: `${progress}%` }}
             role="progressbar"
             aria-valuenow={currentStep}
@@ -213,7 +213,7 @@ export function QuestionnaireWizard() {
             variant="ghost"
             onClick={prevStep}
             disabled={currentStep === 1 || isSubmitting}
-            className="text-lg h-12 text-slate-500 hover:text-[#004F56]"
+            className="text-lg h-12 text-slate-500 hover:text-primary"
           >
             <ChevronLeft className="mr-2 h-5 w-5" /> {t("nav.back")}
           </Button>
@@ -223,7 +223,7 @@ export function QuestionnaireWizard() {
             onClick={nextStep}
             disabled={isSubmitting}
             className={cn(
-              "text-lg h-12 px-8 bg-[#004F56] hover:bg-[#004F56]/90 text-white shadow-md transition-all",
+              "text-lg h-12 px-8 bg-primary hover:bg-primary/90 text-white shadow-md transition-all",
               isSubmitting && "opacity-80",
             )}
           >

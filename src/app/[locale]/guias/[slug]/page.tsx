@@ -109,7 +109,7 @@ export default async function GuidePage({
     description: frontmatter.description,
     author: {
       "@type": "Organization",
-      name: frontmatter.author || "Silver Stays",
+      name: frontmatter.author || "Silver Costa Residences",
     },
     datePublished: frontmatter.date,
     image: "https://silver-stays.com/og-image.jpg", // Placeholder

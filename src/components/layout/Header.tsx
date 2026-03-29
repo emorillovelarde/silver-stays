@@ -15,8 +15,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { LanguageSwitcher } from "./language-switcher";
+import { HeaderBrandLogo } from "./header-brand-logo";
 import { useScrollDirection } from "@/hooks/use-scroll-direction";
-import { useIsAtTop } from "@/hooks/use-is-at-top";
 
 const NAV_LINKS = [
   { href: "/", key: "home" as const },
@@ -37,7 +37,7 @@ function NavLinks({
   return (
     <nav
       className={cn(
-        "flex flex-col gap-1 md:flex-row md:items-center md:gap-6",
+        "flex flex-col gap-1 md:flex-row md:items-center md:gap-8",
         className,
       )}
       aria-label="Navegación principal"
@@ -56,8 +56,8 @@ function NavLinks({
               "min-h-[44px] min-w-[44px] flex items-center px-4 py-2 text-base transition-colors focus:outline-none",
               "md:min-h-0 md:min-w-0",
               isActive
-                ? "text-[#004F56] font-bold"
-                : "text-gray-600 font-medium hover:text-[#004F56]",
+                ? "text-brand-navy font-bold"
+                : "text-brand-navy font-medium hover:text-brand-navy/75",
             )}
             aria-label={t(key)}
             aria-current={isActive ? "page" : undefined}
@@ -84,45 +84,42 @@ function HeaderFull() {
   const [open, setOpen] = useState(false);
   const t = useTranslations("Navigation");
   const scrollDirection = useScrollDirection(10);
-  const isAtTop = useIsAtTop(20);
 
   const isHidden = scrollDirection === "down";
 
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 w-full",
-        "transition-all duration-300 ease-in-out",
+        "fixed top-0 left-0 right-0 z-50 w-full overflow-visible",
+        "bg-white/40 backdrop-blur-md border-b border-white/20",
+        "transition-transform duration-300 ease-out",
         isHidden && "-translate-y-full",
-        isAtTop
-          ? "bg-transparent border-transparent shadow-none"
-          : "bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm",
       )}
     >
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:h-18">
-        {/* Logo */}
+      <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-5 sm:px-6 lg:h-20">
         <Link
           href="/"
-          className="flex items-center gap-2 text-xl font-bold text-[#004F56] focus:outline-none"
-          aria-label="Silver Stays - Ir al inicio"
+          title={t("logoHomeTitle")}
+          aria-label={t("logoHomeTitle")}
+          className="flex shrink-0 items-center pr-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-navy/30 focus-visible:ring-offset-2 rounded-sm"
         >
-          Silver Stays
+          <HeaderBrandLogo />
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex md:items-center md:gap-6">
+        <div className="hidden md:flex md:items-center md:gap-8">
           <NavLinks />
         </div>
 
-        {/* Right controls: CTA + Language + Mobile menu */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2">
           <Link
             href="/questionnaire"
             className={cn(
               "hidden sm:inline-flex items-center justify-center focus:outline-none",
-              "bg-[#004F56] hover:bg-[#00383D] text-white",
+              "bg-brand-cta hover:bg-brand-cta-hover text-[#FFFFFF]",
               "px-5 py-2 rounded-full font-medium text-sm",
               "transition-colors min-h-[44px] md:min-h-0",
+              "focus-visible:ring-2 focus-visible:ring-brand-cta focus-visible:ring-offset-2",
             )}
           >
             {t("startYourPlan")}
@@ -135,7 +132,7 @@ function HeaderFull() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="md:hidden min-h-[44px] min-w-[44px] text-[#1A1A1A] hover:bg-[#004F56]/10 hover:text-[#004F56]"
+                className="md:hidden min-h-[44px] min-w-[44px] text-brand-navy hover:bg-brand-navy/5 hover:text-brand-navy"
                 aria-label={t("openMenu")}
                 aria-expanded={open}
               >
@@ -144,13 +141,20 @@ function HeaderFull() {
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-[min(100vw-2rem,320px)] bg-[#FAFAFA] border-l border-[#004F56]/10"
+              className="w-[min(100vw-2rem,320px)] bg-[#FAFAFA] border-l border-primary/10"
               closeButtonAriaLabel={t("closeMenu")}
             >
               <SheetHeader>
-                <SheetTitle className="text-left text-[#004F56]">
-                  Silver Stays
-                </SheetTitle>
+                <SheetTitle className="sr-only">{t("siteName")}</SheetTitle>
+                <Link
+                  href="/"
+                  title={t("logoHomeTitle")}
+                  aria-label={t("logoHomeTitle")}
+                  onClick={() => setOpen(false)}
+                  className="flex shrink-0 items-center pr-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
+                >
+                  <HeaderBrandLogo />
+                </Link>
               </SheetHeader>
               <div className="mt-8 flex flex-col gap-4">
                 <NavLinks onLinkClick={() => setOpen(false)} />
@@ -159,9 +163,10 @@ function HeaderFull() {
                   onClick={() => setOpen(false)}
                   className={cn(
                     "inline-flex items-center justify-center mt-4 focus:outline-none",
-                    "bg-[#004F56] hover:bg-[#00383D] text-white",
+                    "bg-brand-cta hover:bg-brand-cta-hover text-[#FFFFFF]",
                     "px-5 py-3 rounded-full font-medium text-sm",
                     "min-h-[44px]",
+                    "focus-visible:ring-2 focus-visible:ring-brand-cta focus-visible:ring-offset-2",
                   )}
                 >
                   {t("startYourPlan")}

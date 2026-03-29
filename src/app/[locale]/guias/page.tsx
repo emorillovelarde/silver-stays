@@ -60,10 +60,10 @@ export default async function GuidesHubPage({ params }: Props) {
               <Link
                 key={guide.slug}
                 href={`/guias/${guide.slug}`}
-                className="flex flex-col h-full min-h-[200px] focus:outline-none focus:ring-2 focus:ring-[#004F56] focus:ring-offset-2 rounded-xl"
+                className="flex flex-col h-full min-h-[200px] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-xl"
                 aria-label={`${guide.title}: ${t("readGuide")}`}
               >
-                <Card className="group h-full flex flex-col overflow-hidden bg-white border-2 border-gray-100 hover:border-[#004F56]/30 hover:shadow-lg transition-all duration-300 cursor-pointer">
+                <Card className="group h-full flex flex-col overflow-hidden bg-white border-2 border-gray-100 hover:border-primary/30 hover:shadow-lg transition-all duration-300 cursor-pointer">
                   {guide.imageUrl && (
                     <div className="relative h-48 w-full shrink-0 overflow-hidden rounded-t-xl">
                       <Image
@@ -77,7 +77,7 @@ export default async function GuidesHubPage({ params }: Props) {
                     </div>
                   )}
                   <CardHeader className="flex-grow">
-                    <CardTitle className="text-xl text-[#1A1A1A] group-hover:text-[#004F56] transition-colors line-clamp-2">
+                    <CardTitle className="text-xl text-[#1A1A1A] group-hover:text-primary transition-colors line-clamp-2">
                       {guide.title}
                     </CardTitle>
                     <CardDescription className="text-[#1A1A1A]/80 text-base leading-relaxed line-clamp-2 mt-2">
@@ -86,7 +86,7 @@ export default async function GuidesHubPage({ params }: Props) {
                   </CardHeader>
                   <CardFooter className="pt-0">
                     <span
-                      className="inline-flex items-center gap-1.5 text-[#004F56] font-semibold group-hover:gap-2.5 transition-all min-h-[44px] items-center"
+                      className="inline-flex items-center gap-1.5 text-primary font-semibold group-hover:gap-2.5 transition-all min-h-[44px] items-center"
                       aria-hidden
                     >
                       {t("readGuide")}
@@ -107,7 +107,7 @@ export default async function GuidesHubPage({ params }: Props) {
       >
         <div className="container mx-auto max-w-4xl">
           <div
-            className="rounded-2xl bg-[#004F56] text-[#FAFAFA] p-10 sm:p-12 text-center"
+            className="rounded-2xl bg-primary text-[#FAFAFA] p-10 sm:p-12 text-center"
             role="complementary"
           >
             <h2
@@ -122,7 +122,7 @@ export default async function GuidesHubPage({ params }: Props) {
             <Button
               asChild
               size="lg"
-              className="bg-white text-[#004F56] hover:bg-white/90 hover:shadow-md min-h-[48px] min-w-[44px] px-8 text-lg font-semibold transition-all"
+              className="bg-white text-primary hover:bg-white/90 hover:shadow-md min-h-[48px] min-w-[44px] px-8 text-lg font-semibold transition-all"
             >
               <Link href="/questionnaire" aria-label={t("ctaButtonAria")}>
                 {t("ctaButton")}

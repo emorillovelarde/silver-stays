@@ -17,12 +17,12 @@ export async function BentoGrid() {
   const t = await getTranslations("BentoGrid");
 
   return (
-    <section className="py-24 bg-[#004F56]/[0.03]">
+    <section className="py-24 bg-primary/[0.03]">
       <div className="container mx-auto px-4 max-w-6xl">
-        <p className="text-sm font-bold tracking-widest text-[#004F56] uppercase mb-4 block text-center">
+        <p className="text-sm font-bold tracking-widest text-primary uppercase mb-4 block text-center">
           {t("eyebrow")}
         </p>
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-[#1A1A1A] tracking-tight max-w-3xl mx-auto text-balance">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-brand-navy tracking-tight max-w-3xl mx-auto text-balance">
           {t("title")}
         </h2>
 
@@ -33,14 +33,14 @@ export async function BentoGrid() {
               className="group h-full flex flex-col bg-white border border-gray-100 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,79,86,0.08)] shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
             >
               <CardHeader className="p-8 flex flex-col gap-4 flex-shrink-0">
-                <div className="w-16 h-16 rounded-full bg-[#004F56]/5 flex items-center justify-center flex-shrink-0">
+                <div className="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center flex-shrink-0">
                   <Icon
-                    className="w-8 h-8 text-[#004F56]"
+                    className="w-8 h-8 text-primary"
                     strokeWidth={1.5}
                     aria-hidden
                   />
                 </div>
-                <CardTitle className="text-xl font-bold text-[#1A1A1A] leading-tight">
+                <CardTitle className="text-xl font-bold text-brand-navy leading-tight">
                   {t(`${key}Title`)}
                 </CardTitle>
               </CardHeader>

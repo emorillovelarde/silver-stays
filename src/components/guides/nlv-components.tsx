@@ -75,7 +75,7 @@ export function NLVSolvencyCalculator() {
           <div>
             <CardTitle
               id="solvency-calculator-title"
-              className="text-2xl font-bold text-[#004F56]"
+              className="text-2xl font-bold text-primary"
             >
               {t.title}
             </CardTitle>
@@ -135,7 +135,7 @@ export function NLVSolvencyCalculator() {
         >
           <p className="text-lg text-[#1A1A1A] mb-2">
             {t.required}{" "}
-            <strong className="text-[#004F56]">
+            <strong className="text-primary">
               {requiredEUR.toLocaleString(locale === "es" ? "es-ES" : "en-GB")}{" "}
               €/año
             </strong>

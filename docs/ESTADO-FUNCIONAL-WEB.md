@@ -1,4 +1,4 @@
-# Silver Stays — Descripción Funcional del Estado Actual de la Web
+# Silver Costa Residences — Descripción Funcional del Estado Actual de la Web
 
 **Fecha de referencia:** Febrero 2026  
 **Stack:** Next.js 16, TypeScript, Tailwind CSS v4, Supabase, next-intl, Shadcn/ui
@@ -7,7 +7,7 @@
 
 ## 1. Resumen Ejecutivo
 
-Silver Stays es una plataforma web para jubilados europeos que buscan estancias largas (1–9 meses) en el corredor Fuengirola–Nerja (Costa del Sol). La web actual incluye: landing, cuestionario de perfilado, galería de propiedades, centro de guías MDX con contenido interactivo, y un panel de administración de leads.
+Silver Costa Residences es una plataforma web para jubilados europeos que buscan estancias largas (1–9 meses) en el corredor Fuengirola–Nerja (Costa del Sol). La web actual incluye: landing, cuestionario de perfilado, galería de propiedades, centro de guías MDX con contenido interactivo, y un panel de administración de leads.
 
 ---
 
@@ -32,7 +32,7 @@ Silver Stays es una plataforma web para jubilados europeos que buscan estancias 
 ### 3.0. Header (global)
 
 - **Sticky:** Fijo en la parte superior con glassmorphism (`bg-[#FAFAFA]/85 backdrop-blur-md`)
-- **Logo:** "Silver Stays" → Home
+- **Logo:** "Silver Costa Residences" → Home
 - **Enlaces:** Inicio, Propiedades, Guías y Recursos (→ `/guias`)
 - **Selector de idioma:** Dropdown Shadcn (es/en) con next-intl
 - **CTA:** "Encontrar mi Estancia" → `/questionnaire`

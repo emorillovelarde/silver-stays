@@ -2,19 +2,13 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { StepsTimeline } from "./steps-timeline";
 
-const CORPORATE_GREEN = "#003B32";
-
 export async function StepsSection() {
   const t = await getTranslations("StepsSection");
 
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 max-w-7xl">
-        {/* Title - centered */}
-        <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16 sm:mb-20"
-          style={{ color: CORPORATE_GREEN }}
-        >
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16 sm:mb-20 text-brand-navy">
           {t("stepsTitle")}
         </h1>
 

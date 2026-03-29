@@ -5,8 +5,6 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 
-const CORPORATE_GREEN = "#003B32";
-
 export function StepsTimeline() {
   const t = useTranslations("StepsSection");
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -67,13 +65,12 @@ export function StepsTimeline() {
         className="absolute left-[23px] top-8 bottom-24 w-0.5 bg-gray-200 rounded-full hidden sm:block"
         aria-hidden
       />
-      {/* Vertical connector line - progress (green) */}
+      {/* Vertical connector line - progress */}
       <div
-        className="absolute left-[23px] top-8 w-0.5 rounded-full transition-all duration-700 ease-out hidden sm:block"
+        className="absolute left-[23px] top-8 w-0.5 rounded-full bg-brand-navy transition-all duration-700 ease-out hidden sm:block"
         style={{
           height: `${lineProgress}%`,
           maxHeight: "calc(100% - 6rem)",
-          backgroundColor: CORPORATE_GREEN,
         }}
         aria-hidden
       />
@@ -91,8 +88,7 @@ export function StepsTimeline() {
           >
             {/* Node circle */}
             <div
-              className="relative z-10 flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center font-bold text-xl sm:text-2xl text-white"
-              style={{ backgroundColor: CORPORATE_GREEN }}
+              className="relative z-10 flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center bg-brand-navy font-bold text-xl sm:text-2xl text-white"
               aria-hidden
             >
               {index + 1}
@@ -100,10 +96,7 @@ export function StepsTimeline() {
 
             {/* Text content */}
             <div className="flex-1 min-w-0 pt-1">
-              <h3
-                className="text-xl sm:text-2xl font-bold mb-2"
-                style={{ color: CORPORATE_GREEN }}
-              >
+              <h3 className="text-xl sm:text-2xl font-bold mb-2 text-brand-navy">
                 {step.title}
               </h3>
               <p className="text-base sm:text-lg leading-relaxed text-[#4A4A4A]">
@@ -119,9 +112,9 @@ export function StepsTimeline() {
         <Link
           href="/questionnaire"
           className={cn(
-            "inline-flex items-center justify-center min-h-[52px] px-10 py-4 text-lg font-semibold text-white",
-            "bg-[#004F56] rounded-xl hover:bg-[#004F56]/90 hover:scale-[1.02] transition-all duration-300 shadow-lg",
-            "focus:outline-none focus:ring-2 focus:ring-[#004F56] focus:ring-offset-2",
+            "inline-flex items-center justify-center min-h-[52px] px-10 py-4 text-lg font-semibold text-[#FFFFFF]",
+            "bg-brand-cta rounded-xl hover:bg-brand-cta-hover hover:scale-[1.02] transition-all duration-300 shadow-lg",
+            "focus:outline-none focus:ring-2 focus:ring-brand-cta focus:ring-offset-2",
           )}
         >
           {t("btnCTA")}

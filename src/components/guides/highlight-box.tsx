@@ -12,9 +12,9 @@ const styles: Record<
   { bg: string; border: string; icon: React.ReactNode }
 > = {
   info: {
-    bg: "bg-[#004F56]/5",
-    border: "border-[#004F56]/30",
-    icon: <Info className="h-6 w-6 text-[#004F56] shrink-0" aria-hidden />,
+    bg: "bg-primary/5",
+    border: "border-primary/30",
+    icon: <Info className="h-6 w-6 text-primary shrink-0" aria-hidden />,
   },
   warning: {
     bg: "bg-amber-50",

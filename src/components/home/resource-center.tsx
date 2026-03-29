@@ -29,7 +29,7 @@ export function ResourceCenter() {
   return (
     <section className="py-16 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4 max-w-5xl">
-        <h2 className="text-3xl font-bold text-[#004F56] mb-8 text-center md:text-left">
+        <h2 className="text-3xl font-bold text-brand-navy mb-8 text-center md:text-left">
           {t("title")}
         </h2>
 
@@ -49,8 +49,8 @@ export function ResourceCenter() {
                 className={cn(
                   "flex flex-col items-center gap-4 py-8 px-6 rounded-xl border-2 border-secondary/30",
                   "transition-all duration-300 group",
-                  "hover:border-[#004F56] hover:bg-primary/5 hover:shadow-md",
-                  "focus:outline-none focus:ring-2 focus:ring-[#004F56] focus:ring-offset-2 focus:border-[#004F56]",
+                  "hover:border-primary hover:bg-primary/5 hover:shadow-md",
+                  "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:border-primary",
                 )}
                 aria-label={`${title}: ${description}`}
               >
@@ -64,14 +64,14 @@ export function ResourceCenter() {
                 >
                   {badge}
                 </span>
-                <div className="bg-[#004F56]/10 p-4 rounded-full text-[#004F56] group-hover:scale-110 transition-transform">
+                <div className="bg-primary/10 p-4 rounded-full text-primary group-hover:scale-110 transition-transform">
                   <Icon className="h-8 w-8" aria-hidden />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-[#004F56] group-hover:text-[#004F56]/90">
+                  <h3 className="text-xl font-bold text-brand-navy group-hover:opacity-90">
                     {title}
                   </h3>
-                  <p className="text-base text-[#1A1A1A] mt-2 leading-relaxed min-h-[3rem]">
+                  <p className="text-base text-slate-700 mt-2 leading-relaxed min-h-[3rem]">
                     {description}
                   </p>
                 </div>

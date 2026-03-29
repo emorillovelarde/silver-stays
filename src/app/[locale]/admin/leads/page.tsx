@@ -67,7 +67,7 @@ export default function AdminLeadsPage() {
           <Button
             onClick={fetchLeads}
             variant="outline"
-            className="border-[#004F56] text-[#004F56] hover:bg-[#004F56] hover:text-white"
+            className="border-primary text-primary hover:bg-primary hover:text-white"
             disabled={loading}
           >
             {loading ? (
@@ -136,7 +136,7 @@ export default function AdminLeadsPage() {
                           { locale: es },
                         )}
                       </TableCell>
-                      <TableCell className="font-semibold text-[#004F56]">
+                      <TableCell className="font-semibold text-primary">
                         {lead.full_name || "N/A"}
                       </TableCell>
                       <TableCell>{lead.email}</TableCell>
@@ -156,7 +156,7 @@ export default function AdminLeadsPage() {
                         </div>
                       </TableCell>
                       <TableCell>
-                        <span className="px-3 py-1 bg-[#004F56]/10 text-[#004F56] rounded-full text-sm font-medium">
+                        <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
                           {lead.data?.questionnaire?.duration}
                         </span>
                       </TableCell>

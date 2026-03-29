@@ -1,15 +1,15 @@
 {
   "HomePage": {
-    "title": "Welcome to Silver Stays",
+    "title": "Welcome to Silver Costa Residences",
     "subtitle": "Discover your perfect home for the golden years.",
     "cta": "Get Started"
   },
   "Hero": {
-    "headline": "Finest Winter Stays on the Costa del Sol",
-    "subtitle": "Your home, healthcare, and community in Spain, managed with a single call",
+    "headline": "Premium Winter Rentals on the Costa del Sol",
+    "subtitle": "Silver-Standard long stays for active retirees. Your home, healthcare, and community in Spain, managed with a single call.",
     "supportText": "Leave the cold and bureaucracy behind. We curate stays of 1 to 9 months between Fuengirola and Nerja, so you can simply enjoy your time.",
     "cta": "Design Your Stay",
-    "imageAlt": "Sunset in Marbella - Panoramic view of the Costa del Sol"
+    "imageAlt": "Bluevera Residences - Costa del Sol"
   },
   "StepsSection": {
     "stepsTitle": "Three steps to your winter retreat",
@@ -20,7 +20,7 @@
     "step3Title": "Arrive and enjoy",
     "step3Desc": "From legal paperwork and healthcare to your property readiness. We handle the logistics so you can simply focus on the sun.",
     "btnCTA": "Design Your Stay",
-    "imageAlt": "Premium terrace with Mediterranean views - Silver Stays stay"
+    "imageAlt": "Premium terrace with Mediterranean views - Silver Costa Residences stay"
   },
   "BentoGrid": {
     "eyebrow": "Our Promise",
@@ -83,7 +83,7 @@
       "lastNamePlaceholder": "Smith",
       "emailPlaceholder": "example@email.com",
       "phonePlaceholder": "+34 600 000 000",
-      "privacyNote": "Your privacy is our priority. A Silver Stays Managing Partner will review your vision and contact you within 24 hours."
+      "privacyNote": "Your privacy is our priority. A Silver Costa Residences Managing Partner will review your vision and contact you within 24 hours."
     },
     "validation": {
       "selectOption": "Please select an option",
@@ -114,14 +114,27 @@
     "error": "An error occurred. Please try again."
   },
   "Success": {
-    "title": "Your vision has been received.",
-    "subtitle": "Thank you for trusting Silver Stays. One of our Managing Partners is reviewing your preferences and will contact you within 24 hours to design your perfect winter retreat.",
-    "guideTitle": "Your free guide is ready.",
-    "guideDesc": "We have sent a copy to your email for your records, but you can download your '2026 Costa del Sol Guide' right now to start discovering the best areas and visa requirements while you wait.",
-    "btnDownload": "Download Free Guide",
-    "btnHome": "Return to Home"
+    "title": "Thank you for your trust",
+    "description": "Your details have been successfully received and your profile is now active. The 2026 Costa del Sol Guide is on its way to your inbox. You can also download it below.",
+    "downloadButton": "Download 2026 Costa del Sol Guide",
+    "nextStepLabel": "PREMIUM NEXT STEP",
+    "nextStepTitle": "Let's design your winter retreat",
+    "nextStepDescription": "To guarantee the excellence of our Silver-Standard service, our Managing Partner reserves 15 minutes to begin designing your stay and answer any questions you may have.",
+    "bookCallButton": "Schedule your Welcome Call",
+    "bullet1": "15-min Video Call",
+    "bullet2": "No commitment",
+    "trustBadge": "100% legally verified properties & expert logistical support.",
+    "backToHome": "Back to Home",
+    "guideImageAlt": "2026 Costa del Sol Guide - Cover",
+    "partnerAvatarAlt": "Silver Costa Residences Managing Partner",
+    "modalClose": "Close",
+    "rewardSectionLabel": "Your guide and download"
   },
   "Navigation": {
+    "siteName": "Bluevera Residences",
+    "logoAlt": "Bluevera Residences logo - Luxury residences on the Costa del Sol",
+    "logoHomeTitle": "Back to the Bluevera Residences home page",
+    "logoAriaLabel": "Bluevera Residences — Go to home",
     "home": "Home",
     "about": "About Us",
     "contact": "Contact",
@@ -136,8 +149,8 @@
     "startYourPlan": "Design Your Stay"
   },
   "Metadata": {
-    "title": "Silver Stays | Your perfect home for the golden years",
-    "description": "Discover your perfect home for the golden years. Senior-friendly stays with comfort and care."
+    "title": "Silver Costa Residences | Your perfect home for the golden years",
+    "description": "Discover your perfect home for the golden years with Silver Costa Residences. Senior-friendly stays with comfort and care."
   },
   "Guias": {
     "arbitraje-energetico": {
@@ -150,7 +163,7 @@
   "Footer": {
     "cta": "Ready to take the next step?",
     "questionnaire": "Start Questionnaire",
-    "copyright": "© 2026 Silver Stays. All rights reserved."
+    "copyright": "© 2026 Silver Costa Residences. All rights reserved."
   },
   "GuidesHub": {
     "heroTitle": "Living in Spain Guides & Resources",
@@ -161,7 +174,7 @@
     "ctaSubtitle": "Complete our free assessment and we'll find the perfect stay for your needs.",
     "ctaButton": "Start My Assessment",
     "ctaButtonAria": "Start free assessment to find your ideal stay",
-    "metaTitle": "Living in Spain Guides & Resources | Silver Stays",
+    "metaTitle": "Living in Spain Guides & Resources | Silver Costa Residences",
     "metaDescription": "Discover everything you need to know about visas, rental contracts, and the cost of living on the Costa del Sol. Expert guides for your retirement in Spain."
   },
   "ResourceCenter": {

@@ -32,7 +32,7 @@ export function NLVGuideCTA() {
       role="complementary"
       aria-label={locale === "es" ? "Llamada a la acción" : "Call to action"}
     >
-      <h3 className="text-2xl font-bold text-[#004F56] mb-4">{t.title}</h3>
+      <h3 className="text-2xl font-bold text-primary mb-4">{t.title}</h3>
       <p className="text-lg text-[#1A1A1A] mb-6 max-w-2xl mx-auto">
         {t.description}
       </p>
