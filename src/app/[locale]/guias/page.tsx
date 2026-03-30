@@ -30,20 +30,20 @@ export default async function GuidesHubPage({ params }: Props) {
   const guides = getGuides(locale);
 
   return (
-    <main className="min-h-screen bg-[#FAFAFA]">
+    <main className="min-h-screen bg-[#FAFAFA] pt-24 md:pt-28 lg:pt-32">
       {/* Hero Section */}
       <section
-        className="bg-white border-b border-gray-100 py-16 px-4 sm:px-6 lg:px-8"
+        className="bg-white border-b border-gray-100 px-4 sm:px-6 lg:px-8 pt-8 pb-4 md:pt-10 md:pb-5 lg:pt-10 lg:pb-6"
         aria-labelledby="guides-heading"
       >
         <div className="container mx-auto max-w-4xl text-center">
           <h1
             id="guides-heading"
-            className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-4"
+            className="font-serif text-3xl sm:text-4xl font-bold text-[#1A365D] mb-4"
           >
             {t("heroTitle")}
           </h1>
-          <h2 className="text-lg sm:text-xl text-[#1A1A1A]/90 font-normal leading-relaxed max-w-2xl mx-auto">
+          <h2 className="text-lg sm:text-xl text-[#1A365D]/85 font-sans font-normal leading-relaxed max-w-2xl mx-auto">
             {t("heroSubtitle")}
           </h2>
         </div>
@@ -51,7 +51,7 @@ export default async function GuidesHubPage({ params }: Props) {
 
       {/* Grid of Guides */}
       <section
-        className="py-16 px-4 sm:px-6 lg:px-8"
+        className="pt-8 pb-4 md:pt-10 md:pb-6 lg:pt-12 px-4 sm:px-6 lg:px-8"
         aria-label={t("guidesGridLabel")}
       >
         <div className="container mx-auto max-w-6xl">
@@ -102,27 +102,28 @@ export default async function GuidesHubPage({ params }: Props) {
 
       {/* CTA / Lead Magnet */}
       <section
-        className="py-16 px-4 sm:px-6 lg:px-8"
+        className="mt-12 md:mt-16 lg:mt-20 pb-16 md:pb-20 px-4 sm:px-6 lg:px-8"
         aria-labelledby="cta-heading"
       >
         <div className="container mx-auto max-w-4xl">
           <div
-            className="rounded-2xl bg-primary text-[#FAFAFA] p-10 sm:p-12 text-center"
+            className="rounded-2xl bg-[#1A365D] text-white p-10 sm:p-12 text-center shadow-lg shadow-[#1A365D]/15"
             role="complementary"
           >
             <h2
               id="cta-heading"
-              className="text-2xl sm:text-3xl font-bold mb-4"
+              className="font-sans text-2xl sm:text-3xl font-bold mb-4 text-white"
             >
               {t("ctaTitle")}
             </h2>
-            <p className="text-[#FAFAFA]/95 text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-white/95 text-lg mb-8 max-w-xl mx-auto font-sans leading-relaxed">
               {t("ctaSubtitle")}
             </p>
             <Button
               asChild
               size="lg"
-              className="bg-white text-primary hover:bg-white/90 hover:shadow-md min-h-[48px] min-w-[44px] px-8 text-lg font-semibold transition-all"
+              variant="ghost"
+              className="min-h-[48px] min-w-[44px] border-0 border-transparent bg-[#D9734E] px-8 text-lg font-bold text-white shadow-none ring-offset-2 hover:bg-[#c45d3d] hover:text-white focus-visible:ring-2 focus-visible:ring-[#D9734E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1A365D]"
             >
               <Link href="/questionnaire" aria-label={t("ctaButtonAria")}>
                 {t("ctaButton")}

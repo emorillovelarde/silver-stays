@@ -17,16 +17,16 @@ export default async function Home() {
       <BentoGrid />
       <ResourceCenter />
 
-      <footer className="py-12 bg-primary text-white text-center">
+      <footer className="bg-[#1A365D] py-12 text-center text-white">
         <div className="container mx-auto px-4">
-          <p className="text-xl mb-6 opacity-90">{t("cta")}</p>
+          <p className="mb-6 text-xl text-white/95">{t("cta")}</p>
           <Link
             href="/questionnaire"
-            className="inline-block border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-primary transition-colors font-bold text-lg"
+            className="inline-block rounded-full border-0 bg-[#D9734E] px-8 py-3 text-lg font-bold text-white shadow-none transition-colors hover:bg-[#c45d3d] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D9734E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1A365D]"
           >
             {t("questionnaire")}
           </Link>
-          <p className="mt-8 text-sm opacity-60">{t("copyright")}</p>
+          <p className="mt-8 text-sm text-white/60">{t("copyright")}</p>
         </div>
       </footer>
     </main>

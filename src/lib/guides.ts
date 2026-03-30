@@ -71,20 +71,29 @@ const GUIDE_IMAGES: Record<
     },
   },
   "fuengirola-vs-nerja-winter-stay": {
-    imageUrl: "/images/silver_stays_premium_terrace.jpg",
+    imageUrl: "/images/guia%20nerja%20fuengirola.jpg",
     imageAlt: {
       es: "Guía Fuengirola vs Nerja para invierno en la Costa del Sol",
       en: "Fuengirola vs Nerja winter stay comparison guide for expats",
     },
   },
   "fuengirola-vs-nerja-invierno": {
-    imageUrl: "/images/silver_stays_premium_terrace.jpg",
+    imageUrl: "/images/guia%20nerja%20fuengirola.jpg",
     imageAlt: {
       es: "Guía comparativa Fuengirola vs Nerja para pasar el invierno en la Costa del Sol",
       en: "Fuengirola vs Nerja winter stay comparison guide for expats",
     },
   },
 };
+
+/** `draft: true` en frontmatter: excluir del hub, de SSG y del acceso directo. */
+export function isDraftFrontmatter(data: Record<string, unknown>): boolean {
+  return data.draft === true || data.draft === "true";
+}
+
+export function isDraftMdxSource(source: string): boolean {
+  return isDraftFrontmatter(matter(source).data as Record<string, unknown>);
+}
 
 function getGuideImage(
   slug: string,
@@ -114,6 +123,7 @@ export function getGuides(locale: string): GuideMeta[] {
     const filePath = path.join(contentDir, file);
     const source = fs.readFileSync(filePath, "utf8");
     const { data } = matter(source);
+    if (isDraftFrontmatter(data as Record<string, unknown>)) continue;
     const { imageUrl, imageAlt } = getGuideImage(slug, locale);
     guides.push({
       slug,

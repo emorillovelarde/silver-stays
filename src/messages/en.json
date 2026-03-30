@@ -179,6 +179,7 @@
   },
   "ResourceCenter": {
     "title": "Resource Center",
+    "viewAllGuides": "View all guides",
     "guides": {
       "arbitrage": {
         "title": "Energy Arbitrage 2026",

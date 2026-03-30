@@ -5,6 +5,7 @@ import matter from "gray-matter";
 import { compileMDX } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import { getMDXComponents } from "@/mdx-components";
+import { isDraftMdxSource } from "@/lib/guides";
 import { notFound } from "next/navigation";
 
 interface Frontmatter {
@@ -32,6 +33,7 @@ export async function generateMetadata({
   );
   if (!fs.existsSync(filePath)) return {};
   const source = fs.readFileSync(filePath, "utf8");
+  if (isDraftMdxSource(source)) return {};
   const { data } = matter(source);
   const frontmatter = data as Frontmatter;
   const title = frontmatter.seoTitle ?? frontmatter.title;
@@ -59,12 +61,12 @@ export async function generateStaticParams() {
     if (fs.existsSync(contentDir)) {
       const files = fs.readdirSync(contentDir);
       for (const file of files) {
-        if (file.endsWith(".mdx")) {
-          params.push({
-            locale,
-            slug: file.replace(/\.mdx$/, ""),
-          });
-        }
+        if (!file.endsWith(".mdx")) continue;
+        const slug = file.replace(/\.mdx$/, "");
+        const fp = path.join(contentDir, file);
+        const src = fs.readFileSync(fp, "utf8");
+        if (isDraftMdxSource(src)) continue;
+        params.push({ locale, slug });
       }
     }
   }
@@ -89,6 +91,10 @@ export default async function GuidePage({
   }
 
   const source = fs.readFileSync(filePath, "utf8");
+  if (isDraftMdxSource(source)) {
+    notFound();
+  }
+
   const components = getMDXComponents({});
 
   const { content, frontmatter } = await compileMDX<Frontmatter>({

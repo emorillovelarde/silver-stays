@@ -20,7 +20,8 @@ import { useScrollDirection } from "@/hooks/use-scroll-direction";
 
 const NAV_LINKS = [
   { href: "/", key: "home" as const },
-  { href: "/properties", key: "properties" as const },
+  // Soft launch: ocultar Propiedades hasta que el inventario esté listo (ruta /properties sigue existiendo).
+  // { href: "/properties", key: "properties" as const },
   { href: "/guias", key: "guidesAndResources" as const },
 ] as const;
 
