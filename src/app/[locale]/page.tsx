@@ -1,8 +1,11 @@
 import { Hero } from "@/components/home/hero";
 import { StepsSection } from "@/components/home/steps-section";
 import { TrustBar } from "@/components/home/trust-bar";
+import { WhyCostaDelSol } from "@/components/home/why-costa-del-sol";
 import { BentoGrid } from "@/components/home/bento-grid";
+import { FaqSection } from "@/components/home/faq-section";
 import { ResourceCenter } from "@/components/home/resource-center";
+import { AboutBluevera } from "@/components/home/about-bluevera";
 import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 
@@ -14,8 +17,11 @@ export default async function Home() {
       <Hero />
       <StepsSection />
       <TrustBar />
+      <WhyCostaDelSol />
       <BentoGrid />
+      <FaqSection />
       <ResourceCenter />
+      <AboutBluevera />
 
       <footer className="bg-[#1A365D] py-12 text-center text-white">
         <div className="container mx-auto px-4">

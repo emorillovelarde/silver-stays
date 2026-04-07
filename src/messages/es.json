@@ -160,6 +160,81 @@
       "heatingDegreeDays": "Grados Días de Calefacción"
     }
   },
+  "WhyCostaDelSol": {
+    "eyebrow": "El Destino",
+    "title": "Por qué miles de jubilados europeos eligen la Costa del Sol cada invierno",
+    "intro": "Más que unas vacaciones: pasar el invierno en el sur de España se ha convertido en una decisión inteligente de estilo de vida y financiera para jubilados activos de toda Europa.",
+    "sunshine": {
+      "title": "Más de 300 días de sol al año",
+      "text": "Mientras el norte de Europa tiembla con inviernos oscuros, la Costa del Sol disfruta de temperaturas suaves de 15–20 °C y una media de 320 días soleados al año. El clima mediterráneo es ideal para la vida al aire libre, los paseos matutinos por el paseo marítimo y el golf durante todo el año."
+    },
+    "savings": {
+      "title": "Ahorre hasta un 40% en coste de vida",
+      "text": "Calentar una vivienda en Reino Unido o Alemania durante el invierno puede costar más que alquilar un apartamento completamente equipado en la Costa del Sol. Sume los menores costes de alimentación, restaurantes y transporte, y su estancia invernal a menudo se paga sola."
+    },
+    "healthcare": {
+      "title": "Sanidad de primer nivel a su alcance",
+      "text": "La provincia de Málaga cuenta con hospitales acreditados internacionalmente como Vithas Xanit y Quirónsalud. Los ciudadanos de la UE pueden usar su Tarjeta Sanitaria Europea (TSE) o el formulario S1, mientras que los seguros privados comienzan desde 80 €/mes con médicos que hablan inglés en toda la costa."
+    },
+    "community": {
+      "title": "Una comunidad internacional activa",
+      "text": "Desde clubes sociales británicos en Fuengirola hasta asociaciones escandinavas en Mijas y grupos de senderismo alemanes en Nerja, la Costa del Sol cuenta con redes de expatriados consolidadas que le darán la bienvenida desde el primer día."
+    },
+    "flights": {
+      "title": "Vuelos directos, a 30 minutos de su puerta",
+      "text": "El Aeropuerto de Málaga-Costa del Sol conecta directamente con más de 60 ciudades europeas durante todo el año. Desde el aterrizaje hasta la puerta de su vivienda en Fuengirola o Nerja, estará en un plazo de 30 a 60 minutos."
+    },
+    "corridor": {
+      "title": "De Fuengirola a Nerja: un estilo de vida para cada persona",
+      "text": "Nuestro corredor seleccionado ofrece experiencias diferenciadas — desde la vibrante comodidad urbana de Fuengirola y la riqueza cultural de Málaga capital, hasta la auténtica tranquilidad y los espectaculares acantilados de Nerja y la Axarquía."
+    }
+  },
+  "Faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Todo lo que necesita saber antes de planificar su invierno en la Costa del Sol.",
+    "stayDuration": {
+      "q": "¿Cuánto tiempo puedo permanecer en España sin visado?",
+      "a": "Los ciudadanos de la UE/EEE pueden permanecer de forma indefinida, pero deben registrarse ante las autoridades españolas tras 90 días (Certificado de Registro de Ciudadano de la Unión). Los ciudadanos del Reino Unido y de otros países no pertenecientes a la UE están sujetos a la regla Schengen 90/180: un máximo de 90 días en cualquier periodo de 180. Para estancias más largas, se requiere un Visado No Lucrativo (NLV)."
+    },
+    "seasonalContract": {
+      "q": "¿Qué es un contrato de alquiler de temporada en España?",
+      "a": "El alquiler de temporada (arrendamiento de temporada) se regula bajo la Ley de Arrendamientos Urbanos (LAU) y cubre estancias motivadas por un propósito temporal — como invernar, salud o trabajo remoto — generalmente entre 1 y 11 meses. A diferencia del alquiler turístico (VFT), los contratos de temporada no requieren licencia turística y ofrecen mayor claridad legal para inquilino y propietario."
+    },
+    "rentalCost": {
+      "q": "¿Cuánto cuesta alquilar un apartamento en la Costa del Sol para el invierno?",
+      "a": "Los apartamentos Silver-Standard oscilan entre 1.000 € y 2.500 € al mes, dependiendo de la zona, tamaño y equipamiento. Fuengirola y Mijas tienden a ser algo más asequibles, mientras que las propiedades en primera línea de playa en Nerja tienen un precio superior. Todos los precios incluyen viviendas con calefacción, fibra óptica y contratos legales de temporada."
+    },
+    "safeRental": {
+      "q": "¿Es seguro alquilar a medio plazo en la Costa del Sol desde el extranjero?",
+      "a": "Los mayores riesgos son las 'propiedades fantasma' y los propietarios no verificados en plataformas genéricas. En Bluevera Residences, cada propiedad es inspeccionada físicamente y verificada legalmente mediante una Nota Simple (consulta al Registro de la Propiedad). Los pagos se procesan a través de canales seguros, nunca mediante transferencias directas a cuentas desconocidas."
+    },
+    "healthInsurance": {
+      "q": "¿Necesito seguro médico para vivir en España como jubilado?",
+      "a": "Los ciudadanos de la UE pueden utilizar la Tarjeta Sanitaria Europea (TSE) o el formulario S1 para cobertura sanitaria pública completa. Los ciudadanos del Reino Unido post-Brexit con formulario S1 mantienen acceso equivalente al NHS. Para los solicitantes del Visado No Lucrativo, es obligatorio un seguro de salud privado sin copagos, normalmente entre 100–200 €/mes según edad y cobertura."
+    },
+    "winterWeather": {
+      "q": "¿Cómo es el clima en la Costa del Sol en invierno?",
+      "a": "Las medias de enero son de 12–17 °C con unas 6 horas de sol diarias. La lluvia es poco frecuente — unos 5–6 días al mes en el periodo más lluvioso (noviembre–enero). Comparado con Londres (5 °C, 1,5 horas de sol) o Estocolmo (−1 °C), la diferencia en calidad de vida es notable."
+    },
+    "pets": {
+      "q": "¿Puedo traer a mi mascota a España para una estancia larga?",
+      "a": "Sí. Los perros y gatos que viajan desde la UE necesitan un Pasaporte Europeo para Animales de Compañía válido con la vacuna antirrábica actualizada. Desde el Reino Unido, necesitará un Certificado de Salud Animal emitido por un veterinario en los 10 días previos al viaje. Podemos ayudarle a encontrar propiedades que admitan mascotas y servicios veterinarios locales."
+    },
+    "overstay": {
+      "q": "¿Qué ocurre si permanezco más de 90 días en España siendo ciudadano del Reino Unido?",
+      "a": "Exceder el límite Schengen de 90/180 días puede resultar en multas, prohibiciones de entrada y complicaciones con futuras solicitudes de visado. Si planea quedarse más de 3 meses, le recomendamos encarecidamente solicitar un Visado No Lucrativo (NLV) con suficiente antelación — nuestros socios legales gestionan todo el proceso."
+    }
+  },
+  "AboutBluevera": {
+    "title": "Experiencia Local, Servicio Personal",
+    "description": "Bluevera Residences es una agencia boutique de estilo de vida con sede en la Costa del Sol, especializada exclusivamente en estancias invernales de media duración para jubilados activos. No somos una plataforma de reservas impersonal — somos su equipo local dedicado que verifica personalmente cada propiedad, gestiona la burocracia y se asegura de que su transición a la vida en España sea sencilla.",
+    "traits": {
+      "local": "Con sede en la Costa del Sol",
+      "verified": "Cada propiedad inspeccionada in situ",
+      "personal": "Un punto de contacto dedicado"
+    },
+    "cta": "Diseñe su Estancia"
+  },
   "Footer": {
     "cta": "¿Listo para dar el siguiente paso?",
     "questionnaire": "Comenzar Cuestionario",

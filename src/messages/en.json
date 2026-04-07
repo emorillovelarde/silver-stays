@@ -160,6 +160,81 @@
       "heatingDegreeDays": "Heating Degree Days"
     }
   },
+  "WhyCostaDelSol": {
+    "eyebrow": "The Destination",
+    "title": "Why Thousands of European Retirees Choose the Costa del Sol Every Winter",
+    "intro": "More than a holiday — wintering in Southern Spain has become a smart lifestyle and financial decision for active retirees across Europe and beyond.",
+    "sunshine": {
+      "title": "300+ Days of Sunshine",
+      "text": "While Northern Europe shivers through dark winters, the Costa del Sol enjoys mild temperatures of 15–20 °C and an average of 320 sunny days per year. The gentle Mediterranean climate is ideal for outdoor living, morning walks along the promenade, and year-round golf."
+    },
+    "savings": {
+      "title": "Save Up to 40% on Living Costs",
+      "text": "Heating a home in the UK or Germany through winter can cost more than renting a fully equipped apartment on the Costa del Sol. Add lower grocery, dining, and transport costs, and your winter stay often pays for itself."
+    },
+    "healthcare": {
+      "title": "World-Class Healthcare Within Reach",
+      "text": "Málaga province hosts internationally accredited hospitals such as Vithas Xanit and Quirónsalud. EU citizens can use their EHIC/S1 form, while private cover starts from €80/month with English-speaking doctors available throughout the coast."
+    },
+    "community": {
+      "title": "A Thriving International Community",
+      "text": "From British social clubs in Fuengirola to Scandinavian associations in Mijas and German hiking groups in Nerja, the Costa del Sol has established expat networks ready to welcome you from day one."
+    },
+    "flights": {
+      "title": "Direct Flights, 30 Minutes to Your Door",
+      "text": "Málaga-Costa del Sol Airport connects directly to over 60 European cities with year-round flights. From landing to your front door in Fuengirola or Nerja, you are typically within 30 to 60 minutes."
+    },
+    "corridor": {
+      "title": "Fuengirola to Nerja: A Lifestyle for Everyone",
+      "text": "Our curated corridor offers distinct experiences — from the vibrant urban convenience of Fuengirola and the cultural richness of Málaga capital, to the authentic tranquillity and dramatic cliffs of Nerja and the Axarquía."
+    }
+  },
+  "Faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know before planning your winter on the Costa del Sol.",
+    "stayDuration": {
+      "q": "How long can I stay in Spain without a visa?",
+      "a": "EU/EEA citizens can stay indefinitely but must register with Spanish authorities after 90 days (Certificado de Registro). UK and other non-EU citizens are subject to the Schengen 90/180-day rule: a maximum of 90 days in any 180-day period. For longer stays, a Non-Lucrative Visa (NLV) is required."
+    },
+    "seasonalContract": {
+      "q": "What is a seasonal rental contract in Spain?",
+      "a": "A seasonal rental (arrendamiento de temporada) falls under the Spanish Urban Tenancy Law (LAU) and covers stays motivated by a temporary purpose — such as wintering, health, or remote work — typically between 1 and 11 months. Unlike short-term tourist lets (VFT), seasonal contracts do not require a tourism licence and offer greater legal clarity for both tenant and landlord."
+    },
+    "rentalCost": {
+      "q": "How much does it cost to rent an apartment on the Costa del Sol for the winter?",
+      "a": "Silver-Standard apartments typically range from €1,000 to €2,500 per month depending on the area, size, and amenities. Fuengirola and Mijas tend to be slightly more affordable, while beachfront properties in Nerja command a premium. All prices include utility-ready homes with heating, fibre optic, and legal seasonal contracts."
+    },
+    "safeRental": {
+      "q": "Is it safe to rent mid-term on the Costa del Sol from abroad?",
+      "a": "The biggest risks are 'ghost properties' and unverified landlords on generic platforms. At Bluevera Residences, every property is physically inspected and legally verified through a Nota Simple (land registry check). Payments are processed through secure channels — never via direct transfers to unknown accounts."
+    },
+    "healthInsurance": {
+      "q": "Do I need health insurance to live in Spain as a retiree?",
+      "a": "EU citizens can use the European Health Insurance Card (EHIC) or the S1 form for full public healthcare coverage. UK citizens post-Brexit with an S1 retain NHS-equivalent access. For Non-Lucrative Visa applicants, private health insurance without co-payments is mandatory — typically €100–€200/month depending on age and coverage."
+    },
+    "winterWeather": {
+      "q": "What is the weather like on the Costa del Sol in winter?",
+      "a": "January averages are 12–17 °C with around 6 hours of daily sunshine. Rain is infrequent — roughly 5–6 days per month in the wettest period (November–January). Compared to London (5 °C, 1.5 sunshine hours) or Stockholm (−1 °C), the difference in quality of life is remarkable."
+    },
+    "pets": {
+      "q": "Can I bring my pet to Spain for a long stay?",
+      "a": "Yes. Dogs and cats travelling from the EU need a valid EU Pet Passport with up-to-date rabies vaccination. From the UK, you will need an Animal Health Certificate issued by a vet within 10 days of travel. We can help identify pet-friendly properties and local veterinary services."
+    },
+    "overstay": {
+      "q": "What happens if I stay more than 90 days in Spain as a UK citizen?",
+      "a": "Overstaying the 90/180-day Schengen limit can result in fines, entry bans, and complications with future visa applications. If you plan to stay longer than 3 months, we strongly recommend applying for a Non-Lucrative Visa (NLV) well in advance — our legal partners handle the entire process."
+    }
+  },
+  "AboutBluevera": {
+    "title": "Local Expertise, Personal Service",
+    "description": "Bluevera Residences is a boutique lifestyle agency based on the Costa del Sol, specialising exclusively in mid-term winter stays for active retirees. We are not an impersonal booking platform — we are your dedicated local team who personally verifies every property, navigates the bureaucracy, and ensures your transition to life in Spain is effortless.",
+    "traits": {
+      "local": "Based on the Costa del Sol",
+      "verified": "Every property inspected in person",
+      "personal": "One dedicated point of contact"
+    },
+    "cta": "Design Your Stay"
+  },
   "Footer": {
     "cta": "Ready to take the next step?",
     "questionnaire": "Start Questionnaire",
