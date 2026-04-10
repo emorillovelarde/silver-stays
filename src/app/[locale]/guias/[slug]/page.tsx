@@ -4,9 +4,16 @@ import type { Metadata } from "next";
 import matter from "gray-matter";
 import { compileMDX } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import { getMDXComponents } from "@/mdx-components";
 import { isDraftMdxSource } from "@/lib/guides";
 import { notFound } from "next/navigation";
+
+const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+
+function safeJsonLd(obj: Record<string, unknown>): string {
+  return JSON.stringify(obj).replace(/</g, "\\u003c");
+}
 
 interface Frontmatter {
   title: string;
@@ -25,6 +32,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string; locale: string }>;
 }): Promise<Metadata> {
   const { slug, locale } = await params;
+  if (!SLUG_RE.test(slug)) return {};
   const filePath = path.join(
     process.cwd(),
     "src/content/guias",
@@ -79,6 +87,7 @@ export default async function GuidePage({
   params: Promise<{ slug: string; locale: string }>;
 }) {
   const { slug, locale } = await params;
+  if (!SLUG_RE.test(slug)) notFound();
   const filePath = path.join(
     process.cwd(),
     "src/content/guias",
@@ -104,6 +113,32 @@ export default async function GuidePage({
       parseFrontmatter: true,
       mdxOptions: {
         remarkPlugins: [remarkGfm],
+        rehypePlugins: [
+          [
+            rehypeSanitize,
+            {
+              ...defaultSchema,
+              tagNames: [
+                ...(defaultSchema.tagNames ?? []),
+                "HeroImage",
+                "CallToAction",
+                "HighlightBox",
+                "FeatureGrid",
+                "ComparisonTable",
+                "IconList",
+                "GuideImage",
+                "EnergyArbitrageCalculator",
+                "NLVSolvencyCalculator",
+                "SchengenClockAlert",
+                "NLVGuideCTA",
+              ],
+              attributes: {
+                ...defaultSchema.attributes,
+                "*": [...(defaultSchema.attributes?.["*"] ?? []), "className"],
+              },
+            },
+          ],
+        ],
       },
     },
   });
@@ -135,12 +170,14 @@ export default async function GuidePage({
     <main className="min-h-screen bg-[#FAFAFA] flex justify-center py-12 px-4 sm:px-6 lg:px-8">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       {faqJsonLd && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: safeJsonLd(faqJsonLd as Record<string, unknown>),
+          }}
         />
       )}
       <article className="max-w-3xl w-full">

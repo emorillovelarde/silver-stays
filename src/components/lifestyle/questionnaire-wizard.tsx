@@ -1,13 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useForm, Resolver } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   questionnaireSchema,
   QuestionnaireFormValues,
 } from "@/lib/schemas/questionnaire";
-import { supabase } from "@/lib/supabase";
 import { Button } from "@/components/ui/button";
 import { Card, CardFooter } from "@/components/ui/card";
 import {
@@ -21,15 +20,24 @@ import { ChevronRight, ChevronLeft, Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { useTranslations, useLocale } from "next-intl";
-import { sendLeadEmail } from "@/actions/send-lead-email";
+import { submitLead } from "@/actions/submit-lead";
+import { TurnstileWidget } from "@/components/turnstile-widget";
+
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "";
 
 export function QuestionnaireWizard() {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [honeypot, setHoneypot] = useState("");
   const router = useRouter();
   const t = useTranslations("Questionnaire");
   const locale = useLocale();
+
+  const onTurnstileVerify = useCallback((token: string) => {
+    setTurnstileToken(token);
+  }, []);
 
   const form = useForm<QuestionnaireFormValues>({
     resolver: zodResolver(
@@ -91,51 +99,29 @@ export function QuestionnaireWizard() {
     setSubmitError(null);
 
     try {
-      const leadData = {
-        questionnaire: {
-          location: data.location,
-          lifestyle: data.lifestyle,
-          essentialServices: data.essentialServices,
-          duration: data.duration,
-        },
-        contact: {
-          firstName: data.firstName,
-          lastName: data.lastName,
-          phone: data.phone,
-          email: data.email,
-        },
-        submittedAt: new Date().toISOString(),
-      };
-
-      const { error: leadError } = await supabase.from("leads").insert({
-        email: data.email,
-        full_name: `${data.firstName} ${data.lastName}`,
-        phone: data.phone,
-        data: leadData,
-      });
-
-      if (leadError) throw leadError;
-
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      if (user) {
-        await supabase
-          .from("profiles")
-          .update({
-            health_notes: JSON.stringify(leadData),
-          })
-          .eq("id", user.id);
+      if (!turnstileToken && TURNSTILE_SITE_KEY) {
+        setSubmitError(t("error"));
+        setIsSubmitting(false);
+        return;
       }
 
-      const { success } = await sendLeadEmail({
-        email: data.email,
+      const result = await submitLead({
+        location: data.location,
+        lifestyle: data.lifestyle,
+        essentialServices: data.essentialServices,
+        duration: data.duration,
         firstName: data.firstName,
         lastName: data.lastName,
+        phone: data.phone,
+        email: data.email,
         locale,
+        turnstileToken,
+        _hp_name: honeypot,
       });
-      if (!success) {
-        console.warn("[Questionnaire] Lead email could not be sent");
+
+      if (!result.success) {
+        setSubmitError(t("error"));
+        return;
       }
 
       router.push("/success");
@@ -196,6 +182,30 @@ export function QuestionnaireWizard() {
       >
         <div className="flex-grow min-h-0 overflow-y-auto px-6 py-4">
           {renderStep()}
+
+          {/* Honeypot — hidden from real users, bots auto-fill it */}
+          <div
+            aria-hidden="true"
+            className="absolute opacity-0 h-0 overflow-hidden"
+          >
+            <label htmlFor="_hp_name">Leave empty</label>
+            <input
+              id="_hp_name"
+              name="_hp_name"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+            />
+          </div>
+
+          {currentStep === totalSteps && TURNSTILE_SITE_KEY && (
+            <TurnstileWidget
+              siteKey={TURNSTILE_SITE_KEY}
+              onVerify={onTurnstileVerify}
+            />
+          )}
         </div>
 
         {submitError && (

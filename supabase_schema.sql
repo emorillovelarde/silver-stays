@@ -7,7 +7,7 @@ create table profiles (
   email text,
   full_name text,
   role text check (role in ('guest', 'owner')),
-  health_notes text,
+  questionnaire_data text,
   mobility_level int check (mobility_level between 1 and 5),
   created_at timestamp with time zone default timezone('utc'::text, now()) not null
 );

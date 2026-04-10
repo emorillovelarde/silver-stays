@@ -32,10 +32,15 @@ export const questionnaireSchema = z.object({
     .union([durationEnum, z.literal("")])
     .default("")
     .refine((v) => v !== "", { message: "selectOption" }),
-  firstName: z.string().min(2, "firstNameRequired"),
-  lastName: z.string().min(2, "lastNameRequired"),
-  phone: z.string().min(9, "phoneRequired"),
-  email: z.string().email("emailRequired"),
+  firstName: z.string().trim().min(2, "firstNameRequired").max(50),
+  lastName: z.string().trim().min(2, "lastNameRequired").max(50),
+  phone: z
+    .string()
+    .trim()
+    .min(9, "phoneRequired")
+    .max(20)
+    .regex(/^[+\d\s()-]+$/, "phoneRequired"),
+  email: z.string().trim().toLowerCase().email("emailRequired").max(254),
 });
 
 export type QuestionnaireData = z.infer<typeof questionnaireSchema>;
