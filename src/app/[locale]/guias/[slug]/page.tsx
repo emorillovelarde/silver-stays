@@ -48,7 +48,7 @@ export async function generateMetadata({
   const description = frontmatter.description ?? "";
   const keywords = frontmatter.keywords;
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://silver-stays.com";
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.blueveraresidences.com";
   return {
     title,
     description,
@@ -153,7 +153,7 @@ export default async function GuidePage({
       name: frontmatter.author || "Silver Costa Residences",
     },
     datePublished: frontmatter.date,
-    image: "https://silver-stays.com/og-image.jpg", // Placeholder
+    image: "https://www.blueveraresidences.com/og-image.jpg",
   };
 
   const faqJsonLd: {

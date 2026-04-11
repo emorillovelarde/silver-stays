@@ -22,6 +22,10 @@
     "btnCTA": "Design Your Stay",
     "imageAlt": "Premium terrace with Mediterranean views - Silver Costa Residences stay"
   },
+  "TrustBar": {
+    "title": "Silver Standard",
+    "subtitle": "Certified Security"
+  },
   "BentoGrid": {
     "eyebrow": "Our Promise",
     "title": "The Standard of Excellence in Long Stay Spain for Retirees",
@@ -146,7 +150,8 @@
     "openMenu": "Open navigation menu",
     "language": "Language",
     "selectLanguage": "Select language",
-    "startYourPlan": "Design Your Stay"
+    "startYourPlan": "Design Your Stay",
+    "mainNavLabel": "Main navigation"
   },
   "Metadata": {
     "title": "Silver Costa Residences | Your perfect home for the golden years",
@@ -238,7 +243,11 @@
   "Footer": {
     "cta": "Ready to take the next step?",
     "questionnaire": "Start Questionnaire",
-    "copyright": "© 2026 Silver Costa Residences. All rights reserved."
+    "copyright": "© 2026 Silver Costa Residences. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "legalNotice": "Legal Notice",
+    "cookiePolicy": "Cookie Policy",
+    "ariaLabel": "Site footer"
   },
   "GuidesHub": {
     "heroTitle": "Living in Spain Guides & Resources",

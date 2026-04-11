@@ -39,7 +39,7 @@ function siteBaseUrl(): string {
   if (explicit) return explicit;
   const vercel = process.env.VERCEL_URL?.replace(/\/$/, "");
   if (vercel) return vercel.startsWith("http") ? vercel : `https://${vercel}`;
-  return "https://silver-stays.com";
+  return "https://www.blueveraresidences.com";
 }
 
 const LOGO_ALT =

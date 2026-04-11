@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
 import {
   Atkinson_Hyperlegible,
@@ -5,6 +6,12 @@ import {
   Playfair_Display,
 } from "next/font/google";
 import "./globals.css";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.blueveraresidences.com",
+  ),
+};
 
 const atkinson = Atkinson_Hyperlegible({
   variable: "--font-atkinson",

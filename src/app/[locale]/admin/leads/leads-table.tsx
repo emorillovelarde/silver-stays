@@ -17,11 +17,12 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
-import { RefreshCw } from "lucide-react";
+import { RefreshCw, LogOut } from "lucide-react";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 import type { Lead } from "@/lib/types/lead";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
+import { createBrowserClient } from "@supabase/ssr";
 
 interface Props {
   initialLeads: Lead[];
@@ -29,6 +30,17 @@ interface Props {
 
 export function AdminLeadsTable({ initialLeads }: Props) {
   const router = useRouter();
+  const { locale } = useParams<{ locale: string }>();
+
+  const handleLogout = async () => {
+    const supabase = createBrowserClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    );
+    await supabase.auth.signOut();
+    router.push(`/${locale}/admin/login`);
+    router.refresh();
+  };
 
   return (
     <Card className="shadow-lg border-none">
@@ -41,14 +53,24 @@ export function AdminLeadsTable({ initialLeads }: Props) {
             Listado de interesados y respuestas del cuestionario
           </CardDescription>
         </div>
-        <Button
-          onClick={() => router.refresh()}
-          variant="outline"
-          className="border-primary text-primary hover:bg-primary hover:text-white"
-        >
-          <RefreshCw className="h-4 w-4 mr-2" />
-          Actualizar
-        </Button>
+        <div className="flex gap-2">
+          <Button
+            onClick={() => router.refresh()}
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary hover:text-white"
+          >
+            <RefreshCw className="h-4 w-4 mr-2" />
+            Actualizar
+          </Button>
+          <Button
+            onClick={handleLogout}
+            variant="outline"
+            className="border-red-300 text-red-600 hover:bg-red-600 hover:text-white"
+          >
+            <LogOut className="h-4 w-4 mr-2" />
+            Salir
+          </Button>
+        </div>
       </CardHeader>
       <CardContent>
         <div className="rounded-md border bg-white">

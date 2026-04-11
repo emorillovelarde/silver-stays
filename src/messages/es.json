@@ -22,9 +22,13 @@
     "btnCTA": "Diseñe su Estancia",
     "imageAlt": "Terraza premium con vistas al Mediterráneo - Estancia Silver Costa Residences"
   },
+  "TrustBar": {
+    "title": "Silver Standard",
+    "subtitle": "Seguridad Certificada"
+  },
   "BentoGrid": {
     "eyebrow": "Nuestra Promesa",
-    "title": "El Estándar de Excelencia en Long Stay Spain for Retirees",
+    "title": "El Estandar de Excelencia en Estancias Largas en Espana para Jubilados",
     "pillar1Title": "Alojamiento Silver-Standard",
     "pillar1Text": "Viviendas cálidas en invierno, sin escalones imprevistos, con fibra óptica garantizada y contratos de temporada 100% seguros y legales.",
     "pillar2Title": "Escudo Legal y Burocrático",
@@ -146,7 +150,8 @@
     "openMenu": "Abrir menú de navegación",
     "language": "Idioma",
     "selectLanguage": "Seleccionar idioma",
-    "startYourPlan": "Diseñe su Estancia"
+    "startYourPlan": "Diseñe su Estancia",
+    "mainNavLabel": "Navegacion principal"
   },
   "Metadata": {
     "title": "Silver Costa Residences | Tu hogar perfecto para los años dorados",
@@ -238,7 +243,11 @@
   "Footer": {
     "cta": "¿Listo para dar el siguiente paso?",
     "questionnaire": "Comenzar Cuestionario",
-    "copyright": "© 2026 Silver Costa Residences. Todos los derechos reservados."
+    "copyright": "© 2026 Silver Costa Residences. Todos los derechos reservados.",
+    "privacyPolicy": "Política de Privacidad",
+    "legalNotice": "Aviso Legal",
+    "cookiePolicy": "Política de Cookies",
+    "ariaLabel": "Pie de página"
   },
   "GuidesHub": {
     "heroTitle": "Guías y Recursos para Vivir en España",

@@ -22,7 +22,8 @@ export type WelcomeEmailProps = {
 };
 
 function urls() {
-  const site = process.env.NEXT_PUBLIC_SITE_URL ?? "https://silver-stays.com";
+  const site =
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.blueveraresidences.com";
   const base = site.replace(/\/$/, "");
   const guidePdf = `${base}/guides/guia-costa-del-sol-2026.pdf`;
   const calendly =

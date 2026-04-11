@@ -41,7 +41,7 @@ function NavLinks({
         "flex flex-col gap-1 md:flex-row md:items-center md:gap-8",
         className,
       )}
-      aria-label="Navegación principal"
+      aria-label={t("mainNavLabel")}
     >
       {NAV_LINKS.map(({ href, key }) => {
         const isActive =
