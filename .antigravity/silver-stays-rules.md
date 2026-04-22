@@ -1,4 +1,4 @@
-# Silver Stays Rules
+# Bluevera Residences Rules
 
 - **Framework**: Next.js 15+
 - **Typography**: Base font size 18px (`text-lg`)

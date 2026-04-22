@@ -43,14 +43,14 @@ const GUIDE_IMAGES: Record<
     },
   },
   "healthcare-andalusia-expats": {
-    imageUrl: "/images/silver_stays_premium_terrace.jpg",
+    imageUrl: "/images/bluevera_premium_terrace.jpg",
     imageAlt: {
       es: "Guía de sanidad pública y privada en Andalucía para expatriados",
       en: "Public vs private healthcare in Andalusia for expats guide",
     },
   },
   "sanidad-andalucia-expatriados": {
-    imageUrl: "/images/silver_stays_premium_terrace.jpg",
+    imageUrl: "/images/bluevera_premium_terrace.jpg",
     imageAlt: {
       es: "Guía de diferencias entre sanidad pública y privada en Andalucía para expatriados",
       en: "Public vs private healthcare in Andalusia for expats guide",

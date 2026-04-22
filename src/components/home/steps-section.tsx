@@ -23,7 +23,7 @@ export async function StepsSection() {
           <div className="lg:w-[55%] lg:min-w-0">
             <div className="relative w-full h-[400px] sm:h-[500px] lg:h-full min-h-[400px] rounded-xl overflow-hidden">
               <Image
-                src="/images/silver_stays_premium_terrace.jpg"
+                src="/images/bluevera_premium_terrace.jpg"
                 alt={t("imageAlt")}
                 fill
                 sizes="(max-width: 1024px) 100vw, 55vw"

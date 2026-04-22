@@ -410,7 +410,7 @@ export function EnergyArbitrageCalculator() {
                 : 0}
               %
             </strong>{" "}
-            de un alquiler Silver-Standard típico (1.200 €/mes).
+            de un alquiler Bluevera Standard típico (1.200 €/mes).
           </p>
           <p className="text-base text-emerald-600 mt-4">
             Los resultados se guardan automáticamente. Puede continuar al

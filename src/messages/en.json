@@ -1,12 +1,12 @@
 {
   "HomePage": {
-    "title": "Welcome to Silver Costa Residences",
+    "title": "Welcome to Bluevera Residences",
     "subtitle": "Discover your perfect home for the golden years.",
     "cta": "Get Started"
   },
   "Hero": {
     "headline": "Premium Winter Rentals on the Costa del Sol",
-    "subtitle": "Silver-Standard long stays for active retirees. Your home, healthcare, and community in Spain, managed with a single call.",
+    "subtitle": "Bluevera Standard long stays for active retirees. Your home, healthcare, and community in Spain, managed with a single call.",
     "supportText": "Leave the cold and bureaucracy behind. We curate stays of 1 to 9 months between Fuengirola and Nerja, so you can simply enjoy your time.",
     "cta": "Design Your Stay",
     "imageAlt": "Bluevera Residences - Costa del Sol"
@@ -20,16 +20,16 @@
     "step3Title": "Arrive and enjoy",
     "step3Desc": "From legal paperwork and healthcare to your property readiness. We handle the logistics so you can simply focus on the sun.",
     "btnCTA": "Design Your Stay",
-    "imageAlt": "Premium terrace with Mediterranean views - Silver Costa Residences stay"
+    "imageAlt": "Premium terrace with Mediterranean views - Bluevera Residences stay"
   },
   "TrustBar": {
-    "title": "Silver Standard",
+    "title": "Bluevera Standard",
     "subtitle": "Certified Security"
   },
   "BentoGrid": {
     "eyebrow": "Our Promise",
     "title": "The Standard of Excellence in Long Stay Spain for Retirees",
-    "pillar1Title": "Silver-Standard Accommodation",
+    "pillar1Title": "Bluevera Standard Accommodation",
     "pillar1Text": "Warm homes in winter, no unexpected stairs, guaranteed fibre optic and 100% secure and legal seasonal contracts.",
     "pillar2Title": "Legal and Bureaucratic Shield",
     "pillar2Text": "We navigate Spanish administration for you. We manage your Non-Lucrative Visa (NLV), Schengen rules (90/180) and your registration.",
@@ -37,13 +37,13 @@
     "pillar3Text": "Enjoy with peace of mind. We connect you with the best private medical network (such as Vithas Xanit) with fast-track access and manage your insurance.",
     "pillar4Title": "Community and Integration",
     "pillar4Text": "You will never feel alone. Exclusive access to our Private Social Club, weekly events, wine tastings and connection with local associations.",
-    "pillar1Alt": "Silver-Standard Accommodation icon",
+    "pillar1Alt": "Bluevera Standard Accommodation icon",
     "pillar2Alt": "Legal and Bureaucratic Shield icon",
     "pillar3Alt": "Health Concierge icon",
     "pillar4Alt": "Community and Integration icon"
   },
   "Concepts": {
-    "silverStandard": "Silver-Standard",
+    "silverStandard": "Bluevera Standard",
     "bureaucracyShield": "Bureaucracy Shield",
     "winterStays": "Winter Stays",
     "careConcierge": "Care Concierge",
@@ -87,7 +87,7 @@
       "lastNamePlaceholder": "Smith",
       "emailPlaceholder": "example@email.com",
       "phonePlaceholder": "+34 600 000 000",
-      "privacyNote": "Your privacy is our priority. A Silver Costa Residences Managing Partner will review your vision and contact you within 24 hours."
+      "privacyNote": "Your privacy is our priority. A Bluevera Residences Managing Partner will review your vision and contact you within 24 hours."
     },
     "validation": {
       "selectOption": "Please select an option",
@@ -123,14 +123,14 @@
     "downloadButton": "Download 2026 Costa del Sol Guide",
     "nextStepLabel": "PREMIUM NEXT STEP",
     "nextStepTitle": "Let's design your winter retreat",
-    "nextStepDescription": "To guarantee the excellence of our Silver-Standard service, our Managing Partner reserves 15 minutes to begin designing your stay and answer any questions you may have.",
+    "nextStepDescription": "To guarantee the excellence of our Bluevera Standard service, our Managing Partner reserves 15 minutes to begin designing your stay and answer any questions you may have.",
     "bookCallButton": "Schedule your Welcome Call",
     "bullet1": "15-min Video Call",
     "bullet2": "No commitment",
     "trustBadge": "100% legally verified properties & expert logistical support.",
     "backToHome": "Back to Home",
     "guideImageAlt": "2026 Costa del Sol Guide - Cover",
-    "partnerAvatarAlt": "Silver Costa Residences Managing Partner",
+    "partnerAvatarAlt": "Bluevera Residences Managing Partner",
     "modalClose": "Close",
     "rewardSectionLabel": "Your guide and download"
   },
@@ -154,8 +154,8 @@
     "mainNavLabel": "Main navigation"
   },
   "Metadata": {
-    "title": "Silver Costa Residences | Your perfect home for the golden years",
-    "description": "Discover your perfect home for the golden years with Silver Costa Residences. Senior-friendly stays with comfort and care."
+    "title": "Bluevera Residences | Your perfect home for the golden years",
+    "description": "Discover your perfect home for the golden years with Bluevera Residences. Senior-friendly stays with comfort and care."
   },
   "Guias": {
     "arbitraje-energetico": {
@@ -207,7 +207,7 @@
     },
     "rentalCost": {
       "q": "How much does it cost to rent an apartment on the Costa del Sol for the winter?",
-      "a": "Silver-Standard apartments typically range from €1,000 to €2,500 per month depending on the area, size, and amenities. Fuengirola and Mijas tend to be slightly more affordable, while beachfront properties in Nerja command a premium. All prices include utility-ready homes with heating, fibre optic, and legal seasonal contracts."
+      "a": "Bluevera Standard apartments typically range from €1,000 to €2,500 per month depending on the area, size, and amenities. Fuengirola and Mijas tend to be slightly more affordable, while beachfront properties in Nerja command a premium. All prices include utility-ready homes with heating, fibre optic, and legal seasonal contracts."
     },
     "safeRental": {
       "q": "Is it safe to rent mid-term on the Costa del Sol from abroad?",
@@ -243,7 +243,7 @@
   "Footer": {
     "cta": "Ready to take the next step?",
     "questionnaire": "Start Questionnaire",
-    "copyright": "© 2026 Silver Costa Residences. All rights reserved.",
+    "copyright": "© 2026 Bluevera Residences. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "legalNotice": "Legal Notice",
     "cookiePolicy": "Cookie Policy",
@@ -258,7 +258,7 @@
     "ctaSubtitle": "Complete our free assessment and we'll find the perfect stay for your needs.",
     "ctaButton": "Start My Assessment",
     "ctaButtonAria": "Start free assessment to find your ideal stay",
-    "metaTitle": "Living in Spain Guides & Resources | Silver Costa Residences",
+    "metaTitle": "Living in Spain Guides & Resources | Bluevera Residences",
     "metaDescription": "Discover everything you need to know about visas, rental contracts, and the cost of living on the Costa del Sol. Expert guides for your retirement in Spain."
   },
   "ResourceCenter": {

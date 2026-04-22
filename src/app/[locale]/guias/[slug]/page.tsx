@@ -150,7 +150,7 @@ export default async function GuidePage({
     description: frontmatter.description,
     author: {
       "@type": "Organization",
-      name: frontmatter.author || "Silver Costa Residences",
+      name: frontmatter.author || "Bluevera Residences",
     },
     datePublished: frontmatter.date,
     image: "https://www.blueveraresidences.com/og-image.jpg",

@@ -14,6 +14,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/images/silver_stays_premium_terrace.jpg",
+        destination: "/images/bluevera_premium_terrace.jpg",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

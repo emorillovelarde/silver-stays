@@ -33,12 +33,12 @@ const copy = {
     greeting: (name: string) => `Dear ${name},`,
     p1: "A few days ago, I sent you the 2026 Costa del Sol Guide. I hope you found the section about local communities and healthcare useful.",
     p2: 'Today, I want to address the "elephant in the room". Many of our clients tell us that while the idea of a Mediterranean winter is a dream, the reality of Spanish bureaucracy—navigating the 90/180-day Schengen rule, securing Non-Lucrative Visas, and avoiding unregulated holiday rentals—can feel like a nightmare.',
-    p3: "You shouldn't have to spend your retirement fighting with paperwork or worrying about rental scams. That is exactly why we created the Silver-Standard Framework. We only work with 100% legally verified properties under strict long-term contracts (LAU), and we manage the complex local logistics for you.",
+    p3: "You shouldn't have to spend your retirement fighting with paperwork or worrying about rental scams. That is exactly why we created the Bluevera Standard Framework. We only work with 100% legally verified properties under strict long-term contracts (LAU), and we manage the complex local logistics for you.",
     p4: "Let's take the guesswork out of your transition. I have a few slots left this week for a brief, zero-obligation Welcome Call. We can discuss your ideal dates and map out your secure legal route to Spain.",
     cta: "Schedule Your 15-Min Call",
     closing1: "Speak soon,",
     closingName: "[Tu Nombre]",
-    closingRole: "Managing Partner, Silver Costa Residences",
+    closingRole: "Managing Partner, Bluevera Residences",
   },
   es: {
     preview:
@@ -46,12 +46,12 @@ const copy = {
     greeting: (name: string) => `Estimado/a ${name},`,
     p1: "Hace unos días le envié la Guía Costa del Sol 2026. Espero que le haya resultado útil la sección sobre nuestras comunidades y acceso sanitario.",
     p2: "Hoy quiero hablarle del mayor obstáculo que frena a la mayoría: la burocracia y la inseguridad del mercado inmobiliario. Muchos de nuestros clientes nos confiesan que, aunque la idea de pasar el invierno frente al mar es un sueño, enfrentarse a normativas complejas y al miedo a las estafas en alquileres no regulados es un verdadero dolor de cabeza.",
-    p3: "Su retiro no debería consistir en lidiar con papeleo. Por eso creamos el Silver-Standard Framework. Auditamos legalmente el 100% de nuestras propiedades, garantizamos contratos de larga temporada seguros (LAU) y gestionamos la logística local por usted.",
+    p3: "Su retiro no debería consistir en lidiar con papeleo. Por eso creamos el Bluevera Standard Framework. Auditamos legalmente el 100% de nuestras propiedades, garantizamos contratos de larga temporada seguros (LAU) y gestionamos la logística local por usted.",
     p4: "Eliminemos la incertidumbre de su viaje. Me quedan algunos huecos esta semana para una breve Llamada de Bienvenida sin compromiso. Hablaremos de sus fechas ideales y trazaremos su hoja de ruta segura hacia la Costa del Sol.",
     cta: "Reservar Llamada de 15 min",
     closing1: "Reciba un cordial saludo,",
     closingName: "[Tu Nombre]",
-    closingRole: "Socio Director, Silver Costa Residences",
+    closingRole: "Socio Director, Bluevera Residences",
   },
 } as const;
 

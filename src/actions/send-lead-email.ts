@@ -12,11 +12,11 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 const FROM_EMAIL =
   process.env.RESEND_FROM_EMAIL ??
-  "Silver Costa Residences <onboarding@resend.dev>";
+  "Bluevera Residences <onboarding@resend.dev>";
 
 const SUBJECT = {
-  en: "Welcome to Silver Costa Residences - Your Costa del Sol Guide is here",
-  es: "Bienvenido a Silver Costa Residences - Su Guía Costa del Sol está aquí",
+  en: "Welcome to Bluevera Residences - Your Costa del Sol Guide is here",
+  es: "Bienvenido a Bluevera Residences - Su Guía Costa del Sol está aquí",
 } as const;
 
 const sendLeadEmailSchema = z.object({

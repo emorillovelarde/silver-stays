@@ -1,9 +1,9 @@
-# Contexto Técnico y Funcional: Silver Stays
+# Contexto Técnico y Funcional: Bluevera Residences
 
-Este documento describe el estado actual, la funcionalidad y la arquitectura del proyecto **Silver Stays**, una plataforma web diseñada para facilitar estancias de larga duración a personas mayores (Silver Economy) en la Costa del Sol, enfocándose en bienestar, accesibilidad y comunidad.
+Este documento describe el estado actual, la funcionalidad y la arquitectura del proyecto **Bluevera Residences**, una plataforma web diseñada para facilitar estancias de larga duración a personas mayores (Silver Economy) en la Costa del Sol, enfocándose en bienestar, accesibilidad y comunidad.
 
 ## 1. Visión del Proyecto
-**Silver Stays** ayuda a seniors activos a diseñar su estancia ideal en el sur de España. A diferencia de un portal inmobiliario tradicional, Silver Stays prioriza tres pilares:
+**Bluevera Residences** ayuda a seniors activos a diseñar su estancia ideal en el sur de España. A diferencia de un portal inmobiliario tradicional, Bluevera Residences prioriza tres pilares:
 1.  **Logística y Salud**: Viviendas certificadas con duchas a ras de suelo, ascensores y temperaturas controladas.
 2.  **Comunidad**: Conexión con actividades locales (bridge, golf, senderismo suave).
 3.  **Soporte**: Asistentes personales para trámites legales y médicos.

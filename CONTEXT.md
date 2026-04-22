@@ -1,4 +1,4 @@
-# Silver Costa Residences – Contexto para IA
+# Bluevera Residences – Contexto para IA
 
 Resumen del estado actual del proyecto para que una IA entienda estilo, funcionalidades y convenciones.
 

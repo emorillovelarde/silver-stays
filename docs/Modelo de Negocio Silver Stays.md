@@ -94,7 +94,7 @@ La agencia no puede ofrecer "café para todos". Cada zona dentro del corredor Fu
 * **Producto Ideal:** Villas o apartamentos con vistas al mar en acantilados, urbanizaciones con jardines (Capistrano en Nerja). Coche casi imprescindible.  
 * **Oportunidad:** Nerja atrae a un turismo de mayor calidad y estancias largas invernales debido a su clima superior (menos viento que la costa oeste). Es ideal para el perfil alemán y suizo.6
 
-## **5\. Diseño del Modelo de Negocio: "Costa Silver Stays"**
+## **5\. Diseño del Modelo de Negocio: "Bluevera Residences"**
 
 El modelo de negocio propuesto trasciende la intermediación inmobiliaria. Se posiciona como una **"Plataforma de Servicios de Vida" (Lifestyle & Care Platform)**. La ventaja competitiva radica en la integración vertical de servicios: Alojamiento \+ Legal \+ Salud \+ Comunidad.
 
@@ -218,7 +218,7 @@ Objetivo: 25 Propiedades gestionadas con ocupación media de 6 meses.
 
 ## **9\. Conclusión y Recomendación Final**
 
-El lanzamiento de "Costa Silver Stays" es oportuno y estratégicamente sólido. Aprovecha una tormenta perfecta: el auge demográfico de la Silver Economy, la crisis energética del norte de Europa y el endurecimiento regulatorio en Andalucía que profesionalizará el sector.
+El lanzamiento de "Bluevera Residences" es oportuno y estratégicamente sólido. Aprovecha una tormenta perfecta: el auge demográfico de la Silver Economy, la crisis energética del norte de Europa y el endurecimiento regulatorio en Andalucía que profesionalizará el sector.
 
 Para tener éxito, la agencia no debe verse como una inmobiliaria, sino como una **empresa de gestión de estilo de vida**. El valor real no está en las paredes del apartamento, sino en la seguridad jurídica, la tranquilidad sanitaria y el calor de la comunidad que se construye alrededor del cliente. La ejecución debe ser impecable en la "calidad de servicio" y la "confianza", los dos activos más valorados por este segmento demográfico.
 

@@ -1,6 +1,6 @@
-# Contexto Técnico y Arquitectura: Silver Stays
+# Contexto Técnico y Arquitectura: Bluevera Residences
 
-Este documento detalla la implementación técnica del proyecto Silver Stays para facilitar su mantenimiento y escalabilidad por parte de agentes de IA y desarrolladores.
+Este documento detalla la implementación técnica del proyecto Bluevera Residences para facilitar su mantenimiento y escalabilidad por parte de agentes de IA y desarrolladores.
 
 ## 1. Stack Tecnológico
 

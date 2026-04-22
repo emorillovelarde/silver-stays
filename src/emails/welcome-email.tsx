@@ -43,7 +43,7 @@ const copy = {
     p3: "Reading the guide is the perfect start, but navigating visas, 90/180-day Schengen rules, and winter logistics requires expert local support. That is why our Managing Partner has reserved a complimentary 15-minute Welcome Call for you. In this brief session, we will outline your logistical roadmap and answer your immediate questions, with zero obligation.",
     btn2: "Schedule Your Welcome Call",
     regards: "Warm regards,",
-    team: "The Silver Costa Residences Team",
+    team: "The Bluevera Residences Team",
   },
   es: {
     preview: "Descargue su guía y descubra su siguiente paso...",
@@ -55,7 +55,7 @@ const copy = {
     p3: "Leer la guía es el comienzo ideal, pero navegar por visados, normativas de alquiler y logística invernal requiere apoyo local experto. Por eso, nuestro Socio Director ha reservado una Llamada de Bienvenida de 15 minutos (sin compromiso) para usted. En esta breve sesión, trazaremos su hoja de ruta y resolveremos sus dudas inmediatas.",
     btn2: "Reservar Llamada de Bienvenida",
     regards: "Reciba un cordial saludo,",
-    team: "El Equipo de Silver Costa Residences",
+    team: "El Equipo de Bluevera Residences",
   },
 } as const;
 

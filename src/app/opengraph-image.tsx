@@ -62,7 +62,7 @@ export default function OGImage() {
             maxWidth: 700,
           }}
         >
-          Silver-Standard long stays for active retirees
+          Bluevera Standard long stays for active retirees
         </div>
         <div
           style={{
