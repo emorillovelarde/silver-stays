@@ -199,14 +199,16 @@ export function QuestionnaireWizard() {
               onChange={(e) => setHoneypot(e.target.value)}
             />
           </div>
+        </div>
 
-          {currentStep === totalSteps && TURNSTILE_SITE_KEY && (
+        {currentStep === totalSteps && TURNSTILE_SITE_KEY && (
+          <div className="px-6 pt-2">
             <TurnstileWidget
               siteKey={TURNSTILE_SITE_KEY}
               onVerify={onTurnstileVerify}
             />
-          )}
-        </div>
+          </div>
+        )}
 
         {submitError && (
           <div

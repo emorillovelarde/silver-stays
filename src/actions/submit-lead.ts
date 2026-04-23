@@ -93,6 +93,10 @@ export async function submitLead(
 
   const turnstileOk = await verifyTurnstile(data.turnstileToken, ip);
   if (!turnstileOk) {
+    console.error(
+      "[submitLead] Turnstile failed for token:",
+      data.turnstileToken?.slice(0, 20),
+    );
     return { success: false, error: "CAPTCHA verification failed" };
   }
 
