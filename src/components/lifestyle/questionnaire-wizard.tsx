@@ -23,7 +23,10 @@ import { useTranslations, useLocale } from "next-intl";
 import { submitLead } from "@/actions/submit-lead";
 import { TurnstileWidget } from "@/components/turnstile-widget";
 
-const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "";
+const TURNSTILE_SITE_KEY =
+  process.env.NODE_ENV === "development"
+    ? ""
+    : (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "");
 
 export function QuestionnaireWizard() {
   const [currentStep, setCurrentStep] = useState(1);

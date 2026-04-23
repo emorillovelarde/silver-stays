@@ -21,7 +21,7 @@ const submitLeadSchema = z.object({
     .regex(/^[+\d\s()-]+$/),
   email: z.string().trim().toLowerCase().email().max(254),
   locale: z.enum(["en", "es"]).optional().default("en"),
-  turnstileToken: z.string().min(1),
+  turnstileToken: z.string(),
   _hp_name: z.string().max(0),
 });
 
@@ -29,6 +29,8 @@ const HOUR_MS = 60 * 60 * 1000;
 const MAX_LEADS_PER_IP_PER_HOUR = 5;
 
 async function verifyTurnstile(token: string, ip: string): Promise<boolean> {
+  if (process.env.NODE_ENV === "development") return true;
+
   const secret = process.env.TURNSTILE_SECRET_KEY;
   if (!secret) {
     console.error("[submitLead] TURNSTILE_SECRET_KEY is not set");
