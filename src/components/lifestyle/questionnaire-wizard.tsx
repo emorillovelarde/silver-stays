@@ -10,10 +10,11 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardFooter } from "@/components/ui/card";
 import {
+  StepExperience,
   StepLocation,
   StepLifestyle,
-  StepEssentialServices,
-  StepDuration,
+  StepPriorities,
+  StepStayDetails,
   StepContact,
 } from "./steps";
 import { ChevronRight, ChevronLeft, Loader2 } from "lucide-react";
@@ -47,36 +48,41 @@ export function QuestionnaireWizard() {
       questionnaireSchema,
     ) as Resolver<QuestionnaireFormValues>,
     defaultValues: {
-      location: "",
-      lifestyle: "",
-      essentialServices: "",
-      duration: "",
+      costaDelSolExperience: "",
+      preferredLocation: "",
+      lifestylePreferences: [],
+      priorities: [],
+      stayDuration: "",
+      arrivalMonth: "",
       firstName: "",
       lastName: "",
-      phone: "",
       email: "",
+      phone: "",
+      nationality: "",
     },
     mode: "onChange",
   });
 
-  const totalSteps = 5;
+  const totalSteps = 6;
   const STEP_LABEL_KEYS = [
     "step1",
     "step2",
     "step3",
     "step4",
     "step5",
+    "step6",
   ] as const;
 
   const nextStep = async () => {
     let isValid = false;
 
     const stepFields: Record<number, (keyof QuestionnaireFormValues)[]> = {
-      1: ["location"],
-      2: ["lifestyle"],
-      3: ["essentialServices"],
-      4: ["duration"],
-      5: ["firstName", "lastName", "phone", "email"],
+      1: ["costaDelSolExperience"],
+      2: ["preferredLocation"],
+      3: ["lifestylePreferences"],
+      4: ["priorities"],
+      5: ["stayDuration", "arrivalMonth"],
+      6: ["firstName", "lastName", "email", "nationality"],
     };
 
     const fields = stepFields[currentStep];
@@ -109,14 +115,17 @@ export function QuestionnaireWizard() {
       }
 
       const result = await submitLead({
-        location: data.location,
-        lifestyle: data.lifestyle,
-        essentialServices: data.essentialServices,
-        duration: data.duration,
+        costaDelSolExperience: data.costaDelSolExperience,
+        preferredLocation: data.preferredLocation,
+        lifestylePreferences: data.lifestylePreferences,
+        priorities: data.priorities,
+        stayDuration: data.stayDuration,
+        arrivalMonth: data.arrivalMonth,
         firstName: data.firstName,
         lastName: data.lastName,
-        phone: data.phone,
+        phone: data.phone ?? "",
         email: data.email,
+        nationality: data.nationality,
         locale,
         turnstileToken,
         _hp_name: honeypot,
@@ -127,7 +136,7 @@ export function QuestionnaireWizard() {
         return;
       }
 
-      router.push("/success");
+      router.push(`/${locale}/success`);
     } catch (err: unknown) {
       console.error(err);
       setSubmitError(t("error"));
@@ -139,14 +148,16 @@ export function QuestionnaireWizard() {
   const renderStep = () => {
     switch (currentStep) {
       case 1:
-        return <StepLocation form={form} />;
+        return <StepExperience form={form} />;
       case 2:
-        return <StepLifestyle form={form} />;
+        return <StepLocation form={form} />;
       case 3:
-        return <StepEssentialServices form={form} />;
+        return <StepLifestyle form={form} />;
       case 4:
-        return <StepDuration form={form} />;
+        return <StepPriorities form={form} />;
       case 5:
+        return <StepStayDetails form={form} />;
+      case 6:
         return <StepContact form={form} />;
       default:
         return null;
@@ -186,7 +197,7 @@ export function QuestionnaireWizard() {
         <div className="flex-grow min-h-0 overflow-y-auto px-6 py-4">
           {renderStep()}
 
-          {/* Honeypot — hidden from real users, bots auto-fill it */}
+          {/* Honeypot — hidden from real users */}
           <div
             aria-hidden="true"
             className="absolute opacity-0 h-0 overflow-hidden"

@@ -43,15 +43,19 @@ const nextConfig: NextConfig = {
             value: "max-age=63072000; includeSubDomains; preload",
           },
           {
+            // MailerLite embedded form (winter-guide landing) needs
+            // *.mailerlite.com and *.mlcdn.com. If the MailerLite form has
+            // Google reCAPTCHA spam protection enabled, www.google.com and
+            // www.gstatic.com must also be added to script-src and frame-src.
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://esm.sh https://challenges.cloudflare.com",
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-              "font-src 'self' https://fonts.gstatic.com",
-              "img-src 'self' https://images.unsplash.com data:",
-              "connect-src 'self' https://*.supabase.co https://challenges.cloudflare.com",
-              "frame-src https://challenges.cloudflare.com",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://esm.sh https://challenges.cloudflare.com https://*.mailerlite.com",
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.mailerlite.com",
+              "font-src 'self' https://fonts.gstatic.com https://*.mailerlite.com",
+              "img-src 'self' https://images.unsplash.com data: https://*.mailerlite.com https://*.mlcdn.com",
+              "connect-src 'self' https://*.supabase.co https://challenges.cloudflare.com https://*.mailerlite.com",
+              "frame-src https://challenges.cloudflare.com https://*.mailerlite.com",
               "frame-ancestors 'none'",
             ].join("; "),
           },

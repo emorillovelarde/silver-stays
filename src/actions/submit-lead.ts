@@ -7,19 +7,17 @@ import { sendLeadEmail } from "./send-lead-email";
 import { checkRateLimit } from "@/lib/rate-limit";
 
 const submitLeadSchema = z.object({
-  location: z.string().min(1),
-  lifestyle: z.string().min(1),
-  essentialServices: z.string().min(1),
-  duration: z.string().min(1),
+  costaDelSolExperience: z.string().min(1),
+  preferredLocation: z.string().min(1),
+  lifestylePreferences: z.array(z.string()).min(1),
+  priorities: z.array(z.string()).min(1),
+  stayDuration: z.string().min(1),
+  arrivalMonth: z.string().min(1),
   firstName: z.string().trim().min(2).max(50),
   lastName: z.string().trim().min(2).max(50),
-  phone: z
-    .string()
-    .trim()
-    .min(9)
-    .max(20)
-    .regex(/^[+\d\s()-]+$/),
   email: z.string().trim().toLowerCase().email().max(254),
+  phone: z.string().optional(),
+  nationality: z.string().min(1),
   locale: z.enum(["en", "es"]).optional().default("en"),
   turnstileToken: z.string(),
   _hp_name: z.string().max(0),
@@ -67,8 +65,25 @@ export type SubmitLeadResult =
   | { success: true }
   | { success: false; error: string };
 
+type SubmitLeadInput = {
+  costaDelSolExperience: string;
+  preferredLocation: string;
+  lifestylePreferences: string[];
+  priorities: string[];
+  stayDuration: string;
+  arrivalMonth: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone?: string;
+  nationality: string;
+  locale?: string;
+  turnstileToken: string;
+  _hp_name: string;
+};
+
 export async function submitLead(
-  formData: Record<string, string>,
+  formData: SubmitLeadInput,
 ): Promise<SubmitLeadResult> {
   const parsed = submitLeadSchema.safeParse(formData);
   if (!parsed.success) {
@@ -104,16 +119,19 @@ export async function submitLead(
 
   const leadPayload = {
     questionnaire: {
-      location: data.location,
-      lifestyle: data.lifestyle,
-      essentialServices: data.essentialServices,
-      duration: data.duration,
+      costaDelSolExperience: data.costaDelSolExperience,
+      preferredLocation: data.preferredLocation,
+      lifestylePreferences: data.lifestylePreferences,
+      priorities: data.priorities,
+      stayDuration: data.stayDuration,
+      arrivalMonth: data.arrivalMonth,
     },
     contact: {
       firstName: data.firstName,
       lastName: data.lastName,
       phone: data.phone,
       email: data.email,
+      nationality: data.nationality,
     },
     submittedAt: new Date().toISOString(),
   };
@@ -122,7 +140,7 @@ export async function submitLead(
   const { error: dbError } = await supabaseAdmin.from("leads").insert({
     email: data.email,
     full_name: `${data.firstName} ${data.lastName}`,
-    phone: data.phone,
+    phone: data.phone ?? null,
     data: leadPayload,
   });
 

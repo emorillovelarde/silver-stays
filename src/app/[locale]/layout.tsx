@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+
+const NO_CHROME_SEGMENTS = ["/winter-guide"];
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -44,11 +47,15 @@ export default async function RootLayout({
   await params;
   const messages = await getMessages();
 
+  const h = await headers();
+  const pathname = h.get("x-pathname") ?? "";
+  const showChrome = !NO_CHROME_SEGMENTS.some((seg) => pathname.includes(seg));
+
   return (
     <NextIntlClientProvider messages={messages}>
-      <Header />
+      {showChrome && <Header />}
       {children}
-      <Footer />
+      {showChrome && <Footer />}
     </NextIntlClientProvider>
   );
 }

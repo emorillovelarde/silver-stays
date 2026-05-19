@@ -28,7 +28,7 @@ export function CalendarModalButton({
       <DialogTrigger asChild>
         <button
           type="button"
-          className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl bg-primary px-10 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:bg-primary-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          className="inline-flex w-full min-h-[52px] items-center justify-center gap-2 rounded-xl bg-[#1B2A49] px-10 py-4 text-lg font-serif font-bold text-white transition-colors duration-200 hover:bg-[#253860] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B2A49] focus-visible:ring-offset-2"
           aria-label={buttonText}
         >
           <Calendar className="h-5 w-5 shrink-0" strokeWidth={2} aria-hidden />
@@ -40,7 +40,7 @@ export function CalendarModalButton({
         closeAriaLabel={closeAriaLabel}
       >
         <DialogHeader className="p-6 pb-0 shrink-0">
-          <DialogTitle className="text-xl font-semibold text-primary">
+          <DialogTitle className="text-xl font-semibold text-[#1B2A49]">
             {buttonText}
           </DialogTitle>
         </DialogHeader>

@@ -46,7 +46,16 @@ export default async function RootLayout({
       lang={locale}
       className={`${atkinson.variable} ${montserrat.variable} ${playfair.variable}`}
     >
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {/*
+          TODO: Meta Pixel — install before launching the Meta Ads campaign
+          for /en/winter-guide. Add the Pixel base code here with next/script
+          (afterInteractive) and fire the custom "GuideDownload" conversion
+          event on the winter-guide thank-you page
+          (src/app/[locale]/winter-guide/thank-you/page.tsx).
+        */}
+        {children}
+      </body>
     </html>
   );
 }

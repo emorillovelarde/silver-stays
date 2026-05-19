@@ -63,7 +63,13 @@ export default async function middleware(request: NextRequest) {
     return response;
   }
 
-  return intlMiddleware(request);
+  const response = intlMiddleware(request);
+  // Expose pathname to server components so layouts can opt out of chrome
+  (response as import("next/server").NextResponse).headers.set(
+    "x-pathname",
+    pathname,
+  );
+  return response;
 }
 
 export const config = {

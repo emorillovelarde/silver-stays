@@ -28,6 +28,39 @@ interface Props {
   initialLeads: Lead[];
 }
 
+const EXPERIENCE_LABELS: Record<string, string> = {
+  never: "Primera vez",
+  tourist: "Turista",
+  extended: "Estancia larga",
+  regular: "Habitual",
+};
+
+const LOCATION_LABELS: Record<string, string> = {
+  fuengirola_mijas: "Fuengirola / Mijas",
+  malaga_capital: "Málaga Capital",
+  rincon_torre: "Rincón / Torre del Mar",
+  torrox_nerja: "Torrox / Nerja",
+  unsure: "Sin preferencia",
+};
+
+const DURATION_LABELS: Record<string, string> = {
+  "1_3_months": "1–3 m",
+  "3_6_months": "3–6 m",
+  "6_9_months": "6–9 m",
+  more_9_months: "+9 m",
+};
+
+const ARRIVAL_LABELS: Record<string, string> = {
+  oct: "Oct",
+  nov: "Nov",
+  dec: "Dic",
+  jan: "Ene",
+  feb: "Feb",
+  mar: "Mar",
+  apr: "Abr",
+  other: "Flexible",
+};
+
 export function AdminLeadsTable({ initialLeads }: Props) {
   const router = useRouter();
   const { locale } = useParams<{ locale: string }>();
@@ -88,13 +121,16 @@ export function AdminLeadsTable({ initialLeads }: Props) {
                   Email
                 </TableHead>
                 <TableHead className="font-bold text-[#333333]">
-                  Telefono
+                  Teléfono
                 </TableHead>
                 <TableHead className="font-bold text-[#333333]">
-                  Intereses
+                  Experiencia
                 </TableHead>
                 <TableHead className="font-bold text-[#333333]">
-                  Duracion
+                  Ubicación
+                </TableHead>
+                <TableHead className="font-bold text-[#333333]">
+                  Duración / Llegada
                 </TableHead>
               </TableRow>
             </TableHeader>
@@ -102,49 +138,74 @@ export function AdminLeadsTable({ initialLeads }: Props) {
               {initialLeads.length === 0 ? (
                 <TableRow>
                   <TableCell
-                    colSpan={6}
+                    colSpan={7}
                     className="h-24 text-center text-muted-foreground"
                   >
                     No hay leads registrados aun.
                   </TableCell>
                 </TableRow>
               ) : (
-                initialLeads.map((lead) => (
-                  <TableRow
-                    key={lead.id}
-                    className="hover:bg-slate-50/50 transition-colors"
-                  >
-                    <TableCell className="font-medium text-slate-600">
-                      {format(new Date(lead.created_at), "d MMM yyyy, HH:mm", {
-                        locale: es,
-                      })}
-                    </TableCell>
-                    <TableCell className="font-semibold text-primary">
-                      {lead.full_name || "N/A"}
-                    </TableCell>
-                    <TableCell>{lead.email}</TableCell>
-                    <TableCell>{lead.phone || "N/A"}</TableCell>
-                    <TableCell>
-                      <div className="flex flex-wrap gap-1">
-                        {lead.data?.questionnaire?.interests?.map(
-                          (tag: string) => (
-                            <span
-                              key={tag}
-                              className="px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full text-xs border"
-                            >
-                              {tag}
-                            </span>
-                          ),
+                initialLeads.map((lead) => {
+                  const q = lead.data?.questionnaire ?? {};
+                  const experience = q.costaDelSolExperience as
+                    | string
+                    | undefined;
+                  const location = q.preferredLocation as string | undefined;
+                  const duration = q.stayDuration as string | undefined;
+                  const arrival = q.arrivalMonth as string | undefined;
+
+                  return (
+                    <TableRow
+                      key={lead.id}
+                      className="hover:bg-slate-50/50 transition-colors"
+                    >
+                      <TableCell className="font-medium text-slate-600">
+                        {format(
+                          new Date(lead.created_at),
+                          "d MMM yyyy, HH:mm",
+                          {
+                            locale: es,
+                          },
                         )}
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                        {lead.data?.questionnaire?.duration}
-                      </span>
-                    </TableCell>
-                  </TableRow>
-                ))
+                      </TableCell>
+                      <TableCell className="font-semibold text-primary">
+                        {lead.full_name || "N/A"}
+                      </TableCell>
+                      <TableCell>{lead.email}</TableCell>
+                      <TableCell>{lead.phone || "—"}</TableCell>
+                      <TableCell>
+                        {experience ? (
+                          <span className="px-2 py-0.5 bg-slate-100 text-slate-700 rounded-full text-xs border">
+                            {EXPERIENCE_LABELS[experience] ?? experience}
+                          </span>
+                        ) : (
+                          <span className="text-slate-400 text-xs">—</span>
+                        )}
+                      </TableCell>
+                      <TableCell>
+                        {location ? (
+                          <span className="text-sm text-slate-700">
+                            {LOCATION_LABELS[location] ?? location}
+                          </span>
+                        ) : (
+                          <span className="text-slate-400 text-xs">—</span>
+                        )}
+                      </TableCell>
+                      <TableCell>
+                        {duration || arrival ? (
+                          <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                            {DURATION_LABELS[duration ?? ""] ?? duration ?? "—"}
+                            {arrival
+                              ? ` · ${ARRIVAL_LABELS[arrival] ?? arrival}`
+                              : ""}
+                          </span>
+                        ) : (
+                          <span className="text-slate-400 text-xs">—</span>
+                        )}
+                      </TableCell>
+                    </TableRow>
+                  );
+                })
               )}
             </TableBody>
           </Table>
