@@ -5,6 +5,7 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { MetaPixel } from "@/components/MetaPixel";
 
 const NO_CHROME_SEGMENTS = ["/winter-guide"];
 
@@ -56,6 +57,7 @@ export default async function RootLayout({
       {showChrome && <Header />}
       {children}
       {showChrome && <Footer />}
+      <MetaPixel />
     </NextIntlClientProvider>
   );
 }
