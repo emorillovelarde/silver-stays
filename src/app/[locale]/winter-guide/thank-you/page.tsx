@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import { PixelLeadEvent } from "@/components/PixelLeadEvent";
 
 export const metadata: Metadata = {
   title: "Thank you — your Winter Guide is on its way | Bluevera Residences",
@@ -16,14 +17,8 @@ export default async function WinterGuideThankYouPage({ params }: Props) {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-[#FAFAF8] px-5 font-sans">
-      {/*
-        TODO: Meta Pixel — install before launching the Meta Ads campaign.
-        This thank-you page is the most reliable place to fire the custom
-        "GuideDownload" conversion event: MailerLite redirects here after a
-        successful signup (After signup action → Redirect to URL). Once the
-        Pixel base code is added in src/app/layout.tsx, fire the event on
-        mount from a small client component here.
-      */}
+      {/* Fires the Meta Pixel "Lead" conversion event once on mount */}
+      <PixelLeadEvent />
       <main className="mx-auto w-full max-w-md text-center">
         <span className="font-serif text-[16px] font-semibold text-[#1B2A49]">
           Bluevera Residences
