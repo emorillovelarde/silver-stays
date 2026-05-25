@@ -276,7 +276,9 @@
     "privacyPolicy": "Privacy Policy",
     "legalNotice": "Legal Notice",
     "cookiePolicy": "Cookie Policy",
-    "ariaLabel": "Site footer"
+    "ariaLabel": "Site footer",
+    "legalNavLabel": "Legal pages",
+    "address": "Paseo de Reding 43, 1º Izda, 29016 Málaga, Spain"
   },
   "GuidesHub": {
     "heroTitle": "Living in Spain Guides & Resources",

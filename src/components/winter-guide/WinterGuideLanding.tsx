@@ -110,14 +110,14 @@ export function WinterGuideLanding() {
         <footer className="mt-8 pb-8 text-center text-[11px] text-[#AAACB0]">
           © 2026 Bluevera Residences ·{" "}
           <Link
-            href="/en/legal/aviso-legal"
+            href="/en/legal-notice"
             className="underline underline-offset-2 hover:text-[#1B2A49]"
           >
             Legal Notice
           </Link>{" "}
           ·{" "}
           <Link
-            href="/en/legal/privacy-policy"
+            href="/en/privacy-policy"
             className="underline underline-offset-2 hover:text-[#1B2A49]"
           >
             Privacy Policy
