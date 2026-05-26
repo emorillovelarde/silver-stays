@@ -9,10 +9,8 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-// Placeholders entre llaves visibles para que el titular verifique los
-// datos antes de desplegar a producción.
-const OWNER_NAME = "{Eduardo Morillo Velarde Magaña}";
-const OWNER_NIF = "{75248131C}";
+const OWNER_NAME = "Eduardo Morillo Velarde Magaña";
+const OWNER_NIF = "75248131C";
 
 type Props = { params: Promise<{ locale: string }> };
 

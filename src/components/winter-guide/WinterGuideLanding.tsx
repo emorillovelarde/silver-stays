@@ -121,6 +121,13 @@ export function WinterGuideLanding() {
             className="underline underline-offset-2 hover:text-[#1B2A49]"
           >
             Privacy Policy
+          </Link>{" "}
+          ·{" "}
+          <Link
+            href="/en/cookie-policy"
+            className="underline underline-offset-2 hover:text-[#1B2A49]"
+          >
+            Cookie Policy
           </Link>
         </footer>
       </div>

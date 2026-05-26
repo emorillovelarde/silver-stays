@@ -9,10 +9,8 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-// Placeholders left visible (curly braces) so the data is verified by the
-// site owner before the production launch — do not silently substitute.
-const OWNER_NAME = "{Eduardo Morillo Velarde Magaña}";
-const OWNER_NIF = "{75248131C}";
+const OWNER_NAME = "Eduardo Morillo Velarde Magaña";
+const OWNER_NIF = "75248131C";
 
 type Props = { params: Promise<{ locale: string }> };
 

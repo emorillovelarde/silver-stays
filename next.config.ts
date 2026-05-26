@@ -21,6 +21,31 @@ const nextConfig: NextConfig = {
         destination: "/images/bluevera_premium_terrace.jpg",
         permanent: true,
       },
+      // The legal pages moved out of /[locale]/legal/* to locale-specific
+      // slugs at /[locale]/<slug>. These 301s catch bookmarks and any
+      // search index that picked up the old paths before they were
+      // removed. Only the routes that actually existed are listed —
+      // /legal/cookie-policy never shipped, so no redirect for it.
+      {
+        source: "/en/legal/aviso-legal",
+        destination: "/en/legal-notice",
+        permanent: true,
+      },
+      {
+        source: "/en/legal/privacy-policy",
+        destination: "/en/privacy-policy",
+        permanent: true,
+      },
+      {
+        source: "/es/legal/aviso-legal",
+        destination: "/es/aviso-legal",
+        permanent: true,
+      },
+      {
+        source: "/es/legal/privacy-policy",
+        destination: "/es/politica-privacidad",
+        permanent: true,
+      },
     ];
   },
   async headers() {
