@@ -1,5 +1,6 @@
 import { Link } from "@/i18n/routing";
 import { getLocale, getTranslations } from "next-intl/server";
+import { CookieSettingsButton } from "@/components/cookie-consent/CookieSettingsButton";
 
 export async function Footer() {
   const t = await getTranslations("Footer");
@@ -50,6 +51,8 @@ export async function Footer() {
           >
             {t("cookiePolicy")}
           </Link>
+          <span aria-hidden="true">|</span>
+          <CookieSettingsButton label={t("cookieSettings")} />
         </nav>
 
         <address className="mt-6 text-sm not-italic leading-relaxed text-white/70">

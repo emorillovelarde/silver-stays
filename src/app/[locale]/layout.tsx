@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MetaPixel } from "@/components/MetaPixel";
+import { CookieConsentManager } from "@/components/cookie-consent/CookieConsentManager";
 
 const NO_CHROME_SEGMENTS = ["/winter-guide"];
 
@@ -45,12 +46,14 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }>) {
-  await params;
+  const { locale } = await params;
   const messages = await getMessages();
 
   const h = await headers();
   const pathname = h.get("x-pathname") ?? "";
   const showChrome = !NO_CHROME_SEGMENTS.some((seg) => pathname.includes(seg));
+
+  const consentLocale: "en" | "es" = locale === "es" ? "es" : "en";
 
   return (
     <NextIntlClientProvider messages={messages}>
@@ -58,6 +61,9 @@ export default async function RootLayout({
       {children}
       {showChrome && <Footer />}
       <MetaPixel />
+      {/* Banner + preferences modal. Rendered on every route, including
+          /winter-guide, so no page can leak tracking before consent. */}
+      <CookieConsentManager locale={consentLocale} />
     </NextIntlClientProvider>
   );
 }

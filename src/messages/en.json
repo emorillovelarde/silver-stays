@@ -276,9 +276,43 @@
     "privacyPolicy": "Privacy Policy",
     "legalNotice": "Legal Notice",
     "cookiePolicy": "Cookie Policy",
+    "cookieSettings": "Cookie settings",
     "ariaLabel": "Site footer",
     "legalNavLabel": "Legal pages",
     "address": "Paseo de Reding 43, 1º Izda, 29016 Málaga, Spain"
+  },
+  "CookieConsent": {
+    "banner": {
+      "ariaLabel": "Cookie consent",
+      "body": "We use cookies to make this site work, to understand how it is used and to measure the effectiveness of our advertising. Strictly necessary cookies are always active; the rest are optional. You can accept all, reject all or choose which to enable. You can change your choice at any time from the footer. More information in our <link>Cookie Policy</link>.",
+      "rejectAll": "Reject all",
+      "customize": "Customize",
+      "acceptAll": "Accept all"
+    },
+    "preferences": {
+      "title": "Cookie preferences",
+      "description": "Strictly necessary cookies are always active. Choose which optional categories you want to enable.",
+      "alwaysOn": "Always on",
+      "necessary": {
+        "title": "Strictly necessary",
+        "description": "Required for the site to function. Cannot be disabled."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "description": "Help us understand how visitors use the site."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "Used to measure our advertising on Meta and to show relevant ads."
+      },
+      "functional": {
+        "title": "Functional",
+        "description": "Remember preferences such as language."
+      },
+      "save": "Save preferences",
+      "cancel": "Cancel",
+      "close": "Close"
+    }
   },
   "GuidesHub": {
     "heroTitle": "Living in Spain Guides & Resources",

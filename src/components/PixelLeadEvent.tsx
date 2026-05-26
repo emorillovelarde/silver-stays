@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { hasConsent } from "@/lib/cookie-consent";
 
 declare global {
   interface Window {
@@ -8,8 +9,17 @@ declare global {
   }
 }
 
+/**
+ * Fires the Meta Pixel "Lead" conversion event once on mount.
+ *
+ * Gated on marketing consent: if the visitor hasn't accepted marketing
+ * cookies, the event is silently skipped — and we don't even poll for
+ * fbq, since the base script will never load without consent.
+ */
 export function PixelLeadEvent() {
   useEffect(() => {
+    if (!hasConsent("marketing")) return;
+
     const fireLead = () => {
       window.fbq?.("track", "Lead", {
         content_name: "Winter Guide Download",

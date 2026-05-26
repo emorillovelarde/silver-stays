@@ -276,9 +276,43 @@
     "privacyPolicy": "Política de Privacidad",
     "legalNotice": "Aviso Legal",
     "cookiePolicy": "Política de Cookies",
+    "cookieSettings": "Configuración de cookies",
     "ariaLabel": "Pie de página",
     "legalNavLabel": "Páginas legales",
     "address": "Paseo de Reding 43, 1º Izda, 29016 Málaga, España"
+  },
+  "CookieConsent": {
+    "banner": {
+      "ariaLabel": "Consentimiento de cookies",
+      "body": "Utilizamos cookies para que este sitio funcione, para entender cómo se usa y para medir la eficacia de nuestra publicidad. Las cookies estrictamente necesarias están siempre activas; el resto son opcionales. Puede aceptarlas todas, rechazarlas todas o elegir cuáles activar. Puede cambiar su elección en cualquier momento desde el pie de página. Más información en nuestra <link>Política de Cookies</link>.",
+      "rejectAll": "Rechazar todo",
+      "customize": "Configurar",
+      "acceptAll": "Aceptar todo"
+    },
+    "preferences": {
+      "title": "Preferencias de cookies",
+      "description": "Las cookies estrictamente necesarias están siempre activas. Elija qué categorías opcionales desea activar.",
+      "alwaysOn": "Siempre activas",
+      "necessary": {
+        "title": "Estrictamente necesarias",
+        "description": "Necesarias para el funcionamiento del sitio. No pueden desactivarse."
+      },
+      "analytics": {
+        "title": "Analíticas",
+        "description": "Nos ayudan a entender cómo se usa el sitio."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "Se usan para medir nuestra publicidad en Meta y mostrar anuncios relevantes."
+      },
+      "functional": {
+        "title": "Funcionales",
+        "description": "Recuerdan preferencias como el idioma."
+      },
+      "save": "Guardar preferencias",
+      "cancel": "Cancelar",
+      "close": "Cerrar"
+    }
   },
   "GuidesHub": {
     "heroTitle": "Guías y Recursos para Vivir en España",
