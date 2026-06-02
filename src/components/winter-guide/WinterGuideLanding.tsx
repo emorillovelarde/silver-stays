@@ -92,8 +92,8 @@ export function WinterGuideLanding() {
         {/* Trust signals */}
         <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[12px] text-[#8A8D91]">
           <span>
-            <span className="text-[#C96B4A]">✓</span> 100% legally verified
-            properties
+            <span className="text-[#C96B4A]">✓</span> Properties verified in
+            person
           </span>
           <span aria-hidden>·</span>
           <span>
