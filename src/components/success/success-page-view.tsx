@@ -7,7 +7,8 @@ import type { LucideIcon } from "lucide-react";
 import Image from "next/image";
 import { CalendarModalButton } from "@/components/success/calendar-modal-button";
 
-const PDF_PATH = "/guides/guia-costa-del-sol-2026.pdf";
+const PDF_PATH = "/guides/winter-guide-2026.pdf";
+const PDF_DOWNLOAD_NAME = "Bluevera-Winter-Guide-2026.pdf";
 const GUIDE_COVER_IMAGE = "/images/guia-cover-2026.jpg";
 
 type PillarKey =
@@ -101,6 +102,7 @@ export function SuccessPageView() {
 
               <a
                 href={PDF_PATH}
+                download={PDF_DOWNLOAD_NAME}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[44px] items-center justify-center gap-2 self-start rounded-lg bg-[#C96B4A] px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#b55c3d] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C96B4A] focus-visible:ring-offset-2"

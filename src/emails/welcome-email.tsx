@@ -25,7 +25,7 @@ function urls() {
   const site =
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.blueveraresidences.com";
   const base = site.replace(/\/$/, "");
-  const guidePdf = `${base}/guides/guia-costa-del-sol-2026.pdf`;
+  const guidePdf = `${base}/guides/winter-guide-2026.pdf`;
   const calendly =
     process.env.NEXT_PUBLIC_CALENDLY_BOOKING_URL ??
     "https://calendly.com/tu-link";
