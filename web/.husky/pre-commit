@@ -1,0 +1,2 @@
+# Los hooks se ejecutan desde la raíz del repo; el proyecto Node vive en web/
+cd web && npx lint-staged

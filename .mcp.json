@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "mailerlite": {
+      "type": "http",
+      "url": "https://mcp.mailerlite.com/mcp"
+    },
+    "calendly": {
+      "type": "http",
+      "url": "https://mcp.calendly.com"
+    },
+    "supabase": {
+      "type": "http",
+      "url": "https://mcp.supabase.com/mcp?read_only=true"
+    },
+    "vercel": {
+      "type": "http",
+      "url": "https://mcp.vercel.com"
+    }
+  }
+}
