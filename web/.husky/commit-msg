@@ -1,0 +1,4 @@
+# Los hooks se ejecutan desde la raíz del repo; el proyecto Node vive en web/
+msg="$1"
+case "$msg" in /*|?:*) ;; *) msg="$PWD/$msg" ;; esac
+cd web && npx --no-install commitlint --edit "$msg"
