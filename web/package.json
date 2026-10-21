@@ -64,7 +64,7 @@
     "lint-staged": "^16.2.7",
     "prettier": "^3.8.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^7"
   },
   "allowScripts": {
     "@parcel/watcher@2.5.6": true,
