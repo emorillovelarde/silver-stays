@@ -336,5 +336,14 @@
         "badge": "Popular"
       }
     }
+  },
+  "Maintenance": {
+    "metaTitle": "Temporarily closed | Bluevera Residences",
+    "description": "The Bluevera Residences website is temporarily closed while a new version is prepared.",
+    "brand": "Bluevera Residences",
+    "title": "This website is temporarily closed",
+    "body": "I am preparing a new version, and I will reopen it once it is ready.",
+    "contact": "If you would like to ask me anything in the meantime, write to me at <link>{email}</link>.",
+    "signature": "Eduardo"
   }
 }

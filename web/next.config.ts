@@ -16,6 +16,19 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // While the site is closed (see src/middleware.ts) the winter guide PDF
+      // is withdrawn too; its cover image stays for emails already sent.
+      // Redirects run before /public files, and next.config is read at build
+      // time, which is why the closure needs a redeploy.
+      ...(process.env.MAINTENANCE_MODE === "true"
+        ? [
+            {
+              source: "/guides/:file(.*\\.pdf)",
+              destination: "/",
+              permanent: false,
+            },
+          ]
+        : []),
       {
         source: "/images/silver_stays_premium_terrace.jpg",
         destination: "/images/bluevera_premium_terrace.jpg",

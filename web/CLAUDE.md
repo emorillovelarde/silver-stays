@@ -60,7 +60,7 @@ Esquema de referencia: `supabase_schema.sql` (puede no estar al día con producc
 
 ## Variables de entorno
 
-`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `RESEND_API_KEY`, `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY`, `NEXT_PUBLIC_MAILERLITE_ACCOUNT_ID`, `NEXT_PUBLIC_MAILERLITE_FORM_ID`. Plantilla en `.env.example`.
+`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `RESEND_API_KEY`, `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY`, `NEXT_PUBLIC_MAILERLITE_ACCOUNT_ID`, `NEXT_PUBLIC_MAILERLITE_FORM_ID`, `MAINTENANCE_MODE` (opcional: `true` cierra la web con la página de espera; en Vercel exige volver a desplegar). Plantilla en `.env.example`.
 
 ## Antes de dar por terminado un cambio
 

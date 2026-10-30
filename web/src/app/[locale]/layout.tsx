@@ -8,7 +8,7 @@ import { Footer } from "@/components/layout/Footer";
 import { MetaPixel } from "@/components/MetaPixel";
 import { CookieConsentManager } from "@/components/cookie-consent/CookieConsentManager";
 
-const NO_CHROME_SEGMENTS = ["/winter-guide"];
+const NO_CHROME_SEGMENTS = ["/winter-guide", "/maintenance"];
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -52,6 +52,8 @@ export default async function RootLayout({
   const h = await headers();
   const pathname = h.get("x-pathname") ?? "";
   const showChrome = !NO_CHROME_SEGMENTS.some((seg) => pathname.includes(seg));
+  // The holding page loads no tracking at all, so it needs no consent banner.
+  const isMaintenance = pathname.endsWith("/maintenance");
 
   const consentLocale: "en" | "es" = locale === "es" ? "es" : "en";
 
@@ -60,10 +62,11 @@ export default async function RootLayout({
       {showChrome && <Header />}
       {children}
       {showChrome && <Footer />}
-      <MetaPixel />
-      {/* Banner + preferences modal. Rendered on every route, including
-          /winter-guide, so no page can leak tracking before consent. */}
-      <CookieConsentManager locale={consentLocale} />
+      {!isMaintenance && <MetaPixel />}
+      {/* Banner + preferences modal. Rendered on every tracked route,
+          including /winter-guide, so no page can leak tracking before
+          consent. */}
+      {!isMaintenance && <CookieConsentManager locale={consentLocale} />}
     </NextIntlClientProvider>
   );
 }
