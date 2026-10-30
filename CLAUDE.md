@@ -6,7 +6,7 @@ Alquileres de media estancia (1–9 meses) en la Costa del Sol para jubilados de
 
 | Carpeta | Contenido |
 |---|---|
-| `contexto/` | Empresa, cliente objetivo, marca y tono, conocimiento local. Cambia poco |
+| `contexto/` | Empresa, cliente objetivo, marca y tono, conocimiento local, marco legal. Cambia poco |
 | `decisiones/` | Decisiones pendientes de consolidar. `archivo/` guarda las ya incorporadas |
 | `web/` | Código Next.js (desplegado en Vercel con Root Directory = `web`). Reglas en `web/CLAUDE.md`, estado en `web/estado.md` |
 | `marketing/` | Reglas en `marketing/CLAUDE.md`, estado en `marketing/estado.md`, campañas en `campañas/` |
