@@ -40,6 +40,9 @@ Estado: **IA** = lectura de la IA, pendiente de abogado · **Abogado (nombre, fe
 | Zonas tensionadas | Andalucía no ha declarado ninguna (dato a 2026-09-30), así que no hay topes de renta | [Taxdown](https://taxdown.es/propietario/zonas-tensionadas) | IA · 2026-10-30 |
 | Moratoria turística | Málaga capital tiene una (BOP del 2026-07-24). En Vélez-Málaga no se ha encontrado ninguna, pero está sin confirmar | Prensa | IA · sin confirmar |
 | Publicidad | Las ofertas de alquiler deben ser veraces e incluir el número de registro cuando proceda | Art. 20 RDL 29/2026 | IA · 2026-10-30 |
+| Alquilar la propia vivienda | Es rendimiento del capital inmobiliario, no actividad económica, salvo que haya una persona empleada a jornada completa. No exige ser autónomo ni tener sociedad. Se declara en la renta, sin la reducción por alquiler de vivienda habitual, que solo se aplica a contratos del art. 2.1 LAU. Los días sin alquilar que no sean vivienda habitual generan imputación de renta | Arts. 23.2, 27.2 y 85 LIRPF; RDL 29/2026 | IA · pendiente de gestoría |
+| Gestionar viviendas de terceros | Cobrar comisiones o servicios a propietarios o inquilinos es actividad económica. Exige alta en Hacienda, facturas con IVA del 21 % y alta como autónomo (o una sociedad, cuyo administrador también cotiza como autónomo) | LIVA, LIRPF, LGSS | IA · pendiente de gestoría |
+| Depósito de la fianza en Andalucía | Desde el 2026-01-24 ya no hay que depositarla en la Junta (AVRA) | Ley 5/2025 de Vivienda de Andalucía | IA · sin confirmar |
 
 ## Tipo de contrato según el cliente (lectura IA)
 
@@ -58,6 +61,26 @@ Estado: **IA** = lectura de la IA, pendiente de abogado · **Abogado (nombre, fe
 - No prometer al propietario ingresos por toda la estancia, porque el inquilino puede irse al mes.
 - Ni honorarios ni tarifa de alta al inquilino. Los servicios opcionales sí, con su precio y diciendo que son opcionales.
 
+## Mientras Bluevera no tenga forma jurídica (lectura IA, pendiente de gestoría)
+
+Hoy Bluevera Residences no es una sociedad y Edu no está dado de alta como autónomo. Bluevera es solo la marca comercial de Edu como persona física. El aviso legal y la política de privacidad ya le identifican a él como titular. Esta sección se revisa el día que se dé de alta como autónomo o se constituya la sociedad.
+
+**Se puede:**
+- Alquilar la vivienda propia de Edu con contrato temporal exento de IVA, con Edu como arrendador.
+- Usar la marca Bluevera en la web, los anuncios, las guías y la newsletter.
+- Captar contactos de inquilinos y hablar con propietarios interesados.
+
+**No se puede hasta el alta:**
+- Presentar a Bluevera como empresa, agencia, gestora o intermediaria: ni "S.L.", ni "agencia", ni "gestionamos su vivienda". Las ofertas deben ser veraces (art. 20 RDL 29/2026).
+- Firmar contratos, emitir facturas o cobrar en nombre de Bluevera. El contrato y los cobros van a nombre de Edu como propietario.
+- Firmar contratos de gestión con otros propietarios o cobrarles comisiones.
+- Cobrar servicios al inquilino (concierge, traslados, limpieza). Si se ofrecen, los presta y los cobra un tercero.
+- Prestar como arrendador servicios de tipo hotelero, como limpieza o lavandería: el alquiler pasaría a tributar al 10 % de IVA.
+- Explotar viviendas turísticas en verano: Bluevera figuraría como empresa explotadora ante la Junta.
+- Cobrar comisiones por referir clientes a promotores, comercializadoras, aseguradoras o cualquier otro, o por intermediar ventas.
+
+**Al constituir una sociedad**, cambia el responsable del tratamiento de los datos. Habrá que actualizar el aviso legal y la política de privacidad, e informar a los suscriptores de MailerLite y a los contactos de Supabase. Darse de alta como autónomo no cambia el titular.
+
 ## Expediente de cada contrato temporal (lectura IA)
 
 - Cláusula de causa con el motivo real, el domicilio habitual (dirección y país), las fechas y el regreso. La causa nunca se inventa.
@@ -68,7 +91,7 @@ Estado: **IA** = lectura de la IA, pendiente de abogado · **Abogado (nombre, fe
 - Un solo contrato por toda la estancia prevista, mejor que prórrogas.
 - Documento de fin de contrato firmado por las dos partes.
 
-## Preguntas abiertas para el abogado
+## Preguntas abiertas para el abogado y la gestoría
 
 1. ¿Vale "pasar el invierno" (clima, descanso) como causa justificada? ¿Cambia la respuesta si hay un motivo de salud real?
 2. ¿Qué pruebas del domicilio en el extranjero bastan en cada país?
@@ -78,5 +101,7 @@ Estado: **IA** = lectura de la IA, pendiente de abogado · **Abogado (nombre, fe
 6. Una vivienda registrada como turística solo en verano, ¿puede alquilarse en invierno con un contrato temporal de entre 32 días y 2 meses, o conviene que pase siempre de 2 meses?
 7. ¿Qué servicios de Bluevera puede pagar el inquilino y cómo se documentan (art. 20.2)?
 8. En las semanas de verano, ¿quién debe ser el explotador y quién factura, Bluevera o el propietario? ¿Qué supone cada opción con el IVA del 10 % (alta en IVA, declaraciones trimestrales, prorrata con el invierno exento)?
+9. (Gestoría) Si solo se alquila la propia vivienda con alquiler exento de IVA, ¿hace falta alguna alta en Hacienda? ¿Qué gastos se deducen y cómo se amortizan el piso y el mobiliario?
+10. (Gestoría) ¿Cuándo conviene darse de alta como autónomo o constituir una sociedad, y con qué forma? ¿Desde el primer contrato de gestión con otro propietario o antes?
 
 Cuando el abogado responda, su respuesta sustituye a la lectura de la IA en la tabla, con su nombre y la fecha, y la pregunta se borra.
